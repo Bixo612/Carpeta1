@@ -1,0 +1,26 @@
+[
+    {
+        "marca": "Ford",
+        "modelo": "Mustang",
+        "anio": 1968,
+        "patente": "GD78150"
+    },
+    {
+        "marca": "Chevrolet",
+        "modelo": "C10",
+        "anio": 1968,
+        "patente": "FT9865"
+    },
+    {
+        "marca": "Chevrolet",
+        "modelo": "El Camino SS",
+        "anio": 1970,
+        "patente": "GA1254"
+    },
+    {
+        "marca": "Dodge",
+        "modelo": "Dart",
+        "anio": 1970,
+        "patente": "HU6510"
+    }
+]
