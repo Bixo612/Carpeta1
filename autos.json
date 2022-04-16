@@ -22,5 +22,17 @@
         "modelo": "Dart",
         "anio": 1970,
         "patente": "HU6510"
+    },
+    {
+        "marca": "Toyota",
+        "modelo": "AE86",
+        "anio": 1983,
+        "patente": "GD7862"
+    },
+    {
+        "marca": "Nissan",
+        "modelo": "Skyline",
+        "anio": 1972,
+        "patente": "HT7452"
     }
 ]
