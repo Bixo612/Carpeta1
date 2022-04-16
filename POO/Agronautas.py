@@ -1,29 +1,5 @@
-
 import json
 import mysql.connector
-
-auto = '''{
-    "marca": "Ford",
-    "modelo": "Mustang",
-    "anio": 1968,
-    "colores": ["Rojo","Blanco","Azul","Negro"] 
-}'''
-
-
-argo = '''{
-    "nombre": "Alan Brito",
-    "edad": 25,
-    "cargo": "Navegante",
-    "habilidades": ["Cocinar","Luchar","Tocar ukulele"]
-}'''
-
-x = json.load(auto)
-
-y = json.load(argo)
-
-with open("lista.json","w") as file:
-    json.dump(x, file , indent=4)
-    json.dump(y, file , indent=4)
 
 con = mysql.connector.connect(
     host="localhost",
@@ -33,21 +9,53 @@ con = mysql.connector.connect(
     )
 
 cursor = con.cursor()
-
-def selectAll():
-    sql = "Select * from argonauta"
-    cursor.execute(sql) 
-    res = cursor.fetchall()
-    return res
-
-def pasarAjsonDoc(lista):
+print(con)
 
 
+def agregarArgonauta(nombre,cargo,edad):
+    sql = "Insert into argonauta values (%s,%s,%s)"
+    var = (nombre,cargo,edad,)
+    cursor.execute(sql,var)
 
-    with open("lista.json","w") as file:
-        json.dump(lista, file , indent=4)
+agregarArgonauta("Felipe","Grumete",22)
 
-# lista = selectAll()
-# for i in lista:
-#     print (type(i))
+def leerEntero(txt):
+    try:
+        return int(input(txt))
+    except:
+        return None
 
+def leerStringConLimite(txt,limit):
+    string = ""
+    while len(string) == 0 or len(string)>=limit:
+        string = input (txt)
+        if len(string) == 0 or len(string)>=limit:
+            print ("dato no valido")
+    return string        
+
+
+
+
+
+def printMenu():
+    print("MENU AGRONAUTAS")
+    print("0 - Salir")
+    print("1 - Registrar Agronauta")
+
+def menu():
+    salir = True
+    op = None
+    while salir:
+        printMenu()
+        op = leerEntero("Ingrese una opcion")  
+        if op == 0:
+            salir = False
+            print ("Hasta pronto") 
+        if op == 1:
+            #Registrar Agronauta
+            nombre = leerStringConLimite("Ingrese el nombre del agronauta (max 100 caracteres)",100)
+            cargo = leerStringConLimite("Ingrese el cargo del agronauta (max 100 caracteres)",100)
+            print (nombre, cargo)                 
+###
+
+#menu()
