@@ -3,42 +3,49 @@
         "marca": "Ford",
         "modelo": "Mustang",
         "anio": 1968,
-        "patente": "GD78150"
+        "patente": "GD78150",
+        "color":"Azul"
     },
     {
         "marca": "Chevrolet",
         "modelo": "C10",
         "anio": 1968,
-        "patente": "FT9865"
+        "patente": "FT9865",
+        "color":"Celeste"
     },
     {
         "marca": "Chevrolet",
         "modelo": "El Camino SS",
         "anio": 1970,
-        "patente": "GA1254"
+        "patente": "GA1254",
+        "color":"Rojo"
     },
     {
         "marca": "Dodge",
         "modelo": "Dart",
         "anio": 1970,
-        "patente": "HU6510"
+        "patente": "HU6510",
+        "color":"Naranjo"
     },
     {
         "marca": "Toyota",
         "modelo": "AE86",
         "anio": 1983,
-        "patente": "GD7862"
+        "patente": "GD7862",
+        "color":"Gris"
     },
     {
         "marca": "Nissan",
         "modelo": "Skyline",
         "anio": 1972,
-        "patente": "HT7452"
+        "patente": "HT7452",
+        "color":"Gris"
     },
     {
         "marca": "Ford",
         "modelo": "Bronco",
         "anio": 1985,
-        "patente": "RT7532"
+        "patente": "RT7532",
+        "color":"Negro"
     }
 ]
