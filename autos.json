@@ -34,5 +34,11 @@
         "modelo": "Skyline",
         "anio": 1972,
         "patente": "HT7452"
+    },
+    {
+        "marca": "Ford",
+        "modelo": "Bronco",
+        "anio": 1985,
+        "patente": "RT7532"
     }
 ]
