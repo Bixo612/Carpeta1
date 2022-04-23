@@ -1,4 +1,7 @@
-nombre = input("ingrese su nombre: ")
 print ("Hello there")
-print ("General " + nombre +"!")
+nombre = input("ingrese su nombre: ")
+if nombre == "Kenobi":
+    print ("General " + nombre +"!")
+else:
+    print ("Hola " + nombre + ":)")
 nombre = input("")
