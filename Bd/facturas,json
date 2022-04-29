@@ -37,7 +37,7 @@
     },
     {
         "nroFactura": 2,
-        "fechaFactura": new Date("2022,03,03"),
+        "fechaFactura": new Date("2022,03,02"),
         "receptorFactura": {
             "rut": "78546456-K",
             "nombre": "Almacen mis tesoros",
@@ -269,7 +269,7 @@
     },
     {
         "nroFactura": 8,
-        "fechaFactura": new Date("2022,03,04"),
+        "fechaFactura": new Date("2022,03,06"),
         "receptorFactura": {
             "rut": "79125001-K",
             "nombre": "Bazar Colo Colo",
@@ -313,7 +313,7 @@
     },
     {
         "nroFactura": 9,
-        "fechaFactura": new Date("2022,03,03"),
+        "fechaFactura": new Date("2022,03,07"),
         "receptorFactura": {
             "rut": "78963021-K",
             "nombre": "Bazar Las estrellas",
@@ -345,6 +345,86 @@
         "totalNeto": 7320,
         "iva": 1391,
         "valorTotal": 8711,
+        "comentarios": ""
+    },
+    {
+        "nroFactura": 10,
+        "fechaFactura": new Date("2022,03,07"),
+        "receptorFactura": {
+            "rut": "75005123-K",
+            "nombre": "Bazar Las Galaxias",
+            "direccion": "Caupolican #753 - Macul",
+            "giro": "Venta de articulos de oficina"
+        },
+        "vendedor": {
+            "codVendedor": 3,
+            "nombreVendedor": "Arturo Contreras"
+        },
+        "productos": [
+            {
+                "numeroPreducto": 17,
+                "descripcion": "Cuadernos College 80 hjs",
+                "cantidad": 15,
+                "valorNeto": 10500,
+                "iva": 1995,
+                "totalProducto": 12495 
+            },
+            {
+                "numeroPreducto": 18,
+                "descripcion": "Carpeta Plastificada",
+                "cantidad": 7,
+                "valorNeto": 5600,
+                "iva": 1064,
+                "totalProducto": 6664
+            },
+            {
+                "numeroPreducto": 6,
+                "descripcion": "Pliegos de cartulina de colores",
+                "cantidad": 100,
+                "valorNeto": 5000,
+                "iva": 950,
+                "totalProducto": 5950
+            }
+        ],
+        "totalNeto": 33595,
+        "iva": 6383,
+        "valorTotal": 39978,
+        "comentarios": ""
+    },
+    {
+        "nroFactura": 11,
+        "fechaFactura": new Date("2022,03,02"),
+        "receptorFactura": {
+            "rut": "78025333-K",
+            "nombre": "Almacen Inmortales",
+            "direccion": "Isla adelaida #5986 - La Cisterna",
+            "giro": "Venta de abarrotes"
+        },
+        "vendedor": {
+            "codVendedor": 1,
+            "nombreVendedor": "Alan Soto"
+        },
+        "productos": [
+            {
+                "numeroPreducto": 19,
+                "descripcion": "Bebida Coca-Cola 1lt",
+                "cantidad": 5,
+                "valorNeto": 4950,
+                "iva": 950,
+                "totalProducto": 5900
+            },
+            {
+                "numeroPreducto": 20,
+                "descripcion": "Bebida Sprite 1lt",
+                "cantidad": 3,
+                "valorNeto": 2970,
+                "iva": 564,
+                "totalProducto": 3534
+            }
+        ],
+        "totalNeto": 7920,
+        "iva": 1505,
+        "valorTotal": 9452,
         "comentarios": ""
     }
 
