@@ -13,11 +13,54 @@
 
 <body>
     <div class="container">
-        <h2>Formulario ingreso de productos</h2><br>
-        <label for="input_codigo_producto" class="form-label">Codgio de producto</label><br>
-        <input type="form-control" id="input_codigo_producto" placeholder="A29292883">
-        <label for="input_codigo_producto" class="form-label">Codgio de producto</label><br>
-        <input type="form-control" id="input_codigo_producto" placeholder="A29292883">        
+        <h2>Formulario Ingreso de productos</h2>
+        <form action="formulario.php" method="post">
+            <div class="row g-3">
+                <div class="col-xs-12 col-sm-6">
+                    <label for="txt_codigo_producto">Codigo de producto</label>
+                    <input type="text" class="form-control" name="txt_codigo_producto" id="txt_codigo_producto"
+                        placeholder="A129292883">
+                    <!---->
+                    <label for="select_producto">Producto</label>
+                    <select class="form-select" name="select_producto" id="select_producto">
+                        <option value="1">Pintura Latex Blanca</option>
+                        <option value="2">Pintura Latex Negra</option>
+                        <option value="3">Pintura Latex Azul</option>
+                        <option value="4">Pintura Latex Roja</option>
+                        <option value="5">Pintura Latex Amarrilla</option>
+                    </select>
+                    <!---->
+                    <label for="txt_pais_procedencia">Pais procedencia</label>
+                    <input type="text" class="form-control" name="txt_pais_procedencia" id="txt_pais_procedencia"
+                        placeholder="Chile">
+                    <!---->
+                    <label for="num_precio">Precio</label>
+                    <input type="number" class="form-control" name="num_precio" id="num_precio" placeholder="1200">
+                    <!---->
+                    <label for="txt_dimensiones">Diemnsiones en cms</label>
+                    <input type="text" class="form-control" name="txt_dimensiones" id="txt_dimensiones"
+                        placeholder="79X30">
+                    <!---->
+                    <label for="num_numero_tienda">Número de tienda</label>
+                    <input type="number" class="form-control" name="num_numero_tienda" id="num_numero_tienda"
+                        placeholder="2">
+                    <!---->
+                    <label for="txt_descripcion">Descripción</label>
+                    <textarea class="form-control" name="txt_descripcion" id="txt_descripcion" cols="10"
+                        rows="5"></textarea>
+                    <!---->
+                    <label for="date_ingreso">Fecha de ingreso</label>
+                    <input type="date" class="form-control" name="date_ingreso" id="date_ingreso">
+                    <br>
+                    <!---->
+                    <div class="col-xs-12">
+                        <input type="submit" class="btn btn-danger" value="Guardar Producto">
+                        <input type="reset" class="btn btn-primary" value="Limpiar">
+                    </div>
+                </div>
+            </div>
+        </form>
+        <br><br>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
