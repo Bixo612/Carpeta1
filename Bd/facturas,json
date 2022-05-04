@@ -386,9 +386,9 @@
                 "totalProducto": 5950
             }
         ],
-        "totalNeto": 33595,
-        "iva": 6383,
-        "valorTotal": 39978,
+        "totalNeto": 21100,
+        "iva": 4009,
+        "valorTotal": 25109,
         "comentarios": ""
     },
     {
@@ -425,6 +425,58 @@
         "totalNeto": 7920,
         "iva": 1505,
         "valorTotal": 9452,
+        "comentarios": ""
+    },
+    {
+        "nroFactura": 12,
+        "fechaFactura": new Date("2022,03,09"),
+        "receptorFactura": {
+            "rut": "75005123-K",
+            "nombre": "Bazar Las Galaxias",
+            "direccion": "Caupolican #753 - Macul",
+            "giro": "Venta de articulos de oficina"
+        },
+        "vendedor": {
+            "codVendedor": 1,
+            "nombreVendedor": "Alan Soto"
+        },
+        "productos": [
+            {
+                "numeroPreducto": 17,
+                "descripcion": "Cuadernos College 80 hjs",
+                "cantidad": 15,
+                "valorNeto": 10500,
+                "iva": 1995,
+                "totalProducto": 12495 
+            },
+            {
+                "numeroPreducto": 18,
+                "descripcion": "Carpeta Plastificada",
+                "cantidad": 7,
+                "valorNeto": 5600,
+                "iva": 1064,
+                "totalProducto": 6664
+            },
+            {
+                "numeroPreducto": 6,
+                "descripcion": "Pliegos de cartulina de colores",
+                "cantidad": 100,
+                "valorNeto": 5000,
+                "iva": 950,
+                "totalProducto": 5950
+            },
+            {
+                "numeroPreducto": 15,
+                "descripcion": "Cola fria",
+                "cantidad": 12,
+                "valorNeto": 4200,
+                "iva": 798,
+                "totalProducto": 4998 
+            }
+        ],
+        "totalNeto": 25300,
+        "iva": 4807,
+        "valorTotal": 31007,
         "comentarios": ""
     }
 
