@@ -251,5 +251,3 @@ def menu():
 # FxSql.mostrarPeliculas()
 
 
-
-
