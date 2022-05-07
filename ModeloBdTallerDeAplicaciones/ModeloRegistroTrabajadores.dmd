@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="ModeloRegistroTrabajadores" id="E2784EF5-802B-1D24-7A67-07A3AB1F875C" version="3.5">
+<createdBy>vicen</createdBy>
+<createdTime>2022-05-07 17:04:52 UTC</createdTime>
+<ownerDesignName>ModeloRegistroTrabajadores</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>E2784EF5-802B-1D24-7A67-07A3AB1F875C</designId>
+</OSDM_Design>

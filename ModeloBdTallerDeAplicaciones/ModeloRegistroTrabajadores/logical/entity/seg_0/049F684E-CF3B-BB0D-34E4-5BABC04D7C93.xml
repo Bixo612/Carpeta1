@@ -1,0 +1,140 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="049F684E-CF3B-BB0D-34E4-5BABC04D7C93" name="cargas">
+<createdBy>vicen</createdBy>
+<createdTime>2022-05-07 17:12:42 UTC</createdTime>
+<ownerDesignName>ModeloRegistroTrabajadores</ownerDesignName>
+<engineerTo>
+<item key="17BCAE0E-790E-AC92-8BB6-64B5A0DBA725" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="rut_carga" id="BE00D0DD-F044-C45E-DF57-68514E1D4CBA">
+<createdBy>vicen</createdBy>
+<createdTime>2022-05-07 17:13:00 UTC</createdTime>
+<ownerDesignName>ModeloRegistroTrabajadores</ownerDesignName>
+<engineerTo>
+<item key="17BCAE0E-790E-AC92-8BB6-64B5A0DBA725" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="primer_nombre" id="BDF07EF2-E096-AEEE-C543-0DCB6B0A5B85">
+<createdBy>vicen</createdBy>
+<createdTime>2022-05-07 17:14:24 UTC</createdTime>
+<ownerDesignName>ModeloRegistroTrabajadores</ownerDesignName>
+<engineerTo>
+<item key="17BCAE0E-790E-AC92-8BB6-64B5A0DBA725" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="segundo_nombre" id="44CC78C2-CC03-1B62-ED23-EB6A0EDA0DD9">
+<createdBy>vicen</createdBy>
+<createdTime>2022-05-07 17:14:53 UTC</createdTime>
+<ownerDesignName>ModeloRegistroTrabajadores</ownerDesignName>
+<engineerTo>
+<item key="17BCAE0E-790E-AC92-8BB6-64B5A0DBA725" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="primer_apellido" id="74DE2597-05BE-5F0F-9C5F-0925843016A2">
+<createdBy>vicen</createdBy>
+<createdTime>2022-05-07 17:14:53 UTC</createdTime>
+<ownerDesignName>ModeloRegistroTrabajadores</ownerDesignName>
+<engineerTo>
+<item key="17BCAE0E-790E-AC92-8BB6-64B5A0DBA725" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="segundo_apellido" id="63F4F89D-70AD-CCD2-FAF7-18532949EF57">
+<createdBy>vicen</createdBy>
+<createdTime>2022-05-07 17:14:54 UTC</createdTime>
+<ownerDesignName>ModeloRegistroTrabajadores</ownerDesignName>
+<engineerTo>
+<item key="17BCAE0E-790E-AC92-8BB6-64B5A0DBA725" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fecha_nacimiento_carga" id="E6CDCE45-6B1C-2D56-3C90-82F8C69C1CB8">
+<createdBy>vicen</createdBy>
+<createdTime>2022-05-07 17:15:30 UTC</createdTime>
+<ownerDesignName>ModeloRegistroTrabajadores</ownerDesignName>
+<engineerTo>
+<item key="17BCAE0E-790E-AC92-8BB6-64B5A0DBA725" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="relacion" id="72849B05-B6BC-40FC-44B3-61183037B293">
+<createdBy>vicen</createdBy>
+<createdTime>2022-05-07 17:40:40 UTC</createdTime>
+<ownerDesignName>ModeloRegistroTrabajadores</ownerDesignName>
+<engineerTo>
+<item key="17BCAE0E-790E-AC92-8BB6-64B5A0DBA725" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="rut_trabajador" id="C3C09E3F-6031-6C66-5EE1-81CBE0258FEA">
+<createdBy>vicen</createdBy>
+<createdTime>2022-05-07 17:42:51 UTC</createdTime>
+<generatorID>90DE05B3-FDE8-F4C5-06CB-2288ECD6B297</generatorID>
+<ownerDesignName>ModeloRegistroTrabajadores</ownerDesignName>
+<engineerTo>
+<item key="17BCAE0E-790E-AC92-8BB6-64B5A0DBA725" value="true"/>
+</engineerTo>
+<referedAttribute>00137424-7B20-ECDE-1562-2CC8A97CAE01</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="C92F0F2D-EDCE-38BA-11C4-FEA24CDF3C94" name="cargas PK">
+<createdBy>vicen</createdBy>
+<createdTime>2022-05-07 17:40:30 UTC</createdTime>
+<ownerDesignName>ModeloRegistroTrabajadores</ownerDesignName>
+<engineerTo>
+<item key="17BCAE0E-790E-AC92-8BB6-64B5A0DBA725" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>BE00D0DD-F044-C45E-DF57-68514E1D4CBA</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
