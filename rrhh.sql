@@ -14,7 +14,8 @@ CREATE TABLE `rrhh`.`trabajadores` (
     `fecha_nacimiento` DATE NOT NULL , 
     `fecha_ingreso` DATE NOT NULL , 
     `sexo` VARCHAR(1)  NOT NULL , 
-    `estado` BOOLEAN NOT NULL , 
+    `estado` BOOLEAN NOT NULL ,
+    `clave` VARCHAR(200) NOT NULL,
     PRIMARY KEY (`rut_trabajador`)) ENGINE = InnoDB;
 --agregar columnas de tablas primaras
 ALTER TABLE `trabajadores` 

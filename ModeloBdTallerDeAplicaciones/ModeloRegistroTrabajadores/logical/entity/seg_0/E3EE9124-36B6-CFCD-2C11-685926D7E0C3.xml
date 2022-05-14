@@ -119,48 +119,6 @@
 <logicalDatatype>LOGDT025</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="id_cargo" id="43CE126B-02C1-FBB5-0F2C-78A597132C53">
-<createdBy>vicen</createdBy>
-<createdTime>2022-05-07 17:49:01 UTC</createdTime>
-<generatorID>B664F0FC-0248-2C73-1A49-97DD113F7B6B</generatorID>
-<ownerDesignName>ModeloRegistroTrabajadores</ownerDesignName>
-<engineerTo>
-<item key="17BCAE0E-790E-AC92-8BB6-64B5A0DBA725" value="true"/>
-</engineerTo>
-<referedAttribute>DE1CBA5B-9887-B828-63C6-5246FCCD2B66</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="id_area" id="0FF6B8EC-E78C-AD26-30B6-60D4A8C24FB6">
-<createdBy>vicen</createdBy>
-<createdTime>2022-05-07 17:51:52 UTC</createdTime>
-<generatorID>A2FD8923-39C2-B8BE-54F3-51F94D84FFBC</generatorID>
-<ownerDesignName>ModeloRegistroTrabajadores</ownerDesignName>
-<engineerTo>
-<item key="17BCAE0E-790E-AC92-8BB6-64B5A0DBA725" value="true"/>
-</engineerTo>
-<referedAttribute>1A6936E3-83DB-DB9F-D61C-A5192D71877E</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="id_departamento" id="4D9D3A02-2228-8EC0-82B6-3552A11B335F">
-<createdBy>vicen</createdBy>
-<createdTime>2022-05-07 17:53:03 UTC</createdTime>
-<generatorID>ED6A9666-B600-C496-CA4E-1C8C6BEA3169</generatorID>
-<ownerDesignName>ModeloRegistroTrabajadores</ownerDesignName>
-<engineerTo>
-<item key="17BCAE0E-790E-AC92-8BB6-64B5A0DBA725" value="true"/>
-</engineerTo>
-<referedAttribute>01659D4A-9DBA-A23B-E03B-CCFC98F7010A</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 <Attribute name="estado" id="B48E85DF-AC65-AC41-B245-1BD83401C542">
 <createdBy>vicen</createdBy>
 <createdTime>2022-05-07 22:48:38 UTC</createdTime>
@@ -170,9 +128,36 @@
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT006</logicalDatatype>
-<dataTypeSize>1</dataTypeSize>
-<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="clave" id="F2294B21-97DD-2CEF-E1D5-01C454148D04">
+<createdBy>vicen</createdBy>
+<createdTime>2022-05-09 14:06:10 UTC</createdTime>
+<ownerDesignName>ModeloRegistroTrabajadores</ownerDesignName>
+<engineerTo>
+<item key="17BCAE0E-790E-AC92-8BB6-64B5A0DBA725" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250</dataTypeSize>
+<ownDataTypeParameters>250,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_cargo" id="1B48AA1A-D4F0-7DA1-3E1B-C91A897C87BE">
+<createdBy>vicen</createdBy>
+<createdTime>2022-05-12 00:20:26 UTC</createdTime>
+<generatorID>3E7171CF-A28C-4289-1FF3-F03A11436CEF</generatorID>
+<ownerDesignName>ModeloRegistroTrabajadores</ownerDesignName>
+<engineerTo>
+<item key="17BCAE0E-790E-AC92-8BB6-64B5A0DBA725" value="true"/>
+</engineerTo>
+<referedAttribute>DE1CBA5B-9887-B828-63C6-5246FCCD2B66</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">

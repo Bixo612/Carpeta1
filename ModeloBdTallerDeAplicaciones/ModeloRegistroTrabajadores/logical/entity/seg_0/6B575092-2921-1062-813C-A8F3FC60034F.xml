@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="3D7F9FCB-A3BA-36F3-34EE-F13686D0E95E" name="areas">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="6B575092-2921-1062-813C-A8F3FC60034F" name="Perfiles">
 <createdBy>vicen</createdBy>
-<createdTime>2022-05-07 17:50:51 UTC</createdTime>
+<createdTime>2022-05-12 00:21:02 UTC</createdTime>
 <ownerDesignName>ModeloRegistroTrabajadores</ownerDesignName>
 <engineerTo>
 <item key="17BCAE0E-790E-AC92-8BB6-64B5A0DBA725" value="true"/>
@@ -15,21 +15,9 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="id_area" id="1A6936E3-83DB-DB9F-D61C-A5192D71877E">
+<Attribute name="clave" id="62783EE4-9500-70A5-EA34-AB9809CEBA78">
 <createdBy>vicen</createdBy>
-<createdTime>2022-05-07 17:51:00 UTC</createdTime>
-<ownerDesignName>ModeloRegistroTrabajadores</ownerDesignName>
-<engineerTo>
-<item key="17BCAE0E-790E-AC92-8BB6-64B5A0DBA725" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="nombre_area" id="8EA560F2-53C4-D590-9EE9-C4DE800AFC9E">
-<createdBy>vicen</createdBy>
-<createdTime>2022-05-07 17:51:16 UTC</createdTime>
+<createdTime>2022-05-12 00:21:35 UTC</createdTime>
 <ownerDesignName>ModeloRegistroTrabajadores</ownerDesignName>
 <engineerTo>
 <item key="17BCAE0E-790E-AC92-8BB6-64B5A0DBA725" value="true"/>
@@ -37,35 +25,61 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>50</dataTypeSize>
-<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="id_departamento" id="76AAA715-954F-5BC7-9851-26469CBEDBE8">
+<Attribute name="rol" id="1F9AE332-17DE-B022-3279-6D44C3C5B53F">
 <createdBy>vicen</createdBy>
-<createdTime>2022-05-12 00:20:08 UTC</createdTime>
-<generatorID>1E10DBA8-9F76-746C-DCE8-E1679EDD0038</generatorID>
+<createdTime>2022-05-12 00:21:55 UTC</createdTime>
 <ownerDesignName>ModeloRegistroTrabajadores</ownerDesignName>
 <engineerTo>
 <item key="17BCAE0E-790E-AC92-8BB6-64B5A0DBA725" value="true"/>
 </engineerTo>
-<referedAttribute>01659D4A-9DBA-A23B-E03B-CCFC98F7010A</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id" id="8EB961DA-0AFF-E5D1-3E2C-C9B34BAAB4BC">
+<createdBy>vicen</createdBy>
+<createdTime>2022-05-12 00:22:13 UTC</createdTime>
+<ownerDesignName>ModeloRegistroTrabajadores</ownerDesignName>
+<engineerTo>
+<item key="17BCAE0E-790E-AC92-8BB6-64B5A0DBA725" value="true"/>
+</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="rut_trabajador" id="1088D009-3A11-F9B7-8930-D9EF0A9D67F2">
+<createdBy>vicen</createdBy>
+<createdTime>2022-05-12 00:25:03 UTC</createdTime>
+<generatorID>25FDAF37-5425-8146-1224-5BC6CD91DC9D</generatorID>
+<ownerDesignName>ModeloRegistroTrabajadores</ownerDesignName>
+<engineerTo>
+<item key="17BCAE0E-790E-AC92-8BB6-64B5A0DBA725" value="true"/>
+</engineerTo>
+<referedAttribute>00137424-7B20-ECDE-1562-2CC8A97CAE01</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="7398AEBE-BB4E-3741-3C80-9AA925137870" name="areas PK">
+<identifier id="04A35D7F-9F17-B20B-3038-084A67676B7E" name="Perfiles PK">
 <createdBy>vicen</createdBy>
-<createdTime>2022-05-07 17:51:14 UTC</createdTime>
+<createdTime>2022-05-12 00:24:57 UTC</createdTime>
 <ownerDesignName>ModeloRegistroTrabajadores</ownerDesignName>
 <engineerTo>
 <item key="17BCAE0E-790E-AC92-8BB6-64B5A0DBA725" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>1A6936E3-83DB-DB9F-D61C-A5192D71877E</attributeRef>
+<attributeRef>8EB961DA-0AFF-E5D1-3E2C-C9B34BAAB4BC</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>
