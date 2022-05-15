@@ -40,20 +40,6 @@
 <dataTypeSize>50</dataTypeSize>
 <ownDataTypeParameters>50,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="id_area" id="B663EFC0-E2F1-103C-B600-7CD44EEF95B4">
-<createdBy>vicen</createdBy>
-<createdTime>2022-05-12 00:20:20 UTC</createdTime>
-<generatorID>2E3EB475-2F0F-2838-A30F-61A375CBCCAE</generatorID>
-<ownerDesignName>ModeloRegistroTrabajadores</ownerDesignName>
-<engineerTo>
-<item key="17BCAE0E-790E-AC92-8BB6-64B5A0DBA725" value="true"/>
-</engineerTo>
-<referedAttribute>1A6936E3-83DB-DB9F-D61C-A5192D71877E</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="A5DCBDA3-BE21-23DF-3B8D-82A2C798B300" name="cargos PK">

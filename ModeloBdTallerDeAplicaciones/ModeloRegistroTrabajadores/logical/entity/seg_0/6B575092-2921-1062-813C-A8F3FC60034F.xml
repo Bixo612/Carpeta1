@@ -53,21 +53,6 @@
 <logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="rut_trabajador" id="1088D009-3A11-F9B7-8930-D9EF0A9D67F2">
-<createdBy>vicen</createdBy>
-<createdTime>2022-05-12 00:25:03 UTC</createdTime>
-<generatorID>25FDAF37-5425-8146-1224-5BC6CD91DC9D</generatorID>
-<ownerDesignName>ModeloRegistroTrabajadores</ownerDesignName>
-<engineerTo>
-<item key="17BCAE0E-790E-AC92-8BB6-64B5A0DBA725" value="true"/>
-</engineerTo>
-<referedAttribute>00137424-7B20-ECDE-1562-2CC8A97CAE01</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>10</dataTypeSize>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="04A35D7F-9F17-B20B-3038-084A67676B7E" name="Perfiles PK">

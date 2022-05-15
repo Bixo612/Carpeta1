@@ -159,6 +159,34 @@
 <logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="id_departamento" id="4583FA57-2732-5E79-71FF-77BC6BB725CC">
+<createdBy>Usuario</createdBy>
+<createdTime>2022-05-15 21:04:55 UTC</createdTime>
+<generatorID>CEC04CE0-775C-96E5-20F4-2D2AF0AFFE08</generatorID>
+<ownerDesignName>ModeloRegistroTrabajadores</ownerDesignName>
+<engineerTo>
+<item key="17BCAE0E-790E-AC92-8BB6-64B5A0DBA725" value="true"/>
+</engineerTo>
+<referedAttribute>01659D4A-9DBA-A23B-E03B-CCFC98F7010A</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_area" id="CE0DEC37-22E7-2EEC-6D0C-9B795DC113F5">
+<createdBy>Usuario</createdBy>
+<createdTime>2022-05-15 21:05:02 UTC</createdTime>
+<generatorID>3FA68D0B-634B-E84E-21A7-6BC15B54838A</generatorID>
+<ownerDesignName>ModeloRegistroTrabajadores</ownerDesignName>
+<engineerTo>
+<item key="17BCAE0E-790E-AC92-8BB6-64B5A0DBA725" value="true"/>
+</engineerTo>
+<referedAttribute>1A6936E3-83DB-DB9F-D61C-A5192D71877E</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="81563B02-9A02-5D1E-AD7D-6E06D6208D1F" name="trabajador PK">

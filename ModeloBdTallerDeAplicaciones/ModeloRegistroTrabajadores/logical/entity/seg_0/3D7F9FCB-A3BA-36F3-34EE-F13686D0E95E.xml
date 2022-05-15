@@ -40,20 +40,6 @@
 <dataTypeSize>50</dataTypeSize>
 <ownDataTypeParameters>50,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="id_departamento" id="76AAA715-954F-5BC7-9851-26469CBEDBE8">
-<createdBy>vicen</createdBy>
-<createdTime>2022-05-12 00:20:08 UTC</createdTime>
-<generatorID>1E10DBA8-9F76-746C-DCE8-E1679EDD0038</generatorID>
-<ownerDesignName>ModeloRegistroTrabajadores</ownerDesignName>
-<engineerTo>
-<item key="17BCAE0E-790E-AC92-8BB6-64B5A0DBA725" value="true"/>
-</engineerTo>
-<referedAttribute>01659D4A-9DBA-A23B-E03B-CCFC98F7010A</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="7398AEBE-BB4E-3741-3C80-9AA925137870" name="areas PK">
