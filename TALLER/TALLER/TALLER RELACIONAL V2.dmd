@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="TALLER RELACIONAL V2" id="4CEFF17A-CB1A-3679-1487-7F5741833DA1" version="3.5">
+<createdBy>negid</createdBy>
+<createdTime>2022-05-16 05:18:45 UTC</createdTime>
+<ownerDesignName>TALLER RELACIONAL V2</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>4CEFF17A-CB1A-3679-1487-7F5741833DA1</designId>
+</OSDM_Design>

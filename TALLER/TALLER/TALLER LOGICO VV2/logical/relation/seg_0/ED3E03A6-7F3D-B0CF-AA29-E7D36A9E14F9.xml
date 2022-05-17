@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_8" directorySegmentName="seg_0" id="ED3E03A6-7F3D-B0CF-AA29-E7D36A9E14F9">
+<createdBy>negid</createdBy>
+<createdTime>2022-05-16 05:46:02 UTC</createdTime>
+<ownerDesignName>TALLER LOGICO VV2</ownerDesignName>
+<engineerTo>
+<item key="4621D641-797E-62A2-DB06-911834756D2C" value="true"/>
+<item key="B0C55379-3B3A-5865-239A-808FC2F8CBFB" value="true"/>
+</engineerTo>
+<sourcePk>20F8A5C1-4583-90A6-9054-EA5B9ABE481A</sourcePk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>D83177FB-4DBB-7A8A-C6C4-8FC8DA6D4904</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>E5A0B2EE-C150-7C38-272C-916619C54D2A</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

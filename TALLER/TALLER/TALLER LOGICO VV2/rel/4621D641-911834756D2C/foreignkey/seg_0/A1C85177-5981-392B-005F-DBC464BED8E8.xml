@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="A1C85177-5981-392B-005F-DBC464BED8E8" containerWithKeyObject="83BC44B2-81BA-08FE-112E-0FA705304832" localFKIndex="07A79938-8F00-153D-0AA6-45555A1F8EB2" name="trabajadores_personas_FK">
+<createdBy>negid</createdBy>
+<createdTime>2022-05-16 05:53:18 UTC</createdTime>
+<generatorID>E7633C2E-70A1-989D-B41E-9FC91F1ACBA1</generatorID>
+<ownerDesignName>TALLER LOGICO VV2</ownerDesignName>
+<referredTableLongName>personas</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>A5B4C156-86FA-1E77-ADAC-247145B99E70</referredTableID>
+<keyObject>8B8DC4BC-948C-80D9-1C4E-3751E06CFC86</keyObject>
+<referredKeyID>8B8DC4BC-948C-80D9-1C4E-3751E06CFC86</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>rut</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

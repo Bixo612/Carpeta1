@@ -1,0 +1,94 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="ABAC4D26-0740-18C9-1EC3-7E812277FEC2" name="cargas_familiares">
+<createdBy>negid</createdBy>
+<createdTime>2022-05-16 05:38:00 UTC</createdTime>
+<ownerDesignName>TALLER LOGICO VV2</ownerDesignName>
+<engineerTo>
+<item key="4621D641-797E-62A2-DB06-911834756D2C" value="true"/>
+<item key="B0C55379-3B3A-5865-239A-808FC2F8CBFB" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<shortName>cf</shortName>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_carga" id="87208C95-81BB-14C2-982B-770723260BCB">
+<createdBy>negid</createdBy>
+<createdTime>2022-05-16 05:38:20 UTC</createdTime>
+<ownerDesignName>TALLER LOGICO VV2</ownerDesignName>
+<engineerTo>
+<item key="4621D641-797E-62A2-DB06-911834756D2C" value="true"/>
+<item key="B0C55379-3B3A-5865-239A-808FC2F8CBFB" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="parentesco" id="7F8CE1BD-00D8-2ADA-39BD-97C0AD34F5EF">
+<createdBy>negid</createdBy>
+<createdTime>2022-05-16 05:38:38 UTC</createdTime>
+<ownerDesignName>TALLER LOGICO VV2</ownerDesignName>
+<engineerTo>
+<item key="4621D641-797E-62A2-DB06-911834756D2C" value="true"/>
+<item key="B0C55379-3B3A-5865-239A-808FC2F8CBFB" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="sexo" id="261749D6-EC0F-87B7-8018-6670D767EAC4">
+<createdBy>negid</createdBy>
+<createdTime>2022-05-16 05:39:03 UTC</createdTime>
+<ownerDesignName>TALLER LOGICO VV2</ownerDesignName>
+<engineerTo>
+<item key="4621D641-797E-62A2-DB06-911834756D2C" value="true"/>
+<item key="B0C55379-3B3A-5865-239A-808FC2F8CBFB" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>12</dataTypeSize>
+<ownDataTypeParameters>12,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="rut" id="64C98AC0-42FD-030B-728D-320A438659B6">
+<createdBy>negid</createdBy>
+<createdTime>2022-05-16 05:45:00 UTC</createdTime>
+<generatorID>FF2F5D35-4BAB-1028-924F-8BE4CC66EE4D</generatorID>
+<ownerDesignName>TALLER LOGICO VV2</ownerDesignName>
+<engineerTo>
+<item key="4621D641-797E-62A2-DB06-911834756D2C" value="true"/>
+<item key="B0C55379-3B3A-5865-239A-808FC2F8CBFB" value="true"/>
+</engineerTo>
+<referedAttribute>49A38E56-E0F8-CE68-431F-A76768ACE752</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="E0944947-222E-C4D0-DDFB-BFC466563D6D" name="cargas_familiares PK">
+<createdBy>negid</createdBy>
+<createdTime>2022-05-16 05:38:27 UTC</createdTime>
+<ownerDesignName>TALLER LOGICO VV2</ownerDesignName>
+<engineerTo>
+<item key="4621D641-797E-62A2-DB06-911834756D2C" value="true"/>
+<item key="B0C55379-3B3A-5865-239A-808FC2F8CBFB" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>87208C95-81BB-14C2-982B-770723260BCB</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

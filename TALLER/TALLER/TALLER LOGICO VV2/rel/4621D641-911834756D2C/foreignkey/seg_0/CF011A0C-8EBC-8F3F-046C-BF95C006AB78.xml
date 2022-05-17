@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="CF011A0C-8EBC-8F3F-046C-BF95C006AB78" containerWithKeyObject="83BC44B2-81BA-08FE-112E-0FA705304832" localFKIndex="2F30C7B8-F57B-B03B-DEA0-CDE2B93D5A1B" name="trabajadores_dep_area_FK">
+<createdBy>negid</createdBy>
+<createdTime>2022-05-16 05:53:18 UTC</createdTime>
+<generatorID>DE05BACF-83DD-40BF-D82F-A8DE6CDE1EBD</generatorID>
+<ownerDesignName>TALLER LOGICO VV2</ownerDesignName>
+<referredTableLongName>dep_area</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>8F359258-2528-45AF-9246-78898263BC1F</referredTableID>
+<keyObject>E35F72E6-FA7C-4F0A-F789-DBC27E64AEFA</keyObject>
+<referredKeyID>E35F72E6-FA7C-4F0A-F789-DBC27E64AEFA</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_dep_area</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

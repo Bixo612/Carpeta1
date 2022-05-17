@@ -1,0 +1,278 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="83BC44B2-81BA-08FE-112E-0FA705304832" name="trabajadores">
+<createdBy>negid</createdBy>
+<createdTime>2022-05-16 05:53:18 UTC</createdTime>
+<generatorID>B23CAD6D-D61B-32E8-EC26-35145A090CAD</generatorID>
+<ownerDesignName>TALLER LOGICO VV2</ownerDesignName>
+<abbreviation>t</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_trabajador" id="B9321F58-A2C7-9936-7C5A-BECFF67CF8A6">
+<createdBy>negid</createdBy>
+<createdTime>2022-05-16 05:53:18 UTC</createdTime>
+<generatorID>9310B9C9-813E-C058-2B54-E1A3E82A9241</generatorID>
+<ownerDesignName>TALLER LOGICO VV2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="sexo" id="5F063DC9-CD73-08A1-C948-2CE17447B844">
+<createdBy>negid</createdBy>
+<createdTime>2022-05-16 05:53:18 UTC</createdTime>
+<commentInRDBMS><![CDATA[					]]></commentInRDBMS>
+<generatorID>6F25EE21-C4E7-35BD-6CFD-D342B3FAD6B7</generatorID>
+<ownerDesignName>TALLER LOGICO VV2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="direccion" id="20B58667-ED8B-5E53-223D-9EABF7E8CEFE">
+<createdBy>negid</createdBy>
+<createdTime>2022-05-16 05:53:18 UTC</createdTime>
+<generatorID>A2B6A445-04E0-5191-E6E5-9D005E5694B8</generatorID>
+<ownerDesignName>TALLER LOGICO VV2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150</dataTypeSize>
+<ownDataTypeParameters>150,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="telefono_trabajador" id="BC4F5B41-24A5-7F8F-34C9-49012AB6856F">
+<createdBy>negid</createdBy>
+<createdTime>2022-05-16 05:53:18 UTC</createdTime>
+<generatorID>52B943D9-5AEB-65EA-1F93-3D093B4C8D12</generatorID>
+<ownerDesignName>TALLER LOGICO VV2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cargo" id="986FADE8-8C77-C143-2E28-89CB5EBB3B8F">
+<createdBy>negid</createdBy>
+<createdTime>2022-05-16 05:53:18 UTC</createdTime>
+<generatorID>FD9941BF-E7D8-D910-F3F5-E2E447BB7E2E</generatorID>
+<ownerDesignName>TALLER LOGICO VV2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>90</dataTypeSize>
+<ownDataTypeParameters>90,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="us" id="1D5474A8-D769-B0AE-499F-5F2CC258EEE3">
+<createdBy>negid</createdBy>
+<createdTime>2022-05-16 05:53:18 UTC</createdTime>
+<generatorID>9C17AF54-3E3A-F375-C3E6-06C3E4A25DF2</generatorID>
+<ownerDesignName>TALLER LOGICO VV2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="pw" id="8B0BA5C6-C4E1-C355-0C41-A1E005872480">
+<createdBy>negid</createdBy>
+<createdTime>2022-05-16 05:53:18 UTC</createdTime>
+<generatorID>4C38A87C-9F4D-646F-F717-E938CB41609C</generatorID>
+<ownerDesignName>TALLER LOGICO VV2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150</dataTypeSize>
+<ownDataTypeParameters>150,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="estado_actividad" id="79DC458D-319D-4FDB-BB01-721AE35B7AFE">
+<createdBy>negid</createdBy>
+<createdTime>2022-05-16 05:53:18 UTC</createdTime>
+<generatorID>5B3DA6C3-691A-C2DB-FC86-03B519AA0410</generatorID>
+<ownerDesignName>TALLER LOGICO VV2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="rol_trabajador" id="7A295293-425A-EE6D-A16B-146E925B000E">
+<createdBy>negid</createdBy>
+<createdTime>2022-05-16 05:53:18 UTC</createdTime>
+<generatorID>559451CD-004A-C2DB-E415-1AAE6436003D</generatorID>
+<ownerDesignName>TALLER LOGICO VV2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>45</dataTypeSize>
+<ownDataTypeParameters>45,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fecha_nacimiento" id="A0D6B52F-1699-1673-767C-1FF21E24B9FE">
+<createdBy>negid</createdBy>
+<createdTime>2022-05-16 05:53:18 UTC</createdTime>
+<generatorID>99AA7AF1-F919-713D-DFED-FCFC989084DE</generatorID>
+<ownerDesignName>TALLER LOGICO VV2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fecha_ingreso" id="322E5CD3-7B8C-64A1-0B31-34362B9DA3FD">
+<createdBy>negid</createdBy>
+<createdTime>2022-05-16 05:53:18 UTC</createdTime>
+<generatorID>97EE81BC-4EF0-6564-2AA0-39BCE84ABB77</generatorID>
+<ownerDesignName>TALLER LOGICO VV2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fecha_inactividad" id="53550683-AF50-8B9A-1BD3-3E1932B636C5">
+<createdBy>negid</createdBy>
+<createdTime>2022-05-16 05:53:18 UTC</createdTime>
+<generatorID>24C3F814-BC36-9E55-1F7A-D86EF6DAD23A</generatorID>
+<ownerDesignName>TALLER LOGICO VV2</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="personas_rut" id="6A8456B1-1F44-F99D-D9C4-2BC521E7A121">
+<createdBy>negid</createdBy>
+<createdTime>2022-05-16 05:53:18 UTC</createdTime>
+<generatorID>FF32A860-BEB8-E5F8-18D2-74D9CEAB1E30</generatorID>
+<ownerDesignName>TALLER LOGICO VV2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A1C85177-5981-392B-005F-DBC464BED8E8" referredColumn="D47A446A-1938-B997-BE3A-28D0B4EEB4CD"/>
+</associations>
+</Column>
+<Column name="cargas_familiares_id_carga" id="298C2AE2-8435-0C3E-2240-9590710B27A7">
+<createdBy>negid</createdBy>
+<createdTime>2022-05-16 05:53:18 UTC</createdTime>
+<generatorID>98229796-98C8-2722-9967-955511AD54F8</generatorID>
+<ownerDesignName>TALLER LOGICO VV2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="15FCA3D1-7BE4-EF7C-F556-F924F090C614" referredColumn="2807B0E0-E0AF-1A16-BDDF-7E19E86167E2"/>
+</associations>
+</Column>
+<Column name="contactos_sos_id_contacto" id="DBF8F1C6-4A61-7E47-11CC-6508FD98CFF4">
+<createdBy>negid</createdBy>
+<createdTime>2022-05-16 05:53:18 UTC</createdTime>
+<generatorID>28A6C35D-8BBA-8110-0A1F-934B8F036B13</generatorID>
+<ownerDesignName>TALLER LOGICO VV2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="FFABD6E9-77C5-B184-2F52-F6EA62E0C192" referredColumn="39A8A7CE-4CAD-699A-E997-2F800273159E"/>
+</associations>
+</Column>
+<Column name="dep_area_id_dep_area" id="E2C51A84-4150-EE43-AB9B-474BBAC28A16">
+<createdBy>negid</createdBy>
+<createdTime>2022-05-16 05:53:18 UTC</createdTime>
+<generatorID>0DEAE66E-7C31-677B-A4BA-42725CEF214B</generatorID>
+<ownerDesignName>TALLER LOGICO VV2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="CF011A0C-8EBC-8F3F-046C-BF95C006AB78" referredColumn="EB592A6E-4908-E979-A2BB-1269ADEAC14D"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="9E286DD2-367D-A29D-05C7-511972CE7205" name="trabajadores_PK">
+<createdBy>negid</createdBy>
+<createdTime>2022-05-16 05:53:18 UTC</createdTime>
+<generatorID>34C612DB-C9BD-4502-5304-DF43F2433B22</generatorID>
+<ownerDesignName>TALLER LOGICO VV2</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B9321F58-A2C7-9936-7C5A-BECFF67CF8A6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="07A79938-8F00-153D-0AA6-45555A1F8EB2" name="trabajadores_personas_FK">
+<createdBy>negid</createdBy>
+<createdTime>2022-05-16 05:53:18 UTC</createdTime>
+<generatorID>E7633C2E-70A1-989D-B41E-9FC91F1ACBA1</generatorID>
+<ownerDesignName>TALLER LOGICO VV2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6A8456B1-1F44-F99D-D9C4-2BC521E7A121"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="71EC6987-E385-DD9D-C698-3A08068565EC" name="trabajadores_cargas_familiares_FK">
+<createdBy>negid</createdBy>
+<createdTime>2022-05-16 05:53:18 UTC</createdTime>
+<generatorID>F7C34BB0-63BE-2742-A8EA-78EF73C55060</generatorID>
+<ownerDesignName>TALLER LOGICO VV2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="298C2AE2-8435-0C3E-2240-9590710B27A7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7F222F3F-22FB-1321-D83F-57A05B808B55" name="trabajadores_contactos_sos_FK">
+<createdBy>negid</createdBy>
+<createdTime>2022-05-16 05:53:18 UTC</createdTime>
+<generatorID>23DDAD80-CF85-F2F7-0863-60B8967CD605</generatorID>
+<ownerDesignName>TALLER LOGICO VV2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DBF8F1C6-4A61-7E47-11CC-6508FD98CFF4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2F30C7B8-F57B-B03B-DEA0-CDE2B93D5A1B" name="trabajadores_dep_area_FK">
+<createdBy>negid</createdBy>
+<createdTime>2022-05-16 05:53:18 UTC</createdTime>
+<generatorID>DE05BACF-83DD-40BF-D82F-A8DE6CDE1EBD</generatorID>
+<ownerDesignName>TALLER LOGICO VV2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E2C51A84-4150-EE43-AB9B-474BBAC28A16"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

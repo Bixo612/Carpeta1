@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="FFABD6E9-77C5-B184-2F52-F6EA62E0C192" containerWithKeyObject="83BC44B2-81BA-08FE-112E-0FA705304832" localFKIndex="7F222F3F-22FB-1321-D83F-57A05B808B55" name="trabajadores_contactos_sos_FK">
+<createdBy>negid</createdBy>
+<createdTime>2022-05-16 05:53:18 UTC</createdTime>
+<generatorID>23DDAD80-CF85-F2F7-0863-60B8967CD605</generatorID>
+<ownerDesignName>TALLER LOGICO VV2</ownerDesignName>
+<referredTableLongName>contactos_sos</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>AC1F31F1-2FBF-BD8C-1E95-A4ADFD14A741</referredTableID>
+<keyObject>66BB594A-4EF0-4B23-8769-718BCA6BF38C</keyObject>
+<referredKeyID>66BB594A-4EF0-4B23-8769-718BCA6BF38C</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_contacto</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

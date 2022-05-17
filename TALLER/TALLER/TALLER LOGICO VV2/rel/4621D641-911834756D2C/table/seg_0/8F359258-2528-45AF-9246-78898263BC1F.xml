@@ -1,0 +1,63 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="8F359258-2528-45AF-9246-78898263BC1F" name="dep_area">
+<createdBy>negid</createdBy>
+<createdTime>2022-05-16 05:53:18 UTC</createdTime>
+<generatorID>9E746875-D448-D6BB-8532-045566F8E43D</generatorID>
+<ownerDesignName>TALLER LOGICO VV2</ownerDesignName>
+<abbreviation>da</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_dep_area" id="EB592A6E-4908-E979-A2BB-1269ADEAC14D">
+<createdBy>negid</createdBy>
+<createdTime>2022-05-16 05:53:18 UTC</createdTime>
+<generatorID>0C58C852-9BB3-65A7-D480-6DD128268C46</generatorID>
+<ownerDesignName>TALLER LOGICO VV2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nombre_depto" id="FFB260BA-BB8C-095A-6A60-6511796D4FE7">
+<createdBy>negid</createdBy>
+<createdTime>2022-05-16 05:53:18 UTC</createdTime>
+<generatorID>09254C10-02BE-3C4C-5551-12A51E6FF605</generatorID>
+<ownerDesignName>TALLER LOGICO VV2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>90</dataTypeSize>
+<ownDataTypeParameters>90,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nombre_area" id="3C043D1E-8A38-8DDB-A124-1468FD8E2FB5">
+<createdBy>negid</createdBy>
+<createdTime>2022-05-16 05:53:18 UTC</createdTime>
+<generatorID>9FF4879E-435D-63AB-C364-7B9AD7B290F1</generatorID>
+<ownerDesignName>TALLER LOGICO VV2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>90</dataTypeSize>
+<ownDataTypeParameters>90,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E35F72E6-FA7C-4F0A-F789-DBC27E64AEFA" name="dep_area_PK">
+<createdBy>negid</createdBy>
+<createdTime>2022-05-16 05:53:18 UTC</createdTime>
+<generatorID>127E8000-C473-595D-50AB-778D789BC97D</generatorID>
+<ownerDesignName>TALLER LOGICO VV2</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EB592A6E-4908-E979-A2BB-1269ADEAC14D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

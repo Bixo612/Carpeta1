@@ -1,0 +1,108 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="D83177FB-4DBB-7A8A-C6C4-8FC8DA6D4904" name="personas ">
+<createdBy>negid</createdBy>
+<createdTime>2022-05-16 05:19:39 UTC</createdTime>
+<ownerDesignName>TALLER LOGICO VV2</ownerDesignName>
+<engineerTo>
+<item key="4621D641-797E-62A2-DB06-911834756D2C" value="true"/>
+<item key="B0C55379-3B3A-5865-239A-808FC2F8CBFB" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<shortName>p</shortName>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="rut" id="49A38E56-E0F8-CE68-431F-A76768ACE752">
+<createdBy>negid</createdBy>
+<createdTime>2022-05-16 05:20:28 UTC</createdTime>
+<ownerDesignName>TALLER LOGICO VV2</ownerDesignName>
+<engineerTo>
+<item key="4621D641-797E-62A2-DB06-911834756D2C" value="true"/>
+<item key="B0C55379-3B3A-5865-239A-808FC2F8CBFB" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="primer_nombre" id="2C8B4EEC-2A81-EDDF-8F38-E23720DC40E2">
+<createdBy>negid</createdBy>
+<createdTime>2022-05-16 05:20:55 UTC</createdTime>
+<ownerDesignName>TALLER LOGICO VV2</ownerDesignName>
+<engineerTo>
+<item key="4621D641-797E-62A2-DB06-911834756D2C" value="true"/>
+<item key="B0C55379-3B3A-5865-239A-808FC2F8CBFB" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="segundo_nombre" id="B00DEEF4-781D-549D-719F-39C1DAD5CADF">
+<createdBy>negid</createdBy>
+<createdTime>2022-05-16 05:21:20 UTC</createdTime>
+<ownerDesignName>TALLER LOGICO VV2</ownerDesignName>
+<engineerTo>
+<item key="4621D641-797E-62A2-DB06-911834756D2C" value="true"/>
+<item key="B0C55379-3B3A-5865-239A-808FC2F8CBFB" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="primer_apellido" id="72649790-B683-8038-8DF0-06480F18E8C8">
+<createdBy>negid</createdBy>
+<createdTime>2022-05-16 05:21:47 UTC</createdTime>
+<ownerDesignName>TALLER LOGICO VV2</ownerDesignName>
+<engineerTo>
+<item key="4621D641-797E-62A2-DB06-911834756D2C" value="true"/>
+<item key="B0C55379-3B3A-5865-239A-808FC2F8CBFB" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="segundo_apellido" id="6874C469-C8EA-A480-1A2D-F44E700C0C55">
+<createdBy>negid</createdBy>
+<createdTime>2022-05-16 05:22:09 UTC</createdTime>
+<ownerDesignName>TALLER LOGICO VV2</ownerDesignName>
+<engineerTo>
+<item key="4621D641-797E-62A2-DB06-911834756D2C" value="true"/>
+<item key="B0C55379-3B3A-5865-239A-808FC2F8CBFB" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="20F8A5C1-4583-90A6-9054-EA5B9ABE481A" name="personas PK">
+<createdBy>negid</createdBy>
+<createdTime>2022-05-16 05:20:33 UTC</createdTime>
+<ownerDesignName>TALLER LOGICO VV2</ownerDesignName>
+<engineerTo>
+<item key="4621D641-797E-62A2-DB06-911834756D2C" value="true"/>
+<item key="B0C55379-3B3A-5865-239A-808FC2F8CBFB" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>49A38E56-E0F8-CE68-431F-A76768ACE752</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
