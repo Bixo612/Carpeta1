@@ -40,25 +40,41 @@
     <div class="container">
         <h2>Agenda tu hora</h2>
         <form action="#" method="post" class="row g-3">
-            <label for="txt_nombre">Nombre completo</label>
-            <input type="text" class="form-control" name="txt_nombre" id="txt_nombre">
-            <label for="txt_correo">Correo electronico</label>
-            <input type="email" class="form-control" name="txt_correo" id="txt_correo"
-                placeholder="sucorreo@dominio.com">
-            <label for="txt_telefono">Telefono</label>
-            <input type="text" class="form-control" name="txt_telefono" id="txt_telefono" placeholder="+569 1234 4567">
-            <label for="txt_patente">Patente</label>
-            <input type="text" class="form-control" name="txt_patente" id="txt_patente" placeholder="AB-12-34">
-            <div class="row">
-                <div class="col">
-                    <label for="date_dia_solicitado">Dia</label>
-                    <input type="date" class="form-control" name="date_dia_solicitado" id="date_dia_solicitado">
-                </div>
-                <div class="col">
-                    <label for="date_hora_solicitada">Dia</label>
-                    <input type="time" class="form-control" name="date_hora_solicitada" id="date_hora_solicitada">
-                </div>
-            </div>
+			<div class="col-6">
+				<label for="txt_nombre">Nombre completo</label>
+				<input type="text" class="form-control" name="txt_nombre" id="txt_nombre">
+				<!---->
+				<label for="txt_correo">Correo electronico</label>
+				<input type="email" class="form-control" name="txt_correo" id="txt_correo"
+					placeholder="sucorreo@dominio.com">
+				<!---->
+				<label for="txt_telefono">Telefono</label>
+				<input type="text" class="form-control" name="txt_telefono" id="txt_telefono" placeholder="+569 1234 4567">
+				<!---->
+				<label for="txt_patente">Patente</label>
+				<input type="text" class="form-control" name="txt_patente" id="txt_patente" placeholder="AB-12-34">
+				<!---->
+				<div class="row">
+					<div class="col">
+						<label for="date_dia_solicitado">Dia</label>
+						<input type="date" class="form-control" name="date_dia_solicitado" id="date_dia_solicitado">
+					</div>
+					<!---->
+					<div class="col">
+						<label for="date_hora_solicitada">Dia</label>
+						<input type="time" class="form-control" name="date_hora_solicitada" id="date_hora_solicitada">
+					</div>
+				</div>
+				<!---->
+				<label for="select_tipo">Tipo</label>
+                    <select class="form-select" name="select_tipo" id="select_tipo">
+                        <option selected disabled value="0">Selecione tipo</option>
+                        <option value="1">Sedan</option>
+                        <option value="2">Compacto</option>
+                        <option value="3">Suv/Pick Up</option>                        
+                    </select>
+				
+			</div>
     </div>
     </form>
     <hr><br>
