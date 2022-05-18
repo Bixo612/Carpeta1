@@ -21,6 +21,13 @@
         "color":"Rojo"
     },
     {
+        "marca": "Chevrolet",
+        "modelo": "El Camino SS",
+        "anio": 1970,
+        "patente": "FT9042",
+        "color":"Negro"
+    },
+    {
         "marca": "Dodge",
         "modelo": "Dart",
         "anio": 1970,
