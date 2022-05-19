@@ -39,31 +39,34 @@
     <!--Fin nav-->
     <div class="container">
         <h2>Agenda tu hora</h2>
-        <form action="#" method="post" class="row g-3">
-            <div class="col-6">
+        <form action="formulario.php" method="post" class="row g-3">
+            <div class="col-sm-12 col-md-6">
                 <label for="txt_nombre">Nombre completo</label>
-                <input type="text" class="form-control" name="txt_nombre" id="txt_nombre">
+                <input type="text" class="form-control" name="txt_nombre" id="txt_nombre" required>
                 <!---->
                 <label for="txt_correo">Correo electronico</label>
-                <input type="email" class="form-control" name="txt_correo" id="txt_correo"
-                    placeholder="sucorreo@dominio.com">
+                <input type="email" class="form-control" name="txt_correo" id="txt_correo" 
+                    placeholder="sucorreo@dominio.com" required>
                 <!---->
                 <label for="txt_telefono">Telefono</label>
-                <input type="text" class="form-control" name="txt_telefono" id="txt_telefono"
+                <input type="text" class="form-control" name="txt_telefono" id="txt_telefono" 
                     placeholder="+569 1234 4567">
                 <!---->
                 <label for="txt_patente">Patente</label>
-                <input type="text" class="form-control" name="txt_patente" id="txt_patente" placeholder="AB-12-34">
+                <input type="text" class="form-control" name="txt_patente" id="txt_patente" required
+                    placeholder="AB-12-34">
                 <!---->
                 <div class="row">
                     <div class="col">
                         <label for="date_dia_solicitado">Fecha</label>
-                        <input type="date" class="form-control" name="date_dia_solicitado" id="date_dia_solicitado">
+                        <input type="date" class="form-control" name="date_dia_solicitado" required
+                            id="date_dia_solicitado">
                     </div>
                     <!---->
                     <div class="col">
                         <label for="date_hora_solicitada">Dia</label>
-                        <input type="time" class="form-control" name="date_hora_solicitada" id="date_hora_solicitada">
+                        <input type="time" class="form-control" name="date_hora_solicitada" required
+                            id="date_hora_solicitada">
                     </div>
                 </div>
                 <div id="fehca_help" class="form-text">
@@ -71,8 +74,8 @@
                 </div>
                 <!---->
                 <label for="select_tipo">Tipo de vehiculo</label>
-                <select class="form-select" name="select_tipo" id="select_tipo">
-                    <option selected disabled value="0">Selecione tipo</option>
+                <select class="form-select" name="select_tipo" id="select_tipo" required>
+                    <option selected disabled value="0"> Selecione tipo</option>
                     <option value="1">Sedan</option>
                     <option value="2">Compacto</option>
                     <option value="3">Suv/Pick Up</option>
@@ -106,29 +109,30 @@
                 </div>
                 <!---->
                 <label>Servicio de retiro y entrega a domicilio</label><br>
-                <input type="radio" class="form-check-input" name="rbt_domiclio_si" id="rbt_domiclio_si"
-                    value="si">
+                <input type="radio" class="form-check-input" name="rbt_domiclio_si" id="rbt_domiclio_si" value="si">
                 <label for="rbt_domiclio_si">Si</label>
-                <input type="radio" class="form-check-input" name="rbt_domiclio_no" id="rbt_domiclio_no"
-                    value="no">
-                <label for="rbt_domiclio_no">No</label><br><br>
+                <input type="radio" class="form-check-input" name="rbt_domiclio_no" id="rbt_domiclio_no" value="no">
+                <label for="rbt_domiclio_no">No</label><br>
                 <!---->
-                <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                    
-                    
-                    <button type="button" class="btn btn-success">Confirmar solicitud</button>
-                    <button type="button" class="btn btn-danger">Limpiar formulario</button>
-                  </div>
+                <label for="txt_observaciones">Observaciones</label>
+                <textarea class="form-control" name="txt_observaciones" id="txt_observaciones" rows="4"></textarea><br>
+                <!---->
+                <div class="col">
+                    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                        <button type="button" class="btn btn-success">Confirmar solicitud</button>
+                        <button type="reset" class="btn btn-danger">Limpiar formulario</button>
+                    </div>
+                </div>
+                <!---->
 
             </div>
             <!---->
-
+        </form>
     </div>
 
-    </form>
+
     <hr><br>
-    tipo
-    kilometraje
+
 
 
     <!--Fin carrusel-->
