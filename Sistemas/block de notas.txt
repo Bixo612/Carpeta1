@@ -1,0 +1,33 @@
+RESOLUCION EVALUACION SISTEMAS
+
+Puntos a desarrollar
+
+Vista Lógica: Debe especificar la funcionalidad que el sistema proporcionará a los usuarios finales. Representar lo que el sistema ha de hacer, funciones y servicios que se ofrecen, especificación de requerimientos funcionales y documentación del análisis.
+
+Vista de Desarrollo: Debe especificar desde la perspectiva del programador y gestión del software. Mostrar cómo va a estar dividido el sistema de software en componentes y dependencias entre esos componentes.
+
+Vista de Procesos: Debe especificar desde la perspectiva de un integrador de sistema, y debe detallar el flujo de trabajo paso a paso de negocio y operacionales de los componentes que conforman un sistema. Debe especificar temas como concurrencia, distribución de procesos, escalabilidad, integridad y tolerancia a fallas desde la perspectiva software.
+
+Vista Física: Debe especificar desde la perspectiva de un Ingeniero de Infraestructura. Debe indicar temas como disponibilidad, tolerancia a fallas, performance y escalabilidad, desde la perspectiva hardware y redes.
+
+Vista de Escenarios: Se debe describir el escenario de uso, como los actores interactúan con la aplicación, secuencias de interacción entre objetos, procesos, etc
+
+
+Docs de apoyo 
+https://silo.tips/download/la-importancia-del-desarrollo-para-el-buen-diseo-del-software (en carpeta)
+
+diagramas de clases
+https://www.teatroabadia.com/es/uploads/documentos/iagramas_del_uml.pdf
+
+Vista logica
+
+Programar consultas medicas y llevar registro de todo lo asociado a esta (datos que tiene)
+funcion de iniciar y detener cronometro de consulta
+agendar procedimientos disponibles algunos dias
+tambien cirugias dependiendo de la disponibilidad de los veterinarios
+monitarizacion de mascotas hospitalizadas
+agendar horas de vacunacion
+
+perfiles de administradores que registrar pacientes y dueños
+
+
