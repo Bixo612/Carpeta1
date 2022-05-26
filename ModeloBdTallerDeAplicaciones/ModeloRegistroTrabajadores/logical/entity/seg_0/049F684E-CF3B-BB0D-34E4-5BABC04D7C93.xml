@@ -15,83 +15,33 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="rut_carga" id="BE00D0DD-F044-C45E-DF57-68514E1D4CBA">
-<createdBy>vicen</createdBy>
-<createdTime>2022-05-07 17:13:00 UTC</createdTime>
+<Attribute name="rut" id="9A483C5A-C4C0-2F94-5AB5-4A6F5BE56DFB">
+<createdBy>Usuario</createdBy>
+<createdTime>2022-05-22 21:06:31 UTC</createdTime>
+<generatorID>49011D00-5C14-35C0-F47B-C24B0DE932F0</generatorID>
 <ownerDesignName>ModeloRegistroTrabajadores</ownerDesignName>
 <engineerTo>
 <item key="17BCAE0E-790E-AC92-8BB6-64B5A0DBA725" value="true"/>
 </engineerTo>
+<referedAttribute>F9439D44-7388-6740-DC0F-E913F7D1B164</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>10</dataTypeSize>
-<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="primer_nombre" id="BDF07EF2-E096-AEEE-C543-0DCB6B0A5B85">
-<createdBy>vicen</createdBy>
-<createdTime>2022-05-07 17:14:24 UTC</createdTime>
-<ownerDesignName>ModeloRegistroTrabajadores</ownerDesignName>
-<engineerTo>
-<item key="17BCAE0E-790E-AC92-8BB6-64B5A0DBA725" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>50</dataTypeSize>
-<ownDataTypeParameters>50,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="segundo_nombre" id="44CC78C2-CC03-1B62-ED23-EB6A0EDA0DD9">
-<createdBy>vicen</createdBy>
-<createdTime>2022-05-07 17:14:53 UTC</createdTime>
+<Attribute name="id_trabajador" id="AD09128F-FC56-BC60-41CB-21C0092B05B4">
+<createdBy>Usuario</createdBy>
+<createdTime>2022-05-22 21:06:38 UTC</createdTime>
+<generatorID>61D272E1-B1E0-0ACB-59F2-7FF4E3CECA8C</generatorID>
 <ownerDesignName>ModeloRegistroTrabajadores</ownerDesignName>
 <engineerTo>
 <item key="17BCAE0E-790E-AC92-8BB6-64B5A0DBA725" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
+<referedAttribute>59071064-9D6E-B574-88DE-16EF874C7B65</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>50</dataTypeSize>
-<ownDataTypeParameters>50,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="primer_apellido" id="74DE2597-05BE-5F0F-9C5F-0925843016A2">
-<createdBy>vicen</createdBy>
-<createdTime>2022-05-07 17:14:53 UTC</createdTime>
-<ownerDesignName>ModeloRegistroTrabajadores</ownerDesignName>
-<engineerTo>
-<item key="17BCAE0E-790E-AC92-8BB6-64B5A0DBA725" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>50</dataTypeSize>
-<ownDataTypeParameters>50,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="segundo_apellido" id="63F4F89D-70AD-CCD2-FAF7-18532949EF57">
-<createdBy>vicen</createdBy>
-<createdTime>2022-05-07 17:14:54 UTC</createdTime>
-<ownerDesignName>ModeloRegistroTrabajadores</ownerDesignName>
-<engineerTo>
-<item key="17BCAE0E-790E-AC92-8BB6-64B5A0DBA725" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>50</dataTypeSize>
-<ownDataTypeParameters>50,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="fecha_nacimiento_carga" id="E6CDCE45-6B1C-2D56-3C90-82F8C69C1CB8">
-<createdBy>vicen</createdBy>
-<createdTime>2022-05-07 17:15:30 UTC</createdTime>
-<ownerDesignName>ModeloRegistroTrabajadores</ownerDesignName>
-<engineerTo>
-<item key="17BCAE0E-790E-AC92-8BB6-64B5A0DBA725" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT007</logicalDatatype>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="relacion" id="72849B05-B6BC-40FC-44B3-61183037B293">
@@ -107,34 +57,5 @@
 <dataTypeSize>20</dataTypeSize>
 <ownDataTypeParameters>20,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="rut_trabajador" id="C3C09E3F-6031-6C66-5EE1-81CBE0258FEA">
-<createdBy>vicen</createdBy>
-<createdTime>2022-05-07 17:42:51 UTC</createdTime>
-<generatorID>90DE05B3-FDE8-F4C5-06CB-2288ECD6B297</generatorID>
-<ownerDesignName>ModeloRegistroTrabajadores</ownerDesignName>
-<engineerTo>
-<item key="17BCAE0E-790E-AC92-8BB6-64B5A0DBA725" value="true"/>
-</engineerTo>
-<referedAttribute>00137424-7B20-ECDE-1562-2CC8A97CAE01</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>10</dataTypeSize>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 </attributes>
-<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="C92F0F2D-EDCE-38BA-11C4-FEA24CDF3C94" name="cargas PK">
-<createdBy>vicen</createdBy>
-<createdTime>2022-05-07 17:40:30 UTC</createdTime>
-<ownerDesignName>ModeloRegistroTrabajadores</ownerDesignName>
-<engineerTo>
-<item key="17BCAE0E-790E-AC92-8BB6-64B5A0DBA725" value="true"/>
-</engineerTo>
-<pk>true</pk>
-<usedAttributes>
-<attributeRef>BE00D0DD-F044-C45E-DF57-68514E1D4CBA</attributeRef>
-</usedAttributes>
-</identifier>
-</identifiers>
 </Entity>

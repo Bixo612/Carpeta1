@@ -54,5 +54,12 @@
         "anio": 1985,
         "patente": "RT7532",
         "color":"Negro"
+    },
+    {
+        "marca": "Chrevrolet",
+        "modelo": "Impal",
+        "anio": 1967,
+        "patente": "CQ5623",
+        "color":"Azul"
     }
 ]

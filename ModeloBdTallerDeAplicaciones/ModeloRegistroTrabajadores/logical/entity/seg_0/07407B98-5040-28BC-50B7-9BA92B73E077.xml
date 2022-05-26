@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="E0C4B40F-23DF-E2C3-A98B-C766EF0F9499" name="contactos_emergencia">
-<createdBy>vicen</createdBy>
-<createdTime>2022-05-07 17:53:41 UTC</createdTime>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="07407B98-5040-28BC-50B7-9BA92B73E077" name="datos_laborales">
+<createdBy>Usuario</createdBy>
+<createdTime>2022-05-22 21:13:15 UTC</createdTime>
 <ownerDesignName>ModeloRegistroTrabajadores</ownerDesignName>
 <engineerTo>
 <item key="17BCAE0E-790E-AC92-8BB6-64B5A0DBA725" value="true"/>
@@ -15,85 +15,70 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="nombre" id="D996698A-18F3-086D-17D3-3AFCA72FD6B5">
-<createdBy>vicen</createdBy>
-<createdTime>2022-05-07 17:55:51 UTC</createdTime>
+<Attribute name="id_laborales" id="9963C493-0EAF-5EDC-3C06-7DE6CC834714">
+<createdBy>Usuario</createdBy>
+<createdTime>2022-05-22 21:15:38 UTC</createdTime>
 <ownerDesignName>ModeloRegistroTrabajadores</ownerDesignName>
 <engineerTo>
 <item key="17BCAE0E-790E-AC92-8BB6-64B5A0DBA725" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>100</dataTypeSize>
-<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="relacion" id="B2566572-15C4-A678-652A-A5CFA9D6BD64">
-<createdBy>vicen</createdBy>
-<createdTime>2022-05-07 17:56:16 UTC</createdTime>
+<Attribute name="cargo" id="3DE07DDD-747D-12AB-ED78-00F52960BB75">
+<createdBy>Usuario</createdBy>
+<createdTime>2022-05-22 21:14:44 UTC</createdTime>
 <ownerDesignName>ModeloRegistroTrabajadores</ownerDesignName>
 <engineerTo>
 <item key="17BCAE0E-790E-AC92-8BB6-64B5A0DBA725" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>50</dataTypeSize>
 <ownDataTypeParameters>50,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="numero1" id="5476C86F-DA44-3EC5-0BD6-C9EF5FE0A3E0">
-<createdBy>vicen</createdBy>
-<createdTime>2022-05-07 17:56:35 UTC</createdTime>
-<ownerDesignName>ModeloRegistroTrabajadores</ownerDesignName>
-<engineerTo>
-<item key="17BCAE0E-790E-AC92-8BB6-64B5A0DBA725" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>25</dataTypeSize>
-<ownDataTypeParameters>25,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="numero2" id="7E3A2D22-3018-FB17-9769-D6AA93E419DB">
-<createdBy>vicen</createdBy>
-<createdTime>2022-05-07 17:59:00 UTC</createdTime>
-<ownerDesignName>ModeloRegistroTrabajadores</ownerDesignName>
-<engineerTo>
-<item key="17BCAE0E-790E-AC92-8BB6-64B5A0DBA725" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>25</dataTypeSize>
-<ownDataTypeParameters>25,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="id_trabajador" id="88DC061D-27CB-9BB8-8891-C0515872AF89">
+<Attribute name="area" id="15F05AC8-847B-37A1-FC1A-DB1676715334">
 <createdBy>Usuario</createdBy>
-<createdTime>2022-05-22 21:07:27 UTC</createdTime>
-<generatorID>FD59E5D6-45BB-A26B-96B7-0D17DA385DF9</generatorID>
+<createdTime>2022-05-22 21:14:44 UTC</createdTime>
 <ownerDesignName>ModeloRegistroTrabajadores</ownerDesignName>
 <engineerTo>
 <item key="17BCAE0E-790E-AC92-8BB6-64B5A0DBA725" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<referedAttribute>59071064-9D6E-B574-88DE-16EF874C7B65</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="departamento" id="922D2417-26C0-35D9-CA7C-7EC4E9BB92C9">
+<createdBy>Usuario</createdBy>
+<createdTime>2022-05-22 21:14:44 UTC</createdTime>
+<ownerDesignName>ModeloRegistroTrabajadores</ownerDesignName>
+<engineerTo>
+<item key="17BCAE0E-790E-AC92-8BB6-64B5A0DBA725" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="3A4A5402-6B39-D65C-0571-3A6C1FC676B0" name="contactos_emergencia PK">
+<identifier id="3D20EDDB-1049-AECB-A875-D78BA704E042" name="datos_laborales PK">
 <createdBy>Usuario</createdBy>
-<createdTime>2022-05-22 21:07:15 UTC</createdTime>
+<createdTime>2022-05-22 21:15:51 UTC</createdTime>
 <ownerDesignName>ModeloRegistroTrabajadores</ownerDesignName>
 <engineerTo>
 <item key="17BCAE0E-790E-AC92-8BB6-64B5A0DBA725" value="true"/>
 </engineerTo>
 <pk>true</pk>
+<usedAttributes>
+<attributeRef>9963C493-0EAF-5EDC-3C06-7DE6CC834714</attributeRef>
+</usedAttributes>
 </identifier>
 </identifiers>
 </Entity>

@@ -113,9 +113,9 @@ def menu():
         else:
             print("Funcion invalida :/")
 
-print("**----------------------------------**")
-x = FxSql.buscar_vehiculo("SDGT69")
-print(x.__str__())
-print("**----------------------------------**")
+# print("**----------------------------------**")
+# x = FxSql.buscar_vehiculo("SDGT69")
+# print(x.__str__())
+# print("**----------------------------------**")
 
-x = input("->")
+# x = input("->")
