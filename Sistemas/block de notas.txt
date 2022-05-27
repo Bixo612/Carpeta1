@@ -2,15 +2,41 @@ RESOLUCION EVALUACION SISTEMAS
 
 Puntos a desarrollar
 
-Vista Lógica: Debe especificar la funcionalidad que el sistema proporcionará a los usuarios finales. Representar lo que el sistema ha de hacer, funciones y servicios que se ofrecen, especificación de requerimientos funcionales y documentación del análisis.
+ok - Vista Lógica: Debe especificar la funcionalidad que el sistema proporcionará a los usuarios finales. Representar lo que el sistema ha de hacer, funciones y servicios que se ofrecen, especificación de requerimientos funcionales y documentación del análisis.
+
+	Los usuarios finales del sistema son principalmente los dueños de las mascotas que tendran la principal funcion de agendar citas de consultas medicas, procedimeintos, cirugias y vacunacion, estos ultimos a ademas tendran ciertas restriciones segun las reglas de negocio del caso que determinan por ejemplo que los procedimeintos se ofrecen solo algunos dias de la semana y que las cirugias dependen de la disponibilidad del personal de la clinica. Ademas se permitir registrar mas de una mascota por dueño y almacenar los datos personales y de contacto del dueño, como tambien la posibilidad de realizar el pago posterior a la prestacion de algun servicio al identificarse en la aplicación web y finalmente la opcion de ver un registro historico de las consultas de sus mascotas.
+
+	Ademas de los dueños de mascotas los auxiliares realizaran funciones administrativas y el sistema les permitira ingresar y gestionar los datos personales del dueño de las mascotas y del animal.
+
+	Y como ultimo usuarios estan los veterinarios que durante una cita medica tienen la funcion de registrar los informacion del animal que incluye datos como: diagnóstico, medicamentos recetados y datos básicos como peso, edad y temperatura. Y finalmente el sistema debe presentar un sisteme de cronometro para medir la duracion de una cita donde cada medico puede marcar el inicio y el termino de la consulta.
+
 
 Vista de Desarrollo: Debe especificar desde la perspectiva del programador y gestión del software. Mostrar cómo va a estar dividido el sistema de software en componentes y dependencias entre esos componentes.
+	
+	DIAGRAMA DE COMPONENTES 
+	DIAGRMA DE PAQUETES
 
+	los pricipilaes componenetes del software son el soporte o base de datos donde se almacenan los registros de la veterinaria, el servidor web donde se generan las interaciones con el cliente o dueño de una mascota el cual interactua con las base de datos para consultar por el historial de consultas y agendar citas con los distintos servicios de la veterinaria.
+	
+	y para los demas usuarios que son los veterinarios y auxilares, cada uno de estos tendran su plataforma desde la cual interactuaran con la base de datos para registrar los antecedentes de la consultas y para gestionar los datos de los clientes y sus mascotas respectivamente que generaran consultas o actulaziran registros dentro de la base de datos.
+
+	El diagrama de componentes a continuacion representa las interfaces necesarias para el funcionamento basico del sistema y las interaciones o relaciones de estas dependen del mismo punto donde se almacenan 
+	
 Vista de Procesos: Debe especificar desde la perspectiva de un integrador de sistema, y debe detallar el flujo de trabajo paso a paso de negocio y operacionales de los componentes que conforman un sistema. Debe especificar temas como concurrencia, distribución de procesos, escalabilidad, integridad y tolerancia a fallas desde la perspectiva software.
+	
+	--DIAGRAMA DE ACTIVAD CON CASOS DE USOS
 
-Vista Física: Debe especificar desde la perspectiva de un Ingeniero de Infraestructura. Debe indicar temas como disponibilidad, tolerancia a fallas, performance y escalabilidad, desde la perspectiva hardware y redes.
+	El sistema desde el punto de vista de procesos implementarse dede los registros de mascotas para comenzar a generar el historal de consultar y seguir añadiendo funciones de registros de los trabajadores para asi implementar funciones de agendamientos de servicios para finalizar con los registros de clientes y pagos. 
+	
+	El sistema debe permitir agregar trabajadores que presten los servicios y clientes que agenden citas en la escala la cantidad de servicios que preste la veterinaria de manera diaria y la cantidad de clientes y mascotas que atienda. Ademas el sisteme debe permitir corregir registros ante errores de ingreso
+
+ok - Vista Física: Debe especificar desde la perspectiva de un Ingeniero de Infraestructura. Debe indicar temas como disponibilidad, tolerancia a fallas, performance y escalabilidad, desde la perspectiva hardware y redes.
+
+	La vista fisica se basa en los siguentes componentes donde muestra que las 3 interfaces de interacion de los 3 principales usuarios finales se realacion con un servidor que almacena los datos de las consultas, fichas medicas de las mascotas, datos de clientes, etc. Pero al mismo tiempo levanta el servidor Web para la interacion via web de clientes para el agendamiento de horas, pago y la consulta del registro historico. Despues el diagrama muestra las interaciones de los auxiliares y veterinarios para el control de datos y el control de consultas respectivamente
 
 Vista de Escenarios: Se debe describir el escenario de uso, como los actores interactúan con la aplicación, secuencias de interacción entre objetos, procesos, etc
+
+	
 
 
 Docs de apoyo 
@@ -18,6 +44,10 @@ https://silo.tips/download/la-importancia-del-desarrollo-para-el-buen-diseo-del-
 
 diagramas de clases
 https://www.teatroabadia.com/es/uploads/documentos/iagramas_del_uml.pdf
+https://diagramasuml.com/despliegue/
+https://www.ionos.es/digitalguide/paginas-web/desarrollo-web/diagrama-de-componentes/
+https://es.slideshare.net/VictorCarreo6/modelo-41-74854589
+
 
 Vista logica
 
