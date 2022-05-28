@@ -1,0 +1,23 @@
+
+Diseño de base de datos y software  mantenedor basico de pacientes para cada centro medico en pc´s.
+Modulo de registro de historial medico de paciente, procedimientos y diagnosticos.
+Implementacion de registro de doctores y hospitales que realizan los procedimientos medicos.
+Implementacion e integracion de funciones con una base de datos nacional que respalde los registros de los hospitales.
+Funciones de informes medicos y estadisticas con integracion a una aplicacion para tablets.
+
+Ciclo 1 
+Determinacion de los objetivos(Diseño de base de datos - Software mantenedor basico)
+Analisis y evaluacion de riezgos
+Desarrollo y pruebas
+	diseño de modelos de bases de datos
+	levantamiento de base datos
+	desarrollo de software mantenedor
+	prueba de base de datos 
+	integracion de software
+	prueba de software con base de datos
+Planficacion del siguente ciclo
+Ciclo2
+Determinacion de los objetivos(Modulo de historial medico)
+Analisis y evaluacion de riezgos
+Desarrollo y pruebas
+	

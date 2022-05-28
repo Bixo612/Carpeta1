@@ -39,10 +39,9 @@ Vista de Escenarios: Se debe describir el escenario de uso, como los actores int
 	
 
 
-Docs de apoyo 
-https://silo.tips/download/la-importancia-del-desarrollo-para-el-buen-diseo-del-software (en carpeta)
 
-diagramas de clases
+https://silo.tips/download/la-importancia-del-desarrollo-para-el-buen-diseo-del-software 
+
 https://www.teatroabadia.com/es/uploads/documentos/iagramas_del_uml.pdf
 https://diagramasuml.com/despliegue/
 https://www.ionos.es/digitalguide/paginas-web/desarrollo-web/diagrama-de-componentes/
