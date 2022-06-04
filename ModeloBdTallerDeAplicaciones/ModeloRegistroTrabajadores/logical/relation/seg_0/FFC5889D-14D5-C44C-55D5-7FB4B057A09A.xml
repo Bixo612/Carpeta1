@@ -9,11 +9,11 @@
 <sourcePk>C2A319C0-B23F-58F1-D322-3BDA8E30B628</sourcePk>
 <targetPk>456AD438-9C84-4D7F-7824-AFC0D01654B9</targetPk>
 <identifying>false</identifying>
-<optionalSource>false</optionalSource>
+<optionalSource>true</optionalSource>
 <optionalTarget>false</optionalTarget>
 <sourceCardinality>1</sourceCardinality>
 <sourceEntity>E3EE9124-36B6-CFCD-2C11-685926D7E0C3</sourceEntity>
-<targetCardinalityString>1</targetCardinalityString>
+<targetCardinalityString>*</targetCardinalityString>
 <targetEntity>8EF29E5F-890F-EB54-CE1E-D6855D8A25B2</targetEntity>
 <transferable>true</transferable>
 <deleteRule>NO ACTION</deleteRule>

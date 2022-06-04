@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="07407B98-5040-28BC-50B7-9BA92B73E077" name="datos_laborales">
-<createdBy>Usuario</createdBy>
-<createdTime>2022-05-22 21:13:15 UTC</createdTime>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="3B1A5A94-1ED8-368F-1BC9-78020DE089A4" name="cargos">
+<createdBy>vicen</createdBy>
+<createdTime>2022-05-30 12:37:46 UTC</createdTime>
 <ownerDesignName>ModeloRegistroTrabajadores</ownerDesignName>
 <engineerTo>
 <item key="17BCAE0E-790E-AC92-8BB6-64B5A0DBA725" value="true"/>
@@ -15,9 +15,9 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="id_laborales" id="9963C493-0EAF-5EDC-3C06-7DE6CC834714">
-<createdBy>Usuario</createdBy>
-<createdTime>2022-05-22 21:15:38 UTC</createdTime>
+<Attribute name="id_cargo" id="A43F3045-071D-3852-8BF5-A4674824C786">
+<createdBy>vicen</createdBy>
+<createdTime>2022-05-30 12:38:20 UTC</createdTime>
 <ownerDesignName>ModeloRegistroTrabajadores</ownerDesignName>
 <engineerTo>
 <item key="17BCAE0E-790E-AC92-8BB6-64B5A0DBA725" value="true"/>
@@ -27,22 +27,9 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="area" id="15F05AC8-847B-37A1-FC1A-DB1676715334">
-<createdBy>Usuario</createdBy>
-<createdTime>2022-05-22 21:14:44 UTC</createdTime>
-<ownerDesignName>ModeloRegistroTrabajadores</ownerDesignName>
-<engineerTo>
-<item key="17BCAE0E-790E-AC92-8BB6-64B5A0DBA725" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>50</dataTypeSize>
-<ownDataTypeParameters>50,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="departamento" id="922D2417-26C0-35D9-CA7C-7EC4E9BB92C9">
-<createdBy>Usuario</createdBy>
-<createdTime>2022-05-22 21:14:44 UTC</createdTime>
+<Attribute name="nombre_cargo" id="26630DE0-5BC2-64C4-DB97-0288F560D8BA">
+<createdBy>vicen</createdBy>
+<createdTime>2022-05-30 12:38:34 UTC</createdTime>
 <ownerDesignName>ModeloRegistroTrabajadores</ownerDesignName>
 <engineerTo>
 <item key="17BCAE0E-790E-AC92-8BB6-64B5A0DBA725" value="true"/>
@@ -55,16 +42,17 @@
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="3D20EDDB-1049-AECB-A875-D78BA704E042" name="datos_laborales PK">
-<createdBy>Usuario</createdBy>
-<createdTime>2022-05-22 21:15:51 UTC</createdTime>
+<identifier id="FB7637F6-F9C3-FC70-34E7-46CD2A061823" name="cargos PK">
+<createdBy>vicen</createdBy>
+<createdTime>2022-05-30 12:38:17 UTC</createdTime>
 <ownerDesignName>ModeloRegistroTrabajadores</ownerDesignName>
 <engineerTo>
 <item key="17BCAE0E-790E-AC92-8BB6-64B5A0DBA725" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>9963C493-0EAF-5EDC-3C06-7DE6CC834714</attributeRef>
+<attributeRef>14CF9628-8082-6F5D-C6AD-CBF2C9008041</attributeRef>
+<attributeRef>A43F3045-071D-3852-8BF5-A4674824C786</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

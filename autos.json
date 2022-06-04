@@ -3,7 +3,7 @@
         "marca": "Ford",
         "modelo": "Mustang",
         "anio": 1968,
-        "patente": "GD78150",
+        "patente": "GD7815",
         "color":"Azul"
     },
     {
@@ -57,7 +57,7 @@
     },
     {
         "marca": "Chrevrolet",
-        "modelo": "Impal",
+        "modelo": "Impala",
         "anio": 1967,
         "patente": "CQ5623",
         "color":"Azul"
