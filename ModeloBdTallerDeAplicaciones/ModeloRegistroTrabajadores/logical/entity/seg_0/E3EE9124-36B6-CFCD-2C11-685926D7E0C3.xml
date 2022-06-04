@@ -106,20 +106,6 @@
 <logicalDatatype>LOGDT025</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="id_trabajador" id="771B9F87-EB41-EF7C-636E-6F9DCA7DDE7D">
-<createdBy>Usuario</createdBy>
-<createdTime>2022-05-22 21:06:20 UTC</createdTime>
-<generatorID>FFC5889D-14D5-C44C-55D5-7FB4B057A09A</generatorID>
-<ownerDesignName>ModeloRegistroTrabajadores</ownerDesignName>
-<engineerTo>
-<item key="17BCAE0E-790E-AC92-8BB6-64B5A0DBA725" value="true"/>
-</engineerTo>
-<referedAttribute>59071064-9D6E-B574-88DE-16EF874C7B65</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="C2A319C0-B23F-58F1-D322-3BDA8E30B628" name="personas PK">

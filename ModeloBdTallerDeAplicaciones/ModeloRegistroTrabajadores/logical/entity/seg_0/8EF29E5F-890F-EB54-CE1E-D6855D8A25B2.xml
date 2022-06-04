@@ -54,20 +54,6 @@
 <dataTypeSize>10</dataTypeSize>
 <ownDataTypeParameters>10,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="id_laborales" id="7298DD8D-7F0F-A9AA-C56F-21EA42EB66BB">
-<createdBy>Usuario</createdBy>
-<createdTime>2022-05-22 21:16:14 UTC</createdTime>
-<generatorID>893BC1A5-FFF9-FC16-3289-6B167698371B</generatorID>
-<ownerDesignName>ModeloRegistroTrabajadores</ownerDesignName>
-<engineerTo>
-<item key="17BCAE0E-790E-AC92-8BB6-64B5A0DBA725" value="true"/>
-</engineerTo>
-<referedAttribute>9963C493-0EAF-5EDC-3C06-7DE6CC834714</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 <Attribute name="telefono" id="77B6B729-D41A-454E-BEE7-0574116DD4BF">
 <createdBy>Usuario</createdBy>
 <createdTime>2022-05-22 21:16:39 UTC</createdTime>
@@ -144,6 +130,20 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_laborales" id="AA029E98-1B38-B886-A4C1-46CD4D2D294E">
+<createdBy>vicen</createdBy>
+<createdTime>2022-05-30 12:42:45 UTC</createdTime>
+<generatorID>B18A0F1A-E72E-9184-7D0C-A444CC789EAF</generatorID>
+<ownerDesignName>ModeloRegistroTrabajadores</ownerDesignName>
+<engineerTo>
+<item key="17BCAE0E-790E-AC92-8BB6-64B5A0DBA725" value="true"/>
+</engineerTo>
+<referedAttribute>9963C493-0EAF-5EDC-3C06-7DE6CC834714</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
