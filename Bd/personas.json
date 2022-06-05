@@ -86,5 +86,37 @@
         "fechaNacimiento": new Date("27-06-2003"),
         "comuna":"Macul",
         "correoElectronico":"rtreuquemil@xmail.com"
+    },
+    {
+        "rut":"20.456.677-K",
+        "nombre":"Omar Felipe Diaz Diaz",
+        "direccion":"Vicuña Mackena 4263 dep 109",
+        "fechaNacimiento": new Date("02-06-2000"),
+        "comuna":"La Cisterna",
+        "correoElectronico":"ofdiaz@xmail.com"
+    },
+    {
+        "rut":"19.360.397-1",
+        "nombre":"Vicente Ignacio Vasquez Galvez",
+        "direccion":"Pedro Nuñez Fernandez 1641 casa 35",
+        "fechaNacimiento": new Date("12-06-1996"),
+        "comuna":"Valdivia",
+        "correoElectronico":"vvasquez@xmail.com"
+    },
+    {
+        "rut":"19.750.000-1",
+        "nombre":"Joaquin Pedro Soto Galvez",
+        "direccion":"Diagonal 7530",
+        "fechaNacimiento": new Date("12-09-1996"),
+        "comuna":"Valdivia",
+        "correoElectronico":"jsoto@xmail.com"
+    },
+    {
+        "rut":"18.563.621",
+        "nombre":"Sofia Andrea Guzman Tapia",
+        "direccion":"Dorsal 123 dep 42",
+        "fechaNacimiento": new Date("27-06-2003"),
+        "comuna":"Osorno",
+        "correoElectronico":"saduzta@xmail.com"
     }
 ]

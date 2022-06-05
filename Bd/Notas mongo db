@@ -1,0 +1,10 @@
+updateMany es para modificar todos lo que coincidan 
+update esta en desuso
+updateOne modifica el primero que coincida
+
+db.regiones.updateMany(
+    {idRegion:1},
+    {$set:
+        {nombre:"Tarapacá"}
+    }
+)
