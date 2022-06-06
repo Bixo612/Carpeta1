@@ -45,6 +45,15 @@
         "precio":10000000
     },
     {
+        "marca": "Dodge",
+        "modelo": "Challeger",
+        "anio": 1970,
+        "patente": "GA7896",
+        "color":"Verde",
+        "kilometraje":88620,
+        "precio":15000000
+    },
+    {
         "marca": "Toyota",
         "modelo": "AE86",
         "anio": 1983,
@@ -72,7 +81,7 @@
         "precio":17000000
     },
     {
-        "marca": "Chrevrolet",
+        "marca": "Chevrolet",
         "modelo": "Impala",
         "anio": 1967,
         "patente": "CQ5623",
@@ -97,5 +106,14 @@
         "color":"Blanco",
         "kilometraje":88122,
         "precio":21000000
+    },
+    {
+        "marca": "Dodge",
+        "modelo": "Charger",
+        "anio": 1969,
+        "patente": "GL0101",
+        "color":"Naranjo",
+        "kilometraje":105631,
+        "precio":20000000
     }
 ]

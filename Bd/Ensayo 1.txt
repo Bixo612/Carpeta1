@@ -52,23 +52,10 @@ db.personas.find(
 8-muestre las personas cuyo rut termine en 5 y su nombre comience con 'a'
 
 db.personas.find(
-	{rut: {$regex: /5$/}}
-)
-
-db.personas.find(
-	{nombre: {$regex: /^A/}}
-)
-
-db.perosnas.find(
 	{
 		$and:[
 			{rut: {$regex: /5$/}},
 			{nombre: {$regex: /^A/}}
 		]
 	}
-)
-
-db.perosnas.find(
-	{rut: {$regex: /5$/}},
-	{nombre: {$regex: /^A/}}
 )

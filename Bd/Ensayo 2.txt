@@ -100,8 +100,19 @@ db.personas.find(
 db.personas.find({rut: {$regex: /^20/}})
 
 9.- Muestre todos los documentos ordenados por nombre de forma descendente.
+
+db.personas.find().sort({nombre: -1})
+
 10.- Muestre todos los documentos ordenados por comuna de forma descendente.
+
+db.personas.find().sort({comuna: -1})
+
+por que ñuñoa sale primero?
+
 11.- Muestre todos los documentos ordenados por rut de forma ascendente.
+
+db.personas.find().sort("rut")
+
 12.- Indique cuantas personas no viven en la comuna de Las Condes.
 
 db.personas.find(	
