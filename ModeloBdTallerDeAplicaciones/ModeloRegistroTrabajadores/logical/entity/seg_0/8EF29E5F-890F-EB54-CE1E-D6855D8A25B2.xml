@@ -146,6 +146,20 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="id_cargo" id="98EA5323-428C-2BB4-D5CF-4BAB02D40106">
+<createdBy>vicen</createdBy>
+<createdTime>2022-06-11 01:04:26 UTC</createdTime>
+<generatorID>5EF45F68-FEB5-FE98-AD71-1EE8EEBA65D8</generatorID>
+<ownerDesignName>ModeloRegistroTrabajadores</ownerDesignName>
+<engineerTo>
+<item key="17BCAE0E-790E-AC92-8BB6-64B5A0DBA725" value="true"/>
+</engineerTo>
+<referedAttribute>A43F3045-071D-3852-8BF5-A4674824C786</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="456AD438-9C84-4D7F-7824-AFC0D01654B9" name="trabajadores PK">
