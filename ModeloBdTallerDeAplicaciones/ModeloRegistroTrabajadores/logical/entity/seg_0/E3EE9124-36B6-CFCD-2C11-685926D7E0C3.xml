@@ -81,7 +81,7 @@
 <dataTypeSize>50</dataTypeSize>
 <ownDataTypeParameters>50,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="fecha_ingreso" id="8134E6D7-E9AC-8A49-59A9-EBA62099E993">
+<Attribute name="fecha_nacimiento" id="8134E6D7-E9AC-8A49-59A9-EBA62099E993">
 <createdBy>vicen</createdBy>
 <createdTime>2022-05-07 17:08:52 UTC</createdTime>
 <ownerDesignName>ModeloRegistroTrabajadores</ownerDesignName>
