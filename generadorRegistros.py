@@ -4,17 +4,21 @@ id_mun = 1
 id_juz = 101
 id_mult = 1001
 
-municipalidades = ("Puente Alto", "Pudahuel", "La Reina", "Las Condes", "La Florida", "La Cisterna", "Valparaiso", "Estacion Central", "Viña del Mar", "El Bosque", "Maipu", "El Bosque", "La Serena", "Coquimbo",
-                   "Recoleta", "Quinta Normal", "Cartaguena", "Quillota", "Consitucion", "Talca", "Villarica", "Temuco", "Pucon", "Frutillar", "Talcahuano", "Chiguayante", "Los Angeles", "Lota", "Concepcion", "Chillan")
+municipalidades = ( "Puente Alto", "Pudahuel", "La Reina", "Las Condes", "La Florida", "La Cisterna", "Valparaiso", "Estacion Central", "Viña del Mar", "El Bosque",
+                    "Maipu", "El Bosque", "La Serena", "Coquimbo","Recoleta", "Quinta Normal", "Cartaguena", "Quillota", "Consitucion", "Talca", "Villarica", "Temuco",
+                    "Pucon", "Frutillar", "Talcahuano", "Chiguayante", "Los Angeles", "Lota", "Concepcion", "Chillan")
 
-direcciones = ["Av Daigonal", "Av Transversal", "Av Longitudinal", "Bernardo O'Higgins", "Arturo Prat", "Gabriela Mistral", "Pablo Neruda", "Vicente Huidobro",
-               "Jose Miguel Carrera", "José Manuel Balmaceda", "Manuel Blanco Encalada", "Manuel Bulnes", "Joaquín Prieto", "Manuel Bulnes", "Luis Barros Borgoño", "Pedro Aguirre Cerda"]
+direcciones = [ "Av Daigonal", "Av Transversal", "Av Longitudinal", "Bernardo O'Higgins", "Arturo Prat", "Gabriela Mistral", "Pablo Neruda", "Vicente Huidobro",
+                "Jose Miguel Carrera", "José Manuel Balmaceda", "Manuel Blanco Encalada", "Manuel Bulnes", "Joaquín Prieto", "Manuel Bulnes", "Luis Barros Borgoño",
+                "Pedro Aguirre Cerda","Algarrobo","Chañar","Pacama","Queñoa","Tamarugo","Patahua","Pelu","Petra","Boldo","Bollen","Corontillo","Frangel","Maiten",
+                "Molle","Petrillo"]
 
-infraciones = ["Exceso de velocidad ", "Uso de via exclusiva", "Conduccion con restricion vehicular",
-               "Doblar en viraje no habilitado", "Estacionamiento en zona demarcada"]
+infraciones = ["Exceso de velocidad ", "Uso de via exclusiva", "Conduccion con restricion vehicular","Doblar en viraje no habilitado", "Estacionamiento en zona demarcada"]
 
-vehiculos = (["Chevrolet", "Orlando"], ["Chevrolet", "Captiva"], ["Hyundai", "Tucson"], ["Hyundai", "Santa Fe"], ["Chevrolet", "Colorado"], ["Chevrolet", "Spin"],
-             ["Suzuki", "S-Presso"], ["Suzuki", "Vitara"], ["Suzuki", "Gran Nomade"],["Ford", "F-150"],["Ford", "Bronco"],["Volkswagen", "Tiguan"])
+vehiculos = (   ["Chevrolet", "Orlando"], ["Chevrolet", "Captiva"], ["Hyundai", "Tucson"], ["Hyundai", "Santa Fe"], ["Chevrolet", "Colorado"], ["Chevrolet", "Spin"],
+                ["Suzuki", "S-Presso"], ["Suzuki", "Vitara"], ["Suzuki", "Gran Nomade"],["Ford", "F-150"],["Ford", "Bronco"],["Volkswagen", "Tiguan"],
+                ["Kia","Frontier"],["Citroën","Berlingo"],["Peugeot","Partner"],["Jeep", "Wrangler"],["Jeep", "Grand Cherokee"],["Jeep", "Compass"],["Dodge", "Durango"],
+                ["Suzuki", "Samurai"], ["Dodge","Ram"])
 
 inspectores = ([1, "12-06-1996", "13520500-K", "Felipe Andres Soto Diaz", "Masculino", "fasd@gamil.com", "14-10-1985", 97854053],
                [2, "12-06-1996", "13456963-1", "Sofia Andrea Roman Valdez","Femenino", "sarv@gamil.com", "14-03-1986", 945289561],
@@ -47,7 +51,6 @@ def gen_fecha():
     anio = str(random.randint(2020, 2022))
     return dia + "-" + mes + "-" + anio
 
-
 def generarPatenteNueva():
     pat = chr(random.randint(65, 90))
     pat = pat + chr(random.randint(65, 90))
@@ -56,17 +59,6 @@ def generarPatenteNueva():
     pat = pat + str(random.randint(0, 9))
     pat = pat + str(random.randint(0, 9))
     return pat
-
-
-def generarPatenteNueva():
-    pat = chr(random.randint(65, 90))
-    pat = pat + chr(random.randint(65, 90))
-    pat = pat + chr(random.randint(65, 90))
-    pat = pat + chr(random.randint(65, 90))
-    pat = pat + str(random.randint(0, 9))
-    pat = pat + str(random.randint(0, 9))
-    return pat
-
 
 def gen_vehiculo():
     max = len(vehiculos)
@@ -76,7 +68,6 @@ def gen_vehiculo():
     vehi = '{"patente" : "' + generarPatenteNueva() + '", "marca":"' + \
         var[0] + '", "modelo":"' + var[1] + '"}'
     return vehi
-
 
 def generar_inspector():
     max = len(inspectores)
