@@ -1,0 +1,23 @@
+db.registros 
+    municipalidades                         
+        juzagado
+            multas
+                vehiculo.txt
+                inspector.txt
+
+municipalidades:[
+    juzagados:[
+        multas:[
+            vehiculo{},
+            inspector:{
+                fucionario:{}
+            }
+        ]
+    ]
+]
+
+c:\registros\municipalidades\juzagado\multas\vehiculo.txt
+
+eso es
+
+db.registos.find({"municipalidades.juzagado.multas.vehiculo.patente":"HCDK86"})
