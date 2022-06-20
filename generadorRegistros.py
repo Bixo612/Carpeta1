@@ -13,19 +13,22 @@ direcciones = [ "Av Daigonal", "Av Transversal", "Av Longitudinal", "Bernardo O'
                 "Pedro Aguirre Cerda","Algarrobo","Chañar","Pacama","Queñoa","Tamarugo","Patahua","Pelu","Petra","Boldo","Bollen","Corontillo","Frangel","Maiten",
                 "Molle","Petrillo"]
 
-infraciones = ["Exceso de velocidad ", "Uso de via exclusiva", "Conduccion con restricion vehicular","Doblar en viraje no habilitado", "Estacionamiento en zona demarcada"]
+infraciones = [ "Conducir a exceso de velocidad","Conduccion con restricion vehicular","Infringir normas sobre viraje","No respetar señal pare","Detener o estacionar un vehículo en doble fila"
+                "Sobrepasar a otro vehiculo por la berma","Conducir vehiculo sin placa patente","No respetar signos o señales de transito","No hacer las señales debidas antes de virar"
+                "Conducir vehiculo en contra el sentido del transito","Conducir vehiculo sin permiso de circulacion","Conducir vehiculo sin certificado de seguro obligatorio vigente"]
 
 vehiculos = (   ["Chevrolet", "Orlando"], ["Chevrolet", "Captiva"], ["Hyundai", "Tucson"], ["Hyundai", "Santa Fe"], ["Chevrolet", "Colorado"], ["Chevrolet", "Spin"],
-                ["Suzuki", "S-Presso"], ["Suzuki", "Vitara"], ["Suzuki", "Gran Nomade"],["Ford", "F-150"],["Ford", "Bronco"],["Volkswagen", "Tiguan"],
-                ["Kia","Frontier"],["Citroën","Berlingo"],["Peugeot","Partner"],["Jeep", "Wrangler"],["Jeep", "Grand Cherokee"],["Jeep", "Compass"],["Dodge", "Durango"],
-                ["Suzuki", "Samurai"], ["Dodge","Ram"])
+                ["Suzuki", "S-Presso"], ["Suzuki", "Vitara"], ["Suzuki", "Gran Nomade"],["Ford", "F-150"],["Ford", "Bronco"],["Volkswagen", "Tiguan"],["Kia","Frontier"],
+                ["Citroën","Berlingo"],["Peugeot","Partner"],["Jeep", "Wrangler"],["Jeep", "Grand Cherokee"],["Jeep", "Compass"],["Dodge", "Durango"],["Suzuki", "Samurai"],
+                ["Dodge","Ram"])
 
 inspectores = ([1, "12-06-1996", "13520500-K", "Felipe Andres Soto Diaz", "Masculino", "fasd@gamil.com", "14-10-1985", 97854053],
                [2, "12-06-1996", "13456963-1", "Sofia Andrea Roman Valdez","Femenino", "sarv@gamil.com", "14-03-1986", 945289561],
                [3, "12-06-1996", "13520630-2", "Marcos Antonio Fernandez Ilabaca","Masculino", "mafi@gamil.com", "20-02-1986", 952624540],
                [4, "12-06-1996", "13025753-3", "Valentina Macarena Valdez Zuniga","Femenino", "vmvz@gamil.com", "03-12-1990", 945786301],
                [5, "12-06-1996", "13525554-4", "Roberto Carlos Carrera Lopez", "Masculino", "rccl@gamil.com", "20-01-1989", 902047755],
-               [6, "12-06-1996", "13520639-5", "Camila Antonio Valdez Zuniga", "Femenino", "cavz@gamil.com", "15-03-1987", 902048560])
+               [6, "12-06-1996", "13520639-5", "Camila Antonio Valdez Zuniga", "Femenino", "cavz@gamil.com", "15-03-1987", 902048560],
+               [7, "12-06-1996", "13753869-6", "Fernanda Sofia Oney Mendez", "Femenino", "fsom@gamil.com", "12-03-1988", 951963050])
 
 
 def gen_direccion():
