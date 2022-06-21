@@ -1,7 +1,13 @@
 --crear tabla cargos
-CREATE TABLE `rrhh`.`cargos` ( `id_cargo` INT NOT NULL , `nombre_cargo` VARCHAR(50) NOT NULL , PRIMARY KEY (`id_cargo`)) ENGINE = InnoDB;
+CREATE TABLE `rrhh`.`cargos` ( 
+    `id_cargo` INT NOT NULL , 
+    `nombre_cargo` VARCHAR(50) NOT NULL 
+    , PRIMARY KEY (`id_cargo`)) ENGINE = InnoDB;
 --Crear tabla areas
-CREATE TABLE `rrhh`.`areas` ( `id_area` INT NOT NULL , `nombre_area` VARCHAR(50) NOT NULL , PRIMARY KEY (`id_area`)) ENGINE = InnoDB;
+CREATE TABLE `rrhh`.`areas` ( 
+    `id_area` INT NOT NULL , 
+    `nombre_area` VARCHAR(50) NOT NULL ,
+    PRIMARY KEY (`id_area`)) ENGINE = InnoDB;
 --crear tabla departamentos
 CREATE TABLE `rrhh`.`departamentos` ( `id_departamento` INT NOT NULL , `nombre_departamento` VARCHAR(50) NOT NULL , PRIMARY KEY (`id_departamento`)) ENGINE = InnoDB;
 --crear tabla trabajadores

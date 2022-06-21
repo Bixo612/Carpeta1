@@ -1,7 +1,0 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
-<BusinessInfoDesign class="oracle.dbtools.crest.model.businessinfo.BusinessInfoDesign" name="Business Information" id="08FD9924-B9D9-E67C-E369-3DD2F569F270">
-<createdBy>negid</createdBy>
-<createdTime>2022-05-16 05:18:45 UTC</createdTime>
-<ownerDesignName>TALLER LOGICO VV2</ownerDesignName>
-<shouldBeOpen>false</shouldBeOpen>
-</BusinessInfoDesign>

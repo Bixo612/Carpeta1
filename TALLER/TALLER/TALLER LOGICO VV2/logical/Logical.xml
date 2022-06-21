@@ -1,7 +1,0 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
-<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="98EC8FC7-E045-9CCB-8F21-E85564947B7A" mainViewID="5E039B2E-B04B-B6E4-6BBD-3562F94AC02C">
-<createdBy>negid</createdBy>
-<createdTime>2022-05-16 05:18:45 UTC</createdTime>
-<ownerDesignName>TALLER LOGICO VV2</ownerDesignName>
-<shouldBeOpen>false</shouldBeOpen>
-</LogicalDesign>
