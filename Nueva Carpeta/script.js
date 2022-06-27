@@ -8,7 +8,7 @@ function validar() {
     let pais = document.formulario.txt_pais.value;
     let precio = document.formulario.txt_precio.value;
     let tienda = document.formulario.num_tienda.value;
-    //TabNine.tabnine-vscode
+    //
     if ((codigo.charAt(0) != 'A' && codigo.charAt(0) != 'H' && codigo.charAt(0) != 'X') || (codigo.length != 7)) {
         alert("Codigo debe comenzar con  A - H - X en mayusculas y con un largo de 7 caracteres");
         document.formulario.txt_codigo.focus();
