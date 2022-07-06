@@ -47,8 +47,5 @@ function validar() {
         document.formulario.num_tienda.focus();
         return false
     }
-
-
-
         alert("Todo bien :D " + codigo)
 }
