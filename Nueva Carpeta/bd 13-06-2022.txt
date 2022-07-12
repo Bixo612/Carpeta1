@@ -21,3 +21,5 @@ c:\registros\municipalidades\juzagado\multas\vehiculo.txt
 eso es
 
 db.registos.find({"municipalidades.juzagado.multas.vehiculo.patente":"HCDK86"})
+
+db.municipalidades.find({"juzgados.multas.valor_infracion":{$gt:50000}})

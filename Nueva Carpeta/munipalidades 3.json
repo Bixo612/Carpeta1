@@ -1,7 +1,7 @@
 [
     {
-        "id_municipalidad": 1,
-        "comuna": "Puente Alto",
+        "id_municipalidad": 2,
+        "comuna": "La cisterna",
         "juzgados": [
             {
                 "id_juzgado": 1,
@@ -10,8 +10,9 @@
                     {
                         "nro_multa": 1000,
                         "direccion_infracion": "Pedro Nuñez Fernandez 1641",
-                        "fecha_infraccion": "18-09-2020",
+                        "fecha_infraccion": new Date("12-06-1996"),
                         "motivo_infraccion": "Exceso de velocidad",
+                        "valor"
                         "vehiculo": {
                             "patente": "HCDK86",
                             "marca": "Chevrolet",
@@ -19,13 +20,13 @@
                         },
                         "inspector": {
                             "id_inspector": 101,
-                            "fecha_ingreso": "1-1-2019",
+                            "fecha_ingreso": new Date("12-06-1996"),
                             "funcionario_municipal": {
                                 "rut ": "13520500-K",
                                 "nombre": "Javier Ismael Diaz Torres",
                                 "sexo": "Masculino",
                                 "correo": "jidito@gmail.com",
-                                "fecha_nacimiento": "11-11-1985",
+                                "fecha_nacimiento": new Date("12-06-1996"),
                                 "telefono": 956321410
                             }
                         }
@@ -33,7 +34,7 @@
                     {
                         "nro_multa": 1001,
                         "direccion_infracion": "Av Los toros 504",
-                        "fecha_infraccion": "19-09-2020",
+                        "fecha_infraccion": new Date("12-06-1996"),
                         "motivo_infraccion": "Exceso de velocidad",
                         "vehiculo": {
                             "patente": "MYRT90",
@@ -48,7 +49,7 @@
                                 "nombre": "Felipe Andres Soto Muñoz",
                                 "sexo": "Masculino",
                                 "correo": "fasomu@gmail.com",
-                                "fecha_nacimiento": "14-10-1985",
+                                "fecha_nacimiento": new Date("12-06-1996"),
                                 "telefono": 951756532
                             }
                         }
@@ -77,7 +78,7 @@
                                 "nombre": "Felipe Andres Soto Muñoz",
                                 "sexo": "Masculino",
                                 "correo": "fasomu@gmail.com",
-                                "fecha_nacimiento": "14-10-1985",
+                                "fecha_nacimiento": new Date("12-06-1996"),
                                 "telefono": 951756532
                             }
                         }
@@ -85,7 +86,7 @@
                     {
                         "nro_multa": 1003,
                         "direccion_infracion": "Av Mexico 500",
-                        "fecha_infraccion": "22-09-2020",
+                        "fecha_infraccion": new Date("12-06-1996"),
                         "motivo_infraccion": "Exceso de velocidad",
                         "vehiculo": {
                             "patente": "MYRT90",
@@ -100,7 +101,7 @@
                                 "nombre": "Felipe Andres Soto Muñoz",
                                 "sexo": "Masculino",
                                 "correo": "fasomu@gmail.com",
-                                "fecha_nacimiento": "14-10-1985",
+                                "fecha_nacimiento": new Date("12-06-1996"),
                                 "telefono": 951756532
                             }
                         }

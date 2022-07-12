@@ -4,9 +4,7 @@ id_mun = 1
 id_juz = 101
 id_mult = 1001
 
-municipalidades = ( "Puente Alto", "Pudahuel", "La Reina", "Las Condes", "La Florida", "La Cisterna", "Valparaiso", "Estacion Central", "Viña del Mar", "El Bosque",
-                    "Maipu", "El Bosque", "La Serena", "Coquimbo","Recoleta", "Quinta Normal", "Cartaguena", "Quillota", "Consitucion", "Talca", "Villarica", "Temuco",
-                    "Pucon", "Frutillar", "Talcahuano", "Chiguayante", "Los Angeles", "Lota", "Concepcion", "Chillan")
+municipalidades = ( "Puente Alto", "Pudahuel", "La Reina")
 
 direcciones = [ "Av Daigonal", "Av Transversal", "Av Longitudinal", "Bernardo O'Higgins", "Arturo Prat", "Gabriela Mistral", "Pablo Neruda", "Vicente Huidobro",
                 "Jose Miguel Carrera", "José Manuel Balmaceda", "Manuel Blanco Encalada", "Manuel Bulnes", "Joaquín Prieto", "Manuel Bulnes", "Luis Barros Borgoño",
