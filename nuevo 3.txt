@@ -1,0 +1,6 @@
+
+db.municipalidades.find({"juzgados.multas.valor_infracion":{$gt:20000}})
+
+db.municipalidades.find({"juzgados.multas.vehiculo.marca":"MG"})
+
+db.municipalidades.find({"juzgados.multas.inspector.funcionario_municipal.sexo":"Femenino"})
