@@ -1,0 +1,232 @@
+[
+    {
+        "archivo": "Video",
+        "titulo": "Tutorial py 01",
+        "fechaPublicacion": new Date("2010,12,12"),
+        "visibilidad": "Publico",
+        "restriccion": "TE",
+        "generoInteres": "Educativo",
+        "likes": 150,
+        "dislikes": 50,
+        "visitas": 300,
+        "usuario": {
+            "_id": 1,
+            "nickname": "masm13",
+            "nombre": "Marco Andres Soto Muñoz",
+            "correo": "masm13@gmail.com",
+            "fechaNacimiento": new Date("1996,16,12"),
+            "fechaAlta": new Date("2010,16,12"),
+            "pais": "Chile",
+            "moderador": {
+                "direccion": "Isla guafo 1314",
+                "_idNacional": "13123123-K",
+                "nroCta": 456789753,
+                "tipoCta": "Corriente",
+                "nombreBanco": "Banco Estado",
+                "tipoModerador": "Moderador superior"
+            }
+        },
+        "sevidor": {
+            "nombre": "Santiago",
+            "ubicacion": "Santiago"
+        }
+    },
+    {
+        "archivo": "Cancion",
+        "titulo": "Never gona give yo up",
+        "generoMusical": "Pop",
+        "reproducciones": 500,
+        "usuario": {
+            "_id": 1,
+            "nickname": "masm13",
+            "nombre": "Marco Andres Soto Muñoz",
+            "correo": "masm13@gmail.com",
+            "fechaNacimiento": new Date("1996,16,12"),
+            "fechaAlta": new Date("2010,16,12"),
+            "pais": "Chile",
+            "moderador": {
+                "direccion": "Isla guafo 1314",
+                "_idNacional": "13123123-K",
+                "nroCta": 456789753,
+                "tipoCta": "Corriente",
+                "nombreBanco": "Banco Estado",
+                "tipoModerador": "Moderador superior"
+            }
+        },
+        "sevidor": {
+            "nombre": "Santiago",
+            "ubicacion": "Santiago"
+        }
+    },
+    {
+        "archivo": "Video",
+        "titulo": "Tour por Francia",
+        "fechaPublicacion": new Date("2010,12,12"),
+        "visibil_idad": "Publico",
+        "restriccion": "TE",
+        "generoInteres": "Turismo",
+        "likes": 150,
+        "dislikes": 50,
+        "visitas": 300,
+        "usuario": {
+            "_id": 2,
+            "nickname": "jahm14",
+            "nombre": "Javier Andres Herrera Montentenegro",
+            "correo": "jahm14@gmail.com",
+            "fechaNacimiento": new Date("1996,16,12"),
+            "fechaAlta": new Date("2010,16,12"),
+            "pais": "Argentina"
+        },
+        "sevidor": {
+            "nombre": "Santiago",
+            "ubicacion": "Santiago"
+        }
+    },
+    {
+        "archivo": "Video",
+        "titulo": "Tour por Amsterdam",
+        "fechaPublicacion": new Date("2010,12,12"),
+        "visibil_idad": "Publico",
+        "restriccion": "+18",
+        "generoInteres": "Turismo",
+        "likes": 200,
+        "dislikes": 100,
+        "visitas": 400,
+        "usuario": {
+            "_id": 2,
+            "nickname": "jahm14",
+            "nombre": "Javier Andres Herrera Montentenegro",
+            "correo": "jahm14@gmail.com",
+            "fechaNacimiento": new Date("1996,16,12"),
+            "fechaAlta": new Date("2010,16,12"),
+            "pais": "Argentina"
+        },
+        "sevidor": {
+            "nombre": "Santiago",
+            "ubicacion": "Santiago"
+        }
+    },
+    {
+        "archivo": "Cancion",
+        "titulo": "I wan to break free",
+        "generoMusical": "Pop",
+        "reproducciones": 50,
+        "usuario": {
+            "_id": 3,
+            "nickname": "sasv99",
+            "nombre": "Sofia Andra Soto Vergara",
+            "correo": "sasv99@gmail.com",
+            "fechaNacimiento": new Date("1996,16,12"),
+            "fechaAlta": new Date("2010,16,12"),
+            "pais": "Brasil"
+        }
+    },
+    {
+        "archivo": "Video",
+        "titulo": "Tutorial sql 01",
+        "fechaPublicacion": new Date("2002,12,12"),
+        "visibil_idad": "Publico",
+        "restriccion": "TE",
+        "generoInteres": "Educativo",
+        "likes": 200,
+        "dislikes": 100,
+        "visitas": 400,
+        "usuario": {
+            "_id": 2,
+            "nickname": "jahm14",
+            "nombre": "Javier Andres Herrera Montentenegro",
+            "correo": "jahm14@gmail.com",
+            "fechaNacimiento": new Date("1996,16,12"),
+            "fechaAlta": new Date("2010,16,12"),
+            "pais": "Argentina"
+        },
+        "sevidor": {
+            "nombre": "Santiago",
+            "ubicacion": "Santiago"
+        }
+    },
+    {
+        "archivo": "Cancion",
+        "titulo": "Back in black",
+        "generoMusical": "Rock",
+        "reproducciones": 50,
+        "usuario": {
+            "_id": 4,
+            "nickname": "offa50",
+            "nombre": "Osvaldo Fernando Fernandez Aragon",
+            "correo": "offa50@gmail.com",
+            "fechaNacimiento": new Date("2015,16,12"),
+            "fechaAlta": new Date("2020,16,12"),
+            "pais": "Brasil"
+        }
+    },
+    {
+        "archivo": "Cancion",
+        "titulo": "thunderstruck",
+        "generoMusical": "Rock",
+        "reproducciones": 50,
+        "usuario": {
+            "_id": 4,
+            "nickname": "offa50",
+            "nombre": "Osvaldo Fernando Fernandez Aragon",
+            "correo": "offa50@gmail.com",
+            "fechaNacimiento": new Date("2015,16,12"),
+            "fechaAlta": new Date("2020,16,12"),
+            "pais": "Brasil"
+        }
+    },
+    {
+        "archivo": "Cancion",
+        "titulo": "Take on me",
+        "generoMusical": "Pop",
+        "reproducciones": 500,
+        "usuario": {
+            "_id": 1,
+            "nickname": "masm13",
+            "nombre": "Marco Andres Soto Muñoz",
+            "correo": "masm13@gmail.com",
+            "fechaNacimiento": new Date("1996,16,12"),
+            "fechaAlta": new Date("2010,16,12"),
+            "pais": "Chile",
+            "moderador": {
+                "direccion": "Isla guafo 1314",
+                "_idNacional": "13123123-K",
+                "nroCta": 456789753,
+                "tipoCta": "Corriente",
+                "nombreBanco": "Banco Estado",
+                "tipoModerador": "Moderador superior"
+            }
+        },
+        "sevidor": {
+            "nombre": "Santiago",
+            "ubicacion": "Santiago"
+        }
+    },
+    {
+        "archivo": "Cancion",
+        "titulo": "Never gona give yo up",
+        "generoMusical": "Pop",
+        "reproducciones": 500,
+        "usuario": {
+            "_id": 1,
+            "nickname": "masm13",
+            "nombre": "Marco Andres Soto Muñoz",
+            "correo": "masm13@gmail.com",
+            "fechaNacimiento": new Date("1996,16,12"),
+            "fechaAlta": new Date("2010,16,12"),
+            "pais": "Chile",
+            "moderador": {
+                "direccion": "Isla guafo 1314",
+                "_idNacional": "13123123-K",
+                "nroCta": 456789753,
+                "tipoCta": "Corriente",
+                "nombreBanco": "Banco Estado",
+                "tipoModerador": "Moderador superior"
+            }
+        },
+        "sevidor": {
+            "nombre": "Santiago",
+            "ubicacion": "Santiago"
+        }
+    }
+]
