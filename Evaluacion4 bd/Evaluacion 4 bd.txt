@@ -46,6 +46,21 @@ MODIFICACIONES
 
 - Modifique la fecha de todos los videos indicando que la fecha es el 1 de octubre de 2020 
 cuando estos videos sean anteriores al 30 de septiembre de 2020. 
+
+db.multimedia.updateMany({fechaPublicacion:{ $lt:new Date('2020-09-30')}},{$set:{fechaPublicacion: new Date('2020-10-01')}})
+
 - Modifique la cantidad de me gusta de los videos aumentando el valor en 350. 
+
+
+db.servidores.updateMany({archivo: "Video"},
+    {$inc: {"usuarios.videos.likes":350 } }
+)
+
+
 - Elimine todos los videos que tengan una calificación para mayores de 18. 
+
+db.multimedia.deleteMany({restriccion:"+18"})
+
 - Elimine a todos los usuarios que tengan menos de 13 años. 
+
+db.multimedia.deleteMany({"usuario.fechaNacimiento":{ $gt:new Date('2009-07-18')}})

@@ -228,5 +228,101 @@
             "nombre": "Santiago",
             "ubicacion": "Santiago"
         }
-    }
+    },
+    {
+        "archivo": "Video",
+        "titulo": "Tutorial sql 02",
+        "fechaPublicacion": new Date("2002,12,12"),
+        "visibil_idad": "Publico",
+        "restriccion": "TE",
+        "generoInteres": "Educativo",
+        "likes": 200,
+        "dislikes": 100,
+        "visitas": 400,
+        "usuario": {
+            "_id": 2,
+            "nickname": "jahm14",
+            "nombre": "Javier Andres Herrera Montentenegro",
+            "correo": "jahm14@gmail.com",
+            "fechaNacimiento": new Date("1996,16,12"),
+            "fechaAlta": new Date("2010,16,13"),
+            "pais": "Argentina"
+        },
+        "sevidor": {
+            "nombre": "Santiago",
+            "ubicacion": "Santiago"
+        }
+    },
+    {
+        "archivo": "Video",
+        "titulo": "Tour por Alemania",
+        "fechaPublicacion": new Date("2010,12,12"),
+        "visibil_idad": "Publico",
+        "restriccion": "TE",
+        "generoInteres": "Turismo",
+        "likes": 150,
+        "dislikes": 50,
+        "visitas": 300,
+        "usuario": {
+            "_id": 2,
+            "nickname": "jahm14",
+            "nombre": "Javier Andres Herrera Montentenegro",
+            "correo": "jahm14@gmail.com",
+            "fechaNacimiento": new Date("1996,16,12"),
+            "fechaAlta": new Date("2010,16,12"),
+            "pais": "Argentina"
+        },
+        "sevidor": {
+            "nombre": "Santiago",
+            "ubicacion": "Santiago"
+        }
+    },
+    {
+        "archivo": "Video",
+        "titulo": "Tour por Belgica",
+        "fechaPublicacion": new Date("2010,12,12"),
+        "visibil_idad": "Publico",
+        "restriccion": "TE",
+        "generoInteres": "Turismo",
+        "likes": 150,
+        "dislikes": 50,
+        "visitas": 300,
+        "usuario": {
+            "_id": 2,
+            "nickname": "jahm14",
+            "nombre": "Javier Andres Herrera Montentenegro",
+            "correo": "jahm14@gmail.com",
+            "fechaNacimiento": new Date("1996,16,12"),
+            "fechaAlta": new Date("2010,16,12"),
+            "pais": "Argentina"
+        },
+        "sevidor": {
+            "nombre": "Santiago",
+            "ubicacion": "Santiago"
+        }
+    },
+    {
+        "archivo": "Video",
+        "titulo": "Tour por Inglarerra",
+        "fechaPublicacion": new Date("2010,12,12"),
+        "visibil_idad": "Publico",
+        "restriccion": "TE",
+        "generoInteres": "Turismo",
+        "likes": 150,
+        "dislikes": 50,
+        "visitas": 300,
+        "usuario": {
+            "_id": 2,
+            "nickname": "jahm14",
+            "nombre": "Javier Andres Herrera Montentenegro",
+            "correo": "jahm14@gmail.com",
+            "fechaNacimiento": new Date("1996,16,12"),
+            "fechaAlta": new Date("2010,16,12"),
+            "pais": "Argentina"
+        },
+        "sevidor": {
+            "nombre": "Santiago",
+            "ubicacion": "Santiago"
+        }
+    },
 ]
