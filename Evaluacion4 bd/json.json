@@ -119,6 +119,10 @@
             "fechaNacimiento": new Date("1996,16,12"),
             "fechaAlta": new Date("2010,16,12"),
             "pais": "Brasil"
+        },
+        "sevidor": {
+            "nombre": "Santiago",
+            "ubicacion": "Santiago"
         }
     },
     {
@@ -158,6 +162,10 @@
             "fechaNacimiento": new Date("2015,16,12"),
             "fechaAlta": new Date("2020,16,12"),
             "pais": "Brasil"
+        },
+        "sevidor": {
+            "nombre": "Santiago",
+            "ubicacion": "Santiago"
         }
     },
     {
@@ -173,6 +181,10 @@
             "fechaNacimiento": new Date("2015,16,12"),
             "fechaAlta": new Date("2020,16,12"),
             "pais": "Brasil"
+        },
+        "sevidor": {
+            "nombre": "Santiago",
+            "ubicacion": "Santiago"
         }
     },
     {
@@ -325,4 +337,184 @@
             "ubicacion": "Santiago"
         }
     },
+    {
+        "archivo": "Cancion",
+        "titulo": "Get Lucky",
+        "generoMusical": "Electroninica",
+        "reproducciones": 500,
+        "usuario": {
+            "_id": 5,
+            "nickname": "mafm00",
+            "nombre": "Marcela Antonia Fuentez Muñoz",
+            "correo": "mafm00@gmail.com",
+            "fechaNacimiento": new Date("1996,16,12"),
+            "fechaAlta": new Date("2010,16,12"),
+            "pais": "Argentina",
+            "moderador": {
+                "direccion": "Transversal 1595",
+                "_idNacional": "12258852-K",
+                "nroCta": 753759600,
+                "tipoCta": "Corriente",
+                "nombreBanco": "Bci",
+                "tipoModerador": "Super Moderador"
+            }
+        },
+        "sevidor": {
+            "nombre": "Buenos Aires",
+            "ubicacion": "Buenos Aires"
+        }
+    },
+    {
+        "archivo": "Cancion",
+        "titulo": "Around the world",
+        "generoMusical": "Electroninica",
+        "reproducciones": 500,
+        "usuario": {
+            "_id": 5,
+            "nickname": "mafm00",
+            "nombre": "Marcela Antonia Fuentez Muñoz",
+            "correo": "mafm00@gmail.com",
+            "fechaNacimiento": new Date("1996,16,12"),
+            "fechaAlta": new Date("2010,16,12"),
+            "pais": "Argentina",
+            "moderador": {
+                "direccion": "Transversal 1595",
+                "_idNacional": "12258852-K",
+                "nroCta": 753759600,
+                "tipoCta": "Corriente",
+                "nombreBanco": "Bci",
+                "tipoModerador": "Super Moderador"
+            }
+        },
+        "sevidor": {
+            "nombre": "Buenos Aires",
+            "ubicacion": "Buenos Aires"
+        }
+    },
+    {
+        "archivo": "Cancion",
+        "titulo": "One more time",
+        "generoMusical": "Electroninica",
+        "reproducciones": 500,
+        "usuario": {
+            "_id": 5,
+            "nickname": "mafm00",
+            "nombre": "Marcela Antonia Fuentez Muñoz",
+            "correo": "mafm00@gmail.com",
+            "fechaNacimiento": new Date("1996,16,12"),
+            "fechaAlta": new Date("2010,16,12"),
+            "pais": "Argentina",
+            "moderador": {
+                "direccion": "Transversal 1595",
+                "_idNacional": "12258852-K",
+                "nroCta": 753759600,
+                "tipoCta": "Corriente",
+                "nombreBanco": "Bci",
+                "tipoModerador": "Super Moderador"
+            }
+        },
+        "sevidor": {
+            "nombre": "Buenos Aires",
+            "ubicacion": "Buenos Aires"
+        }
+    },
+    {
+        "archivo": "Cancion",
+        "titulo": "Harder, Better, Faster, Stronger",
+        "generoMusical": "Electroninica",
+        "reproducciones": 500,
+        "usuario": {
+            "_id": 5,
+            "nickname": "mafm00",
+            "nombre": "Marcela Antonia Fuentez Muñoz",
+            "correo": "mafm00@gmail.com",
+            "fechaNacimiento": new Date("1996,16,12"),
+            "fechaAlta": new Date("2010,16,12"),
+            "pais": "Argentina",
+            "moderador": {
+                "direccion": "Transversal 1595",
+                "_idNacional": "12258852-K",
+                "nroCta": 753759600,
+                "tipoCta": "Corriente",
+                "nombreBanco": "Bci",
+                "tipoModerador": "Super Moderador"
+            }
+        },
+        "sevidor": {
+            "nombre": "Buenos Aires",
+            "ubicacion": "Buenos Aires"
+        }
+    },
+    {
+        "archivo": "Video",
+        "titulo": "Videos de gatos 01",
+        "fechaPublicacion": new Date("2010,12,12"),
+        "visibil_idad": "Publico",
+        "restriccion": "TE",
+        "generoInteres": "Animales",
+        "likes": 150,
+        "dislikes": 50,
+        "visitas": 300,
+        "usuario": {
+            "_id": 6,
+            "nickname": "isfr77",
+            "nombre": "Ivana Soledad Fuentez Rodriguez",
+            "correo": "isfr77@gmail.com",
+            "fechaNacimiento": new Date("1996,16,12"),
+            "fechaAlta": new Date("2010,16,12"),
+            "pais": "Argentina"
+        },
+        "sevidor": {
+            "nombre": "Buenos Aires",
+            "ubicacion": "Buenos Aires"
+        }
+    },
+    {
+        "archivo": "Video",
+        "titulo": "Videos de gatos 02",
+        "fechaPublicacion": new Date("2010,12,12"),
+        "visibil_idad": "Publico",
+        "restriccion": "TE",
+        "generoInteres": "Animales",
+        "likes": 150,
+        "dislikes": 50,
+        "visitas": 300,
+        "usuario": {
+            "_id": 6,
+            "nickname": "isfr77",
+            "nombre": "Ivana Soledad Fuentez Rodriguez",
+            "correo": "isfr77@gmail.com",
+            "fechaNacimiento": new Date("1996,16,12"),
+            "fechaAlta": new Date("2010,16,12"),
+            "pais": "Argentina"
+        },
+        "sevidor": {
+            "nombre": "Buenos Aires",
+            "ubicacion": "Buenos Aires"
+        }
+    },
+    {
+        "archivo": "Video",
+        "titulo": "Videos de gatos 03",
+        "fechaPublicacion": new Date("2010,12,12"),
+        "visibil_idad": "Publico",
+        "restriccion": "TE",
+        "generoInteres": "Animales",
+        "likes": 150,
+        "dislikes": 50,
+        "visitas": 300,
+        "usuario": {
+            "_id": 6,
+            "nickname": "isfr77",
+            "nombre": "Ivana Soledad Fuentez Rodriguez",
+            "correo": "isfr77@gmail.com",
+            "fechaNacimiento": new Date("1996,16,12"),
+            "fechaAlta": new Date("2010,16,12"),
+            "pais": "Argentina"
+        },
+        "sevidor": {
+            "nombre": "Buenos Aires",
+            "ubicacion": "Buenos Aires"
+        }
+    }
 ]

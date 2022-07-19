@@ -51,11 +51,7 @@ db.multimedia.updateMany({fechaPublicacion:{ $lt:new Date('2020-09-30')}},{$set:
 
 - Modifique la cantidad de me gusta de los videos aumentando el valor en 350. 
 
-
-db.servidores.updateMany({archivo: "Video"},
-    {$inc: {"usuarios.videos.likes":350 } }
-)
-
+db.multimedia.updateMany({archivo:"Video"},{$inc:{"likes":350}})
 
 - Elimine todos los videos que tengan una calificación para mayores de 18. 
 
