@@ -1,0 +1,14 @@
+requisitos de react
+1-instalar node js
+2-instalr git bash
+
+crear una APP react:
+
+npx create-react-app nombreAplicacion
+
+cd nombreAplicacion
+
+levanta el servidor desarrollo
+nmp start
+
+ctr + c  =  detiene la pagina
