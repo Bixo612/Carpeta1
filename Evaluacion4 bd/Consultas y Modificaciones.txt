@@ -16,15 +16,15 @@ db.multimedia.find({"archivo":"Cancion"}).count()
 
 - ¿Cuántos usuarios hay en la plataforma que tengan más de un año de antigüedad? 
 
-db.multimedia.find({"usuario.fechaAlta": {$gt:new Date("2021-07-01")}}).count()
+db.multimedia.distinct("usuario._id",{"usuario.fechaAlta": {$lt:new Date("2021-07-01")}}).length
 
 - ¿Cuántos usuarios tienen menos de un año de antigüedad? 
 
-db.multimedia.find({"usuario.fechaAlta": {$lt:new Date("2021-07-01")}}).count()
+db.multimedia.distinct("usuario._id",{"usuario.fechaAlta": {$gt:new Date("2021-07-01")}}).length
 
 - ¿Cuántos moderadores hay en la plataforma? 
 
-db.multimedia.find({"usuario.moderador":{"$exists":1}}).itcount()
+db.multimedia.distinct("usuario._id",{"usuario.moderador":{"$exists":1}}).length
 
 - ¿Cuántos videos con calificación para mayores de 18 hay en la plataforma? 
 
@@ -40,7 +40,7 @@ db.multimedia.find({"fechaPublicacion": {$gt:new Date("2020-12-31")}})
 
 - ¿Cuántos usuarios registrados son menores de 13 años?
 
-db.multimedia.find({"usuario.fechaNacimiento": {$gt:new Date("2009-01-01")}}).count()
+db.multimedia.distinct("usuario._id",{"servidor.nombre": "Buenos Aires"})
 
 MODIFICACIONES
 
