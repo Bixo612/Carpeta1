@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block titulo %} Eliminar {% endblock %}
+{% block body %}
+<h1>Eliminar reserva</h1>
+<p>Ingrese el id que desea eliminar</p>
+<hr>
+<form action="eliminar" method="POST"> {% csrf_token %}
+    <div class="input-group">
+        <span class="input-group-text">ID</span>
+        <input type="text" name="txtId" class="form-control">
+        <input type="submit" value="Eliminar" class="btn btn-danger">
+    </div>
+</form>
+
+{% endblock %}

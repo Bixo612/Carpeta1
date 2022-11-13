@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block titulo %} Lista {% endblock %}
+{% block body %}
+<h1>Listado de reservas</h1>
+<hr>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Rut</th>
+      <th>Nombre</th>
+      <th>Recha Reserva</th>
+      <th>Habitacion</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for x in l %}
+    <tr>
+      <td>{{x.id}}</td>
+      <td>{{x.rut}}</td>
+      <td>{{x.nombre}}</td>
+      <td>{{x.fechaReserva}}</td>
+      <td>{{x.habitacion}}</td>
+    </tr>
+    {% empty %}
+    <tr>
+      <p>No hay reservas</p>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+
+{% endblock %}

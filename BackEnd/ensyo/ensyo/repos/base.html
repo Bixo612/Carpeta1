@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block titulo %} Eventos {% endblock %}</title>
+    <!--Vicente Vasquez Galvez 19360397-1-->
+    <link rel="stylesheet" href="estilosp2.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script type="text/javascript" src="script.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <!--
+            <a class="navbar-brand" href="#">
+                <img src="#" alt="" width="30" height="30">
+            </a>
+            -->
+            <a class="navbar-brand" href="#">Título de la página</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item subra">
+                        <a class="nav-link" href="/">Inicio</a>
+                    </li>
+                    <li class="nav-item subra">
+                        <a class="nav-link" href="formulario">Ingresar Evento</a>
+                    </li>
+                    <li class="nav-item subra">
+                        <a class="nav-link" href="#">Modificar Evento</a>
+                    </li>
+                    <li class="nav-item subra">
+                        <a class="nav-link" href="#">Eliminar Evento</a>
+                    </li>
+                    <li class="nav-item subra">
+                        <a class="nav-link" href="#">Listar Eventos</a>
+                    </li>
+                </ul>
+                <span class="navbar-text">
+                    Lema
+                </span>
+            </div>
+        </div>
+    </nav>
+    <!--Fin nav-->
+    <div class="container">
+        {% block body %} {% endblock %}
+    </div>
+    <!--fin contariner-->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-3">
+                    <!--
+                    <img src="img/logo.png" alt="" width="100" height="100">
+                    <br>-->
+                </div>
+                <div class="col-sm-12 col-md-3">
+                    <!--
+                    <a href="#" class="link-primary">Mapa de sitio</a><br>
+                    <a href="#" class="link-primary">Repuestos</a><br>
+                    <a href="#" class="link-primary">Rent a car</a><br>
+                    <a href="#" class="link-primary">Desabolladura y pintura</a><br>
+                    <a href="#" class="link-primary">trabaja con nosotros</a>
+                    -->
+                </div>
+                <div class="col-sm-12 col-md-3">
+                    <li class="list-group-item">Vicente Vasquez/li>
+                    <!--
+                    <li class="list-group-item">Email: servifast@gmail.com</li>
+                    <l1 class="list-group-item">Casa matriz: Av. Quilín 2854</l1>
+                    -->
+                </div>
+                <div class="col-sm-12 col-md-3">
+                </div>
+            </div>
+        </div>
+        <br>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

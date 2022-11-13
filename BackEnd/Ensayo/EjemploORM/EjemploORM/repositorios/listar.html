@@ -1,0 +1,40 @@
+{% extends "base.html" %} {% block titulo %} Esta es la página de inicio {% endblock %} {% block body %}
+
+<table>
+    <thead>
+        <tr>
+            <th>
+                Rut
+            </th>
+            <th>
+                Correo Electrónico
+            </th>
+            <th>
+                Nombre
+            </th>
+            <th>
+                Contraseña
+            </th>
+            <th>
+                Direccion
+            </th>
+            <th>
+                Telefono
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for p in personas %}
+        <tr>
+            <td>{{p.rut}}</td>
+            <td>{{p.nombre}}</td>
+            <td>{{p.correoElectronico}}</td>
+            <td>**************</td>
+            <td>{{p.direccion}}</td>
+            <td>{{p.telefono}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+
+
+{% endblock %}

@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block titulo %} Reservar {% endblock %}
+{% block body %}
+
+<h1>Reservar</h1>
+<p>Ingrese los datos de su reserva</p>
+<hr>
+<form action="reservar" method="POST"> {% csrf_token %}
+    <table class="table">
+        <tr>
+            <td>ID</td>
+            <td><input type="text" name="txtId" class="form-control"></td>
+        </tr>
+        <tr>
+            <td>Nombre</td>
+            <td><input type="text" name="txtNombre" class="form-control"></td>
+        </tr>
+        <tr>
+            <td>Rut</td>
+            <td><input type="text" name="txtRut" class="form-control"></td>
+        </tr>
+        <tr>
+            <td>Sexo</td>
+            <td><input type="text" name="txtSexo" class="form-control"></td>
+        </tr>
+        <tr>
+            <td>Fecha de nacimiento</td>
+            <td><input type="date" name="txtFechaNacimiento" class="form-control"></td>
+        </tr>
+        <tr>
+            <td>Fecha de reserva</td>
+            <td><input type="date" name="txtFechaReserva" class="form-control"></td>
+        </tr>
+        <tr>
+            <td>Telefono</td>
+            <td><input type="tel" name="txtTelfono" class="form-control"></td>
+        </tr>
+        <tr>
+            <td>Habitacion</td>
+            <td><input type="number" name="txtHabitacion" class="form-control"></td>
+        </tr>
+        <tr>
+            <td>       
+            </td>
+            <td>
+                <div class="btn-group">
+                <input type="submit" value="Enviar" class="btn btn-success">
+                <input type="reset" value="Cancelar" class="btn btn-primary"> 
+            </div>
+            </td>
+        </tr>
+    </table>
+</form>
+
+{% endblock %}

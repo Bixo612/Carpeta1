@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block titulo %} Registrado {% endblock %}
+{% block body %} 
+
+<h1>Evento registrado</h1>
+<hr>
+<p>Nombre: {{e.nombre}}</p>
+<p>Direccion: {{e.direccion}}</p>
+<p>Correo: {{e.correo}}</p>
+<p>Telefono: {{e.telefono}}</p>
+<p>Fecha: {{e.fecha}}</p>
+<p>Cantidad: {{e.cantidad}}</p>
+
+{% endblock %}
+<!--
+    nombre
+    direccion
+    correo
+    telefono
+    fecha
+    cantidad
+-->

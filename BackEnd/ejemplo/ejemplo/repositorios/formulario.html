@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block titulo %} Pagina de inicio {% endblock %}
+{% block body %} 
+<h1>Formulario</h1>
+<form action="respuesta" method="get">
+    <table>
+        <tr>
+            <td>Nombre</td>
+            <td>
+                <input type="text" name="txtnombre" placeholder="Ingrese su nombre" />
+            </td>
+        </tr>
+        <tr>
+            <td>Direccion</td>
+            <td>
+                <input type="text" name="txtdireccion" placeholder="Ingrese su direccion" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" value="Enviar"/>
+            </td>
+            <td><input type="reset" value="Cancelar"/></td>
+        </tr>
+    </table>
+</form>
+{% endblock %}

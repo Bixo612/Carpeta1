@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block titulo %} Reserva {% endblock %}
+{% block body %}
+<h1>Reserva</h1>
+<p>Habitación registrada</p>
+<hr>
+<table class="table">
+    <tbody>
+        <tr>
+            <td>ID: {{r.id}}</td>
+            <td>Nombre: {{r.nombre}}</td>
+            <td>Rut: {{r.rut}}</td>
+            <td>Sexo: {{r.sexo}}</td>
+        </tr>
+        <tr>
+            <td>Fecha de nacimiento: {{r.fechaNacimiento}}</td>
+            <td>Fecha de reserva: {{r.fechaReserva}}</td>
+            <td>Telefono: {{r.telefono}}</td>
+            <td>Habitacion: {{r.habitacion}}</td>
+        </tr>
+    </tbody>
+</table>
+{% endblock %}

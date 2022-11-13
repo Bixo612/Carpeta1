@@ -1,0 +1,19 @@
+footer {
+    background-color: #55ceca;
+    padding-top: 20px;
+}
+
+nav {
+    background-color: #55ceca;
+}
+
+h5{
+    text-decoration: underline;
+}
+
+.hv:hover{
+    background:  #0f003b    ;
+}
+.subra:hover{
+    text-decoration: underline;
+}
