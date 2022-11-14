@@ -2,81 +2,66 @@
 
 <br>
 <div class="container text-center">
-    <div class="row">
-        <div class="col">
-            <div class="card">
-                <h5 class="card-header" style="text-align: left;">Rigistar Pelicula</h5>
-                <div class="card-body">
-                    <form>
-                        <div class="input-group mb-3">
-                            <span for="p_titulo" class="input-group-text">Titulo</span>
-                            <input type="text" name="p_titulo" class="form-control">
-                        </div>
-                        <div class="input-group mb-3">
-                            <span for="p_anno" class="input-group-text">Año</span>
-                            <input type="text" name="p_anno" class="form-control">
-                        </div>
-                        <div class="input-group mb-3">
-                            <span for="p_genero" class="input-group-text">Genero</span>
-                            <input type="text" name="p_genero" class="form-control">
-                        </div>
-                        <div class="input-group mb-3">
-                            <span for="p_restriccion" class="input-group-text">Restriccion</span>
-                            <input type="text" name="p_restriccion" class="form-control">
-                        </div>
-                        <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
-                            <input type="submit" class="btn btn-primary" value="Ingresar" />
-                            <input type="reset" class="btn btn-danger" value="Cancelar" />
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card">
-                <h5 class="card-header" style="text-align: left;">Registrar Juego</h5>
-                <div class="card-body">
-                    <form>
-                        <div class="input-group mb-3">
-                            <span for="j_titulo" class="input-group-text">Titulo</span>
-                            <input type="text" name="j_titulo" class="form-control">
-                        </div>
-                        <div class="input-group mb-3">
-                            <span for="j_consola" class="input-group-text">Consola</span>
-                            <input type="text" name="j_consola" class="form-control">
-                        </div>
-                        <div class="input-group mb-3">
-                            <span for="j_genero" class="input-group-text">Genero</span>
-                            <input type="text" name="j_genero" class="form-control">
-                        </div>
-                        <div class="input-group mb-3">
-                            <span for="j_restriccion" class="input-group-text">Restriccion</span>
-                            <input type="text" name="j_restriccion" class="form-control">
 
-                        </div>
-                        <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
-                            <input type="submit" class="btn btn-primary" value="Ingresar" />
-                            <input type="reset" class="btn btn-danger" value="Cancelar" />
-                        </div>
-                    </form>
+    <div class="card">
+        <h5 class="card-header" style="text-align: left;">Rigistar Pelicula</h5>
+        <div class="card-body">
+            <form class="row g-3">
+
+                <label for="p_titulo" class="form-label">Titulo</label>
+                <input type="text" name="p_titulo" class="form-control">
+
+
+                <label for="p_anno" class="form-label">Año</label>
+                <input type="text" name="p_anno" class="form-control">
+
+
+                <label for="p_genero" class="form-label">Genero</label>
+                <input type="text" name="p_genero" class="form-control">
+
+
+                <label for="p_restriccion" class="form-label">Restriccion</label>
+                <input type="text" name="p_restriccion" class="form-control">
+
+                <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                    <input type="submit" class="btn btn-primary" value="Ingresar" />
+                    <input type="reset" class="btn btn-danger" value="Cancelar" />
                 </div>
-            </div>
+            </form>
         </div>
     </div>
+    <br>
+
+    <div class="card">
+        <h5 class="card-header" style="text-align: left;">Registrar Juego</h5>
+        <div class="card-body">
+            <form class="row g-3">
+
+                <label for="j_titulo" class="form-label">Titulo</label>
+                <input type="text" name="j_titulo" class="form-control">
+
+
+                <label for="j_consola" class="form-label">Consola</label>
+                <input type="text" name="j_consola" class="form-control">
+
+
+                <label for="j_genero" class="form-label">Genero</label>
+                <input type="text" name="j_genero" class="form-control">
+
+
+                <label for="j_restriccion" class="form-label">Restriccion</label>
+                <input type="text" name="j_restriccion" class="form-control">
+
+
+                <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                    <input type="submit" class="btn btn-primary" value="Ingresar" />
+                    <input type="reset" class="btn btn-danger" value="Cancelar" />
+                </div>
+            </form>
+        </div>
+    </div>
+
 </div>
-
-<!--
-    Pelicula
-        Titulo
-        Año
-        Genero
-
-    Juego
-        Titulo
-        Consola
-        Genero
-
--->
-
+<br>
 
 {% endblock %}

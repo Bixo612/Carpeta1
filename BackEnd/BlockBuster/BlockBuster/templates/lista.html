@@ -1,24 +1,20 @@
 {% extends "base.html" %} {% block titulo %} Inicio {% endblock %} {% block body %}
 
-<div>
-    <table>
-        <thead>
-            <tr>
-                <th>Titulo</th>
-                <th>Año</th>
-                <th>Genero</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for p in peliculas %}
-            <tr>
-                <td>{{p.titulo}}</td>
-                <td>{{p.anno}}</td>
-                <td>{{p.genero}}</td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+<br>
+<div class="container text-center">
+    <div class="card">
+        <h5 class="card-header" style="text-align: left;">Lista de peliculas</h5>
+        <div class="card-body">
+        </div>
+    </div>
+    <br>
+    <div class="card">
+        <h5 class="card-header" style="text-align: left;">Lista de juegos</h5>
+        <div class="card-body">
+        </div>
+    </div>
 </div>
+
+
 
 {% endblock %}
