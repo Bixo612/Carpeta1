@@ -1,15 +1,16 @@
 {% extends "base.html" %} {% block titulo %} Inicio {% endblock %} {% block body %}
 <br>
+<script src="validaciones.js"></script>
 <div class="row">
     <div class="col-sm-6">
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title">Registrar Juego</h5>
                 <!--Formulario-->
-                <form action="registar_juego" method="post"> {% csrf_token %}
+                <form action="registar_juego" method="post" id="form_registrar_juego"> {% csrf_token %}
                     <div class="mb-3">
                         <label for="txt_j_id" class="form-label">Id</label>
-                        <input type="text" class="form-control" name="txt_j_id" id="txt_j_id">
+                        <input type="text" class="form-control" name="txt_j_id" id="txt_j_id" required>
                     </div>
                     <div class="mb-3">
                         <label for="txt_j_nombre" class="form-label">Nombre</label>
@@ -25,14 +26,16 @@
                     </div>
                     <div class="mb-3">
                         <label for="txt_j_ano" class="form-label">Año</label>
-                        <input type="text" class="form-control" name="txt_j_ano" id="txt_j_ano">
+                        <input type="number" class="form-control" name="txt_j_ano" id="txt_j_ano" required>
                     </div>
                     <div class="mb-3">
                         <label for="txt_j_clasificacion" class="form-label">Clasificación</label>
                         <input type="text" class="form-control" name="txt_j_clasificacion" id="txt_j_clasificacion">
                     </div>
                     <div class="col-auto">
-                        <button type="submit" class="btn btn-success">Registrar Juego</button>
+                        <input type="submit" class="btn btn-success" onclick="javascript:void(validarJuego())"
+                            value="Registrar Juego">
+                        <input type="reset" class="btn btn-danger" value="Limpiar">
                     </div>
                 </form>
                 <!---->
@@ -47,7 +50,7 @@
                 <form action="registar_pelicula" method="post"> {% csrf_token %}
                     <div class="mb-3">
                         <label for="txt_p_id" class="form-label">Id</label>
-                        <input type="text" class="form-control" name="txt_p_id" id="txt_p_id">
+                        <input type="text" class="form-control" name="txt_p_id" id="txt_p_id" required>
                     </div>
                     <div class="mb-3">
                         <label for="txt_p_nombre" class="form-label">Nombre</label>
@@ -63,7 +66,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="txt_p_ano" class="form-label">Año</label>
-                        <input type="text" class="form-control" name="txt_p_ano" id="txt_p_ano">
+                        <input type="number" class="form-control" name="txt_p_ano" id="txt_p_ano" required>
                     </div>
                     <div class="mb-3">
                         <label for="txt_p_clasificacion" class="form-label">Clasificación</label>

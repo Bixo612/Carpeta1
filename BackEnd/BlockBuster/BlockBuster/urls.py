@@ -22,4 +22,6 @@ urlpatterns = [
     path('irInicio', views.irInicio),
     path('irRegistro', views.irRegistro),
     path('irLista', views.irLista),
+    path('registar_juego', views.fx_registrarJuego),
+    path('registar_pelicula',views.fx_registrarPelicula),
 ]

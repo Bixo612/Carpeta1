@@ -1,7 +1,7 @@
 from django.db import models
 
 class Juego(models.Model):
-    idJuego        = models.CharField(max_length=10)
+    idJuego         = models.CharField(max_length=10)
     nombre          = models.CharField(max_length=100)
     consola         = models.CharField(max_length=25)
     genero          = models.CharField(max_length=10)
@@ -39,4 +39,6 @@ Peliculas
     Genero
     Año
     Clasificación
+py manage.py makemigrations BlockBuster
+python manage.py migrate
 """
