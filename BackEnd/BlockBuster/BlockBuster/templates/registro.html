@@ -6,6 +6,35 @@
             <div class="card-body">
                 <h5 class="card-title">Registrar Juego</h5>
                 <!--Formulario-->
+                <form action="registar_juego" method="post"> {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="txt_j_id" class="form-label">Id</label>
+                        <input type="text" class="form-control" name="txt_j_id" id="txt_j_id">
+                    </div>
+                    <div class="mb-3">
+                        <label for="txt_j_nombre" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" name="txt_j_nombre" id="txt_j_nombre">
+                    </div>
+                    <div class="mb-3">
+                        <label for="txt_j_consola" class="form-label">Consola</label>
+                        <input type="text" class="form-control" name="txt_j_consola" id="txt_j_consola">
+                    </div>
+                    <div class="mb-3">
+                        <label for="txt_j_genero" class="form-label">Genero</label>
+                        <input type="text" class="form-control" name="txt_j_genero" id="txt_j_genero">
+                    </div>
+                    <div class="mb-3">
+                        <label for="txt_j_ano" class="form-label">Año</label>
+                        <input type="text" class="form-control" name="txt_j_ano" id="txt_j_ano">
+                    </div>
+                    <div class="mb-3">
+                        <label for="txt_j_clasificacion" class="form-label">Clasificación</label>
+                        <input type="text" class="form-control" name="txt_j_clasificacion" id="txt_j_clasificacion">
+                    </div>
+                    <div class="col-auto">
+                        <button type="submit" class="btn btn-success">Registrar Juego</button>
+                    </div>
+                </form>
                 <!---->
             </div>
         </div>
@@ -15,79 +44,39 @@
             <div class="card-body">
                 <h5 class="card-title">Registrar Pelicula</h5>
                 <!--Formulario-->
+                <form action="registar_pelicula" method="post"> {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="txt_p_id" class="form-label">Id</label>
+                        <input type="text" class="form-control" name="txt_p_id" id="txt_p_id">
+                    </div>
+                    <div class="mb-3">
+                        <label for="txt_p_nombre" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" name="txt_p_nombre" id="txt_p_nombre">
+                    </div>
+                    <div class="mb-3">
+                        <label for="txt_p_director" class="form-label">Director</label>
+                        <input type="text" class="form-control" name="txt_p_director" id="txt_p_director">
+                    </div>
+                    <div class="mb-3">
+                        <label for="txt_p_genero" class="form-label">Genero</label>
+                        <input type="text" class="form-control" name="txt_p_genero" id="txt_p_genero">
+                    </div>
+                    <div class="mb-3">
+                        <label for="txt_p_ano" class="form-label">Año</label>
+                        <input type="text" class="form-control" name="txt_p_ano" id="txt_p_ano">
+                    </div>
+                    <div class="mb-3">
+                        <label for="txt_p_clasificacion" class="form-label">Clasificación</label>
+                        <input type="text" class="form-control" name="txt_p_clasificacion" id="txt_p_clasificacion">
+                    </div>
+                    <div class="col-auto">
+                        <button type="submit" class="btn btn-success">Registrar Pelicula</button>
+                    </div>
+                </form>
                 <!---->
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
             </div>
         </div>
     </div>
 </div>
 
-
-
-<!--
-<br>
-<div class="container text-center">
-
-    <div class="card">
-        <h5 class="card-header" style="text-align: left;">Rigistar Pelicula</h5>
-        <div class="card-body">
-            <form class="row g-3">
-
-                <label for="p_titulo" class="form-label">Titulo</label>
-                <input type="text" name="p_titulo" class="form-control">
-
-
-                <label for="p_anno" class="form-label">Año</label>
-                <input type="text" name="p_anno" class="form-control">
-
-
-                <label for="p_genero" class="form-label">Genero</label>
-                <input type="text" name="p_genero" class="form-control">
-
-
-                <label for="p_restriccion" class="form-label">Restriccion</label>
-                <input type="text" name="p_restriccion" class="form-control">
-
-                <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
-                    <input type="submit" class="btn btn-primary" value="Ingresar" />
-                    <input type="reset" class="btn btn-danger" value="Cancelar" />
-                </div>
-            </form>
-        </div>
-    </div>
-    <br>
-
-    <div class="card">
-        <h5 class="card-header" style="text-align: left;">Registrar Juego</h5>
-        <div class="card-body">
-            <form class="row g-3">
-
-                <label for="j_titulo" class="form-label">Titulo</label>
-                <input type="text" name="j_titulo" class="form-control">
-
-
-                <label for="j_consola" class="form-label">Consola</label>
-                <input type="text" name="j_consola" class="form-control">
-
-
-                <label for="j_genero" class="form-label">Genero</label>
-                <input type="text" name="j_genero" class="form-control">
-
-
-                <label for="j_restriccion" class="form-label">Restriccion</label>
-                <input type="text" name="j_restriccion" class="form-control">
-
-
-                <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
-                    <input type="submit" class="btn btn-primary" value="Ingresar" />
-                    <input type="reset" class="btn btn-danger" value="Cancelar" />
-                </div>
-            </form>
-        </div>
-    </div>
-
-</div>
-<br>
--->
 {% endblock %}

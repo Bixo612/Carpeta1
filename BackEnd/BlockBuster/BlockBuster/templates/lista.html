@@ -1,19 +1,67 @@
 {% extends "base.html" %} {% block titulo %} Inicio {% endblock %} {% block body %}
 
 <br>
-<div class="container text-center">
-    <div class="card">
-        <h5 class="card-header" style="text-align: left;">Lista de peliculas</h5>
-        <div class="card-body">
-        </div>
-    </div>
-    <br>
-    <div class="card">
-        <h5 class="card-header" style="text-align: left;">Lista de juegos</h5>
-        <div class="card-body">
-        </div>
-    </div>
+
+<!---->
+<div class="card">
+    <h5 class="card-header" style="text-align: left;">Lista de juegos</h5>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Consola</th>
+                <th scope="col">Genero</th>
+                <th scope="col">Año</th>
+                <th scope="col">Clasificación</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for j in juegos %}
+            <tr>
+                <th scope="row">{{j.idJuego}}</th>
+                <td>{{j.nombre}}</td>
+                <td>{{j.consola}}</td>
+                <td>{{j.genero}}</td>
+                <td>{{j.an_o}}</td>
+                <td>{{j.clasificacion}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 </div>
+<!---->
+<br>
+<!---->
+<div class="card">
+    <h5 class="card-header" style="text-align: left;">Lista de peliculas</h5>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Director</th>
+                <th scope="col">Genero</th>
+                <th scope="col">Año</th>
+                <th scope="col">Clasificación</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for p in pelicuas %}
+            <tr>
+                <th scope="row">{{p.idJuego}}</th>
+                <td>{{p.nombre}}</td>
+                <td>{{p.consola}}</td>
+                <td>{{p.genero}}</td>
+                <td>{{p.an_o}}</td>
+                <td>{{p.clasificacion}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+<!---->
+
 
 
 

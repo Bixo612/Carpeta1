@@ -1,0 +1,9 @@
+Comandos Django
+
+'''
+comandos en termianrl para hacer migracioenes
+
+py manage.py makemigrations EjemploORM
+python manage.py migrate
+
+'''
