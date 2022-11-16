@@ -3,20 +3,19 @@ from msilib.schema import Error
 from .models import Juego
 from .models import Pelicula
 
-
 def irInicio(request):
     return render(request, "inicio.html")
-
 
 def irRegistro(request):
     return render(request, "registro.html")
 
+def irEliminar(request):
+    return render(request, "eliminar.html")
 
 def irLista(request):
     p = Pelicula.objects.all()
     j = Juego.objects.all()
     return render(request, "lista.html", {'juegos': j, 'peliculas': p})
-
 
 def fx_registrarJuego(request):
     msj = None
@@ -37,7 +36,6 @@ def fx_registrarJuego(request):
         msj = f'\n Ha ocurrido un error en la operacion'
     return render(request, "inicio.html", {'msj': msj})
 
-
 def fx_registrarPelicula(request):
     msj = None
     p_id = request.POST['txt_p_id']
@@ -52,10 +50,7 @@ def fx_registrarPelicula(request):
             idPelicula=p_id, nombre=p_nombre,
             director=p_director, genero=p_genero,
             an_o=p_ano, clasificacion=p_clasificacion)
-        msj = '''<div class="alert alert-warning alert-dismissible fade show" role="alert">
-    <strong>Holy guacamole!</strong> You should check in on some of those fields below.
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-  </div>'''
+        msj = "Pelicula " + str(p_id) + " registrado correctamente"
     except Error as err:
         msj = f'\n Ha ocurrido un error en la operacion'
     return render(request, "inicio.html", {'msj': msj})
