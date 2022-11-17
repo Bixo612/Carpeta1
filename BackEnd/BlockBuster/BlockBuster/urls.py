@@ -28,4 +28,5 @@ urlpatterns = [
     path('registar_juego', views.fx_registrarJuego),
     path('registar_pelicula',views.fx_registrarPelicula),
     path('eliminar_juego', views.fx_eliminarJuego),
+    path('eliminar_pelicula', views.fx_eliminarPelicula),
 ]

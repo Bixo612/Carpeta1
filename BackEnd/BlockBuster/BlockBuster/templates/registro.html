@@ -9,27 +9,45 @@
                 <form action="registar_juego" method="post" id="form_registrar_juego"> {% csrf_token %}
                     <div class="mb-3">
                         <label for="txt_j_id" class="form-label">Id</label>
-                        <input type="text" class="form-control" name="txt_j_id" id="txt_j_id" required>
+                        <input type="text" class="form-control" name="txt_j_id" id="txt_j_id" required maxlength="10">
                     </div>
                     <div class="mb-3">
                         <label for="txt_j_nombre" class="form-label">Nombre</label>
-                        <input type="text" class="form-control" name="txt_j_nombre" id="txt_j_nombre">
+                        <input type="text" class="form-control" name="txt_j_nombre" id="txt_j_nombre" maxlength="100">
                     </div>
                     <div class="mb-3">
                         <label for="txt_j_consola" class="form-label">Consola</label>
-                        <input type="text" class="form-control" name="txt_j_consola" id="txt_j_consola">
+                        <select class="form-select" name="txt_j_consola" id="txt_j_consola"
+                            aria-label="Default select example" required>
+                            <option value=""></option>
+                            <option value="Switch">Switch</option>
+                            <option value="Wii U">Wii U</option>
+                            <option value="Xbox One">Xbox One</option>
+                            <option value="Xbox Series">Xbox Series</option>
+                            <option value="Ps3">Ps3</option>
+                            <option value="Ps4">Ps4</option>
+                            <option value="Ps5">Ps5</option>
+                        </select>
                     </div>
                     <div class="mb-3">
                         <label for="txt_j_genero" class="form-label">Genero</label>
-                        <input type="text" class="form-control" name="txt_j_genero" id="txt_j_genero">
+                        <input type="text" class="form-control" name="txt_j_genero" id="txt_j_genero" maxlength="10">
                     </div>
                     <div class="mb-3">
                         <label for="txt_j_ano" class="form-label">Año</label>
-                        <input type="number" class="form-control" name="txt_j_ano" id="txt_j_ano" required>
+                        <input type="number" class="form-control" name="txt_j_ano" id="txt_j_ano" required min="2000" max="3000">
                     </div>
                     <div class="mb-3">
                         <label for="txt_j_clasificacion" class="form-label">Clasificación</label>
-                        <input type="text" class="form-control" name="txt_j_clasificacion" id="txt_j_clasificacion">
+                        <select class="form-select" name="txt_j_clasificacion" id="txt_j_clasificacion"
+                            aria-label="Default select example" required>
+                            <option value=""></option>
+                            <option value="ER">ER</option>
+                            <option value="TE">TE</option>
+                            <option value="8+">8+</option>
+                            <option value="14+">14+</option>
+                            <option value="18+">18+</option>
+                        </select>
                     </div>
                     <div class="col-auto">
                         <input type="submit" class="btn btn-success" value="Registrar Juego">

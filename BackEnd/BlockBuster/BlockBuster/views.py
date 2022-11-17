@@ -58,7 +58,7 @@ def fx_registrarPelicula(request):
 def fx_eliminarJuego(request):
     msj = None
     try:
-        ju = Juego.objects.get(id_j = request.GET['txt_j_id'])
+        ju = Juego.objects.get(idJuego = request.GET['txt_j_id'])
         ju.delete()
         msj = 'Juego eliminado'
         return render(request, "inicio.html", {'msj': msj})
@@ -66,7 +66,21 @@ def fx_eliminarJuego(request):
         if str(ex.args).find('does not exist') > 0:
             msj = 'juego no existe'
         else:
-            msj = 'Ha ocurrido un problema'     
+            msj = 'Ha ocurrido un problema'  
+        return render(request,"inicio.html", {"msj":msj}) 
+
+def fx_eliminarPelicula(request):
+    msj = None
+    try:
+        pe = Pelicula.objects.get(idPelicula = request.GET['txt_p_id'])
+        pe.delete()
+        msj = 'Juego eliminado'
+        return render(request, "inicio.html", {'msj': msj})
+    except Exception as ex:
+        if str(ex.args).find('does not exist') > 0:
+            msj = 'juego no existe'
+        else:
+            msj = 'Ha ocurrido un problema'   
         return render(request,"inicio.html", {"msj":msj}) 
 
 '''

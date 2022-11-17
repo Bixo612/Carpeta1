@@ -7,8 +7,8 @@
         <!--Formulario-->
         <form action="eliminar_juego" method="get" id="form_registrar_juego"> {% csrf_token %}
             <div class="mb-3">
-                <label for="txt_j_id" class="form-label">Id</label>
-                <input type="text" class="form-control" name="txt_j_id" id="txt_j_id" required>
+                <label for="txt_j_id" class="form-label">Id del Juego</label>
+                <input type="text" class="form-control" name="txt_j_id" id="txt_j_id">
             </div>
             <div class="col-auto">
                 <input type="submit" class="btn btn-success" value="Eliminar Juego">
@@ -23,13 +23,13 @@
     <div class="card-body">
         <h5 class="card-title">Eliminar Pelicula</h5>
         <!--Formulario-->
-        <form action="eliminar_pelicula" method="post" id="form_registrar_juego"> {% csrf_token %}
+        <form action="eliminar_pelicula" method="get" id="form_registrar_juego"> {% csrf_token %}
             <div class="mb-3">
-                <label for="txt_j_id" class="form-label">Id</label>
-                <input type="text" class="form-control" name="txt_j_id" id="txt_j_id" required>
+                <label for="txt_p_id" class="form-label">Id de la Pelicula</label>
+                <input type="text" class="form-control" name="txt_p_id" id="txt_p_id">
             </div>
             <div class="col-auto">
-                <input type="submit" class="btn btn-success" value="Eliminar Juego">
+                <input type="submit" class="btn btn-success" value="Eliminar Pelicula">
             </div>
         </form>
         <!---->

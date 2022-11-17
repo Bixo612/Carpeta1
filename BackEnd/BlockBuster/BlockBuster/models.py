@@ -1,7 +1,7 @@
 from django.db import models
 
 class Juego(models.Model):
-    idJuego         = models.CharField(max_length=10)
+    idJuego         = models.CharField(max_length=10, primary_key=True)
     nombre          = models.CharField(max_length=100)
     consola         = models.CharField(max_length=25)
     genero          = models.CharField(max_length=10)
@@ -9,7 +9,7 @@ class Juego(models.Model):
     clasificacion   = models.CharField(max_length=10)
 
 class Pelicula(models.Model):
-    idPelicula      = models.CharField(max_length=10)
+    idPelicula      = models.CharField(max_length=10, primary_key=True)
     nombre          = models.CharField(max_length=100)
     director        = models.CharField(max_length=50)
     genero          = models.CharField(max_length=10)
@@ -41,4 +41,5 @@ Peliculas
     Clasificación
 py manage.py makemigrations BlockBuster
 python manage.py migrate
+py manage.py runserver
 """
