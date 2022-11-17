@@ -33,7 +33,7 @@ def fx_registrarJuego(request):
             an_o=j_ano, clasificacion=j_clasificacion)
         msj = "Juego " + str(j_id) + " registrado correctamente"
     except Error as err:
-        msj = f'\n Ha ocurrido un error en la operacion'
+        msj = 'Ha ocurrido un error en la operacion' + err
     return render(request, "inicio.html", {'msj': msj})
 
 def fx_registrarPelicula(request):
@@ -54,3 +54,34 @@ def fx_registrarPelicula(request):
     except Error as err:
         msj = f'\n Ha ocurrido un error en la operacion'
     return render(request, "inicio.html", {'msj': msj})
+
+def fx_eliminarJuego(request):
+    msj = None
+    try:
+        ju = Juego.objects.get(id_j = request.GET['txt_j_id'])
+        ju.delete()
+        msj = 'Juego eliminado'
+        return render(request, "inicio.html", {'msj': msj})
+    except Exception as ex:
+        if str(ex.args).find('does not exist') > 0:
+            msj = 'juego no existe'
+        else:
+            msj = 'Ha ocurrido un problema'     
+        return render(request,"inicio.html", {"msj":msj}) 
+
+'''
+def elimina(request):
+    msj = None
+    try:
+        per = Persona.objects.get(rut = request.GET["rut_busqueda"])
+        per.delete()
+        msj = "Persona eliminada"
+        return render(request, "eliminar.html",{"msj":msj})
+    except Exception as ex:
+        if str(ex.args).find('does not exist') > 0:
+            msj = 'Rut no existe'
+        else:
+            msj = 'Ha ocurrido un problema'
+        
+        return render(request,"eliminar.html", {"msj":msj})    
+'''

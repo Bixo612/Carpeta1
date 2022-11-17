@@ -3,7 +3,7 @@ Comandos Django
 '''
 comandos en termianrl para hacer migracioenes
 
-py manage.py makemigrations EjemploORM
+py manage.py makemigrations BlockBuster
 python manage.py migrate
 
 '''

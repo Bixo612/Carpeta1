@@ -5,7 +5,7 @@
     <div class="card-body">
         <h5 class="card-title">Eliminar juego</h5>
         <!--Formulario-->
-        <form action="eliminar_juego" method="post" id="form_registrar_juego"> {% csrf_token %}
+        <form action="eliminar_juego" method="get" id="form_registrar_juego"> {% csrf_token %}
             <div class="mb-3">
                 <label for="txt_j_id" class="form-label">Id</label>
                 <input type="text" class="form-control" name="txt_j_id" id="txt_j_id" required>
