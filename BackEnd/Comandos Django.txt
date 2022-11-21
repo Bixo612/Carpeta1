@@ -6,4 +6,7 @@ comandos en termianrl para hacer migracioenes
 py manage.py makemigrations BlockBuster
 python manage.py migrate
 
+
+django-admin startproject myworld
+
 '''
