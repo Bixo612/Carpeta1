@@ -12,8 +12,7 @@ def inicio(request):
             sesion = None
     except:
         sesion = None
-    return render(request,"index.html",{'sesion_activa':sesion})
-    
+    return render(request,"index.html",{'sesion_activa':sesion})  
 
 def respuesta(request):
     sesion = None
