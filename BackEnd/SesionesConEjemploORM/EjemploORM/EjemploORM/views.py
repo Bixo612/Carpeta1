@@ -127,8 +127,7 @@ def actualiza(request):
         msj = "No se encontró la persona solicitada"
         visibilidad = "hidden"
         return render(request, "actualizar.html", {"msj":msj, "form2":visibilidad,'sesion_activa':sesion,})
-            
-    
+               
 def eliminar(request):
     sesion = None
     try:
@@ -137,7 +136,6 @@ def eliminar(request):
         return render(request,"iniciar_sesion.html",{'sesion_activa':sesion})
     return render(request,"eliminar.html",{'sesion_activa':sesion})       
 
-    
 def elimina(request):
     msj = None
     try:

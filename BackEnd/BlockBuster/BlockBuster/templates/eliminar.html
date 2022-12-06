@@ -1,39 +1,33 @@
 {% extends "base.html" %} {% block titulo %} Inicio {% endblock %} {% block body %}
-<br>
-<!---->
-<div class="card">
-    <div class="card-body">
-        <h5 class="card-title">Eliminar juego</h5>
-        <!--Formulario-->
-        <form action="eliminar_juego" method="get" id="form_registrar_juego"> {% csrf_token %}
-            <div class="mb-3">
-                <label for="txt_j_id" class="form-label">Id del Juego</label>
-                <input type="text" class="form-control" name="txt_j_id" id="txt_j_id">
-            </div>
-            <div class="col-auto">
-                <input type="submit" class="btn btn-success" value="Eliminar Juego">
-            </div>
-        </form>
-        <!---->
+<h5>Eliminar Juego</h5>
+<form action="fx_eliminar_juego" method="get"> {% csrf_token %}
+    <div class="input-group mb-3">
+        <span class="input-group-text">Id del Juego</span>
+        <input type="text" class="form-control" name="txt_j_id" id="txt_j_id">
+        <input type="submit" class="btn btn-danger" value="Eliminar Juego">
     </div>
-</div>
+</form>
 <br>
-<!---->
-<div class="card">
-    <div class="card-body">
-        <h5 class="card-title">Eliminar Pelicula</h5>
-        <!--Formulario-->
-        <form action="eliminar_pelicula" method="get" id="form_registrar_juego"> {% csrf_token %}
-            <div class="mb-3">
-                <label for="txt_p_id" class="form-label">Id de la Pelicula</label>
-                <input type="text" class="form-control" name="txt_p_id" id="txt_p_id">
-            </div>
-            <div class="col-auto">
-                <input type="submit" class="btn btn-success" value="Eliminar Pelicula">
-            </div>
-        </form>
-        <!---->
+<h5>Eliminar Pelicula</h5>
+<form action="fx_eliminar_pelicula" method="get"> {% csrf_token %}
+    <div class="input-group mb-3">
+        <span class="input-group-text">Id de la Pelicula</span>
+        <input type="text" class="form-control" name="txt_p_id" id="txt_p_id">
+        <input type="submit" class="btn btn-danger" value="Eliminar Pelicula">
     </div>
-</div>
+</form>
+<br>
+<h5>Eliminar Libro</h5>
+<form action="fx_eliminar_libro" method="get">{% csrf_token %}
+    <div class="input-group mb-3">
+        <span class="input-group-text">Id del Libro</span>
+        <input type="text" class="form-control" name="txt_l_id" id="txt_l_id">
+        <input type="submit" class="btn btn-danger" value="Eliminar Libro">
+    </div>
+</form>
+<br>
+<p>{{msj}}</p>
+
+
 
 {% endblock %}

@@ -1,0 +1,19 @@
+{% extends "base.html" %} {% block titulo %} Inicio {% endblock %} {% block body %}
+<h5>Actualizar</h5>
+<form action="fx_eliminar_juego" method="get"> {% csrf_token %}
+    <div class="input-group mb-3">
+        <span class="input-group-text">Id</span>
+        <input type="text" class="form-control" name="txt_id_actualizar" id="txt_id_actualizar">
+        <select class="form-select" id="select_categoria" required>
+            <option selected>Choose...</option>
+            <option value="J">Juego</option>
+            <option value="P">Pelicula</option>
+            <option value="L">Libro</option>
+          </select>
+        <input type="submit" class="btn btn-info" value="Buscar">
+    </div>
+</form>
+<br>
+<p>{{msj}}</p>
+
+{% endblock %}

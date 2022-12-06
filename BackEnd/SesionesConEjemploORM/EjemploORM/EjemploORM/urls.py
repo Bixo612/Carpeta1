@@ -26,6 +26,7 @@ urlpatterns = [
     path('elimina', views.elimina),
     path('eliminar', views.eliminar),
     path('ingresar',views.ingresar),
+    ################################################################
     path('iniciar_sesion', views.iniciar_sesion),
     path('sesion',views.sesion)
 ]

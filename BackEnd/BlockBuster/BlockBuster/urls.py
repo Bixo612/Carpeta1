@@ -24,9 +24,12 @@ urlpatterns = [
     path('Registro', views.irRegistro),
     path('Lista', views.irLista),
     path('Eliminar', views.irEliminar),
+    path('Actualizar',views.irActualizar),
     #url de funciones
     path('registar_juego', views.fx_registrarJuego),
     path('registar_pelicula',views.fx_registrarPelicula),
-    path('eliminar_juego', views.fx_eliminarJuego),
-    path('eliminar_pelicula', views.fx_eliminarPelicula),
+    path('registar_libro',views.fx_registrarLibro),
+    path('fx_eliminar_juego', views.fx_eliminarJuego),
+    path('fx_eliminar_pelicula', views.fx_eliminarPelicula),
+    path('fx_eliminar_libro', views.fx_eliminarlibro),
 ]

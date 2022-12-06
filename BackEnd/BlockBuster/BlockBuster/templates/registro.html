@@ -1,22 +1,23 @@
 {% extends "base.html" %} {% block titulo %} Inicio {% endblock %} {% block body %}
-<br>
 <div class="row">
-    <div class="col-sm-6">
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Registrar Juego</h5>
-                <!--Formulario-->
-                <form action="registar_juego" method="post" id="form_registrar_juego"> {% csrf_token %}
-                    <div class="mb-3">
-                        <label for="txt_j_id" class="form-label">Id</label>
-                        <input type="text" class="form-control" name="txt_j_id" id="txt_j_id" required maxlength="10">
-                    </div>
-                    <div class="mb-3">
-                        <label for="txt_j_nombre" class="form-label">Nombre</label>
-                        <input type="text" class="form-control" name="txt_j_nombre" id="txt_j_nombre" maxlength="100">
-                    </div>
-                    <div class="mb-3">
-                        <label for="txt_j_consola" class="form-label">Consola</label>
+    <div class="col">
+        <h5 class="card-title">Registrar Juego</h5>
+        <br>
+        <form action="registar_juego" method="post" id="form_registrar_juego"> {% csrf_token %}
+            <table class="table table-borderless">
+                <tr>
+                    <th><label for="txt_j_id" class="form-label">Id</label></th>
+                    <th><input type="text" class="form-control" name="txt_j_id" id="txt_j_id" required maxlength="10">
+                    </th>
+                </tr>
+                <tr>
+                    <th><label for="txt_j_nombre" class="form-label">Nombre</label></th>
+                    <th><input type="text" class="form-control" name="txt_j_nombre" id="txt_j_nombre" maxlength="100">
+                    </th>
+                </tr>
+                <tr>
+                    <th><label for="txt_j_consola" class="form-label">Consola</label></th>
+                    <th>
                         <select class="form-select" name="txt_j_consola" id="txt_j_consola"
                             aria-label="Default select example" required>
                             <option value=""></option>
@@ -28,17 +29,21 @@
                             <option value="Ps4">Ps4</option>
                             <option value="Ps5">Ps5</option>
                         </select>
-                    </div>
-                    <div class="mb-3">
-                        <label for="txt_j_genero" class="form-label">Genero</label>
-                        <input type="text" class="form-control" name="txt_j_genero" id="txt_j_genero" maxlength="10">
-                    </div>
-                    <div class="mb-3">
-                        <label for="txt_j_ano" class="form-label">Año</label>
-                        <input type="number" class="form-control" name="txt_j_ano" id="txt_j_ano" required min="2000" max="3000">
-                    </div>
-                    <div class="mb-3">
-                        <label for="txt_j_clasificacion" class="form-label">Clasificación</label>
+                    </th>
+                </tr>
+                <tr>
+                    <th><label for="txt_j_genero" class="form-label">Genero</label></th>
+                    <th><input type="text" class="form-control" name="txt_j_genero" id="txt_j_genero" maxlength="10">
+                    </th>
+                </tr>
+                <tr>
+                    <th><label for="txt_j_ano" class="form-label">Año</label></th>
+                    <th><input type="number" class="form-control" name="txt_j_ano" id="txt_j_ano" required min="2000"
+                            max="3000"></th>
+                </tr>
+                <tr>
+                    <th><label for="txt_j_clasificacion" class="form-label">Clasificación</label></th>
+                    <th>
                         <select class="form-select" name="txt_j_clasificacion" id="txt_j_clasificacion"
                             aria-label="Default select example" required>
                             <option value=""></option>
@@ -48,54 +53,96 @@
                             <option value="14+">14+</option>
                             <option value="18+">18+</option>
                         </select>
-                    </div>
-                    <div class="col-auto">
+                    </th>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th>
                         <input type="submit" class="btn btn-success" value="Registrar Juego">
                         <input type="reset" class="btn btn-danger" value="Limpiar">
-                    </div>
-                </form>
-                <!---->
-            </div>
-        </div>
+                    </th>
+                </tr>
+            </table>
+        </form>
     </div>
-    <div class="col-sm-6">
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Registrar Pelicula</h5>
-                <!--Formulario-->
-                <form action="registar_pelicula" method="post"> {% csrf_token %}
-                    <div class="mb-3">
-                        <label for="txt_p_id" class="form-label">Id</label>
-                        <input type="text" class="form-control" name="txt_p_id" id="txt_p_id" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="txt_p_nombre" class="form-label">Nombre</label>
-                        <input type="text" class="form-control" name="txt_p_nombre" id="txt_p_nombre">
-                    </div>
-                    <div class="mb-3">
-                        <label for="txt_p_director" class="form-label">Director</label>
-                        <input type="text" class="form-control" name="txt_p_director" id="txt_p_director">
-                    </div>
-                    <div class="mb-3">
-                        <label for="txt_p_genero" class="form-label">Genero</label>
-                        <input type="text" class="form-control" name="txt_p_genero" id="txt_p_genero">
-                    </div>
-                    <div class="mb-3">
-                        <label for="txt_p_ano" class="form-label">Año</label>
-                        <input type="number" class="form-control" name="txt_p_ano" id="txt_p_ano" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="txt_p_clasificacion" class="form-label">Clasificación</label>
-                        <input type="text" class="form-control" name="txt_p_clasificacion" id="txt_p_clasificacion">
-                    </div>
-                    <div class="col-auto">
+    <div class="col">
+        <h5 class="card-title">Registrar Pelicula</h5>
+        <br>
+        <form action="registar_pelicula" method="post"> {% csrf_token %}
+            <table class="table table-borderless">
+                <tr>
+                    <th><label for="txt_p_id" class="form-label">Id</label></th>
+                    <th><input type="text" class="form-control" name="txt_p_id" id="txt_p_id" required></th>
+                </tr>
+                <tr>
+                    <th><label for="txt_p_nombre" class="form-label">Nombre</label></th>
+                    <th><input type="text" class="form-control" name="txt_p_nombre" id="txt_p_nombre"></th>
+                </tr>
+                <tr>
+                    <th><label for="txt_p_director" class="form-label">Director</label></th>
+                    <th><input type="text" class="form-control" name="txt_p_director" id="txt_p_director"></th>
+                </tr>
+                <tr>
+                    <th><label for="txt_p_genero" class="form-label">Genero</label></th>
+                    <th><input type="text" class="form-control" name="txt_p_genero" id="txt_p_genero"></th>
+                </tr>
+                <tr>
+                    <th><label for="txt_p_ano" class="form-label">Año</label></th>
+                    <th><input type="number" class="form-control" name="txt_p_ano" id="txt_p_ano" required></th>
+                </tr>
+                <tr>
+                    <th><label for="txt_p_clasificacion" class="form-label">Clasificación</label></th>
+                    <th><input type="text" class="form-control" name="txt_p_clasificacion" id="txt_p_clasificacion">
+                    </th>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th>
                         <button type="submit" class="btn btn-success">Registrar Pelicula</button>
-                    </div>
-                </form>
-                <!---->
-            </div>
-        </div>
+                        <input type="reset" class="btn btn-danger" value="Limpiar">
+                    </th>
+            </table>
+        </form>
+    </div>
+    <div class="col">
+        <h5 class="card-title">Registrar Libro</h5>
+        <br>
+        <form action="registar_libro" method="post" id="form_registrar_juego"> {% csrf_token %}
+            <table class="table table-borderless">
+                <tr>
+                    <th><label for="txt_p_id" class="form-label">Id</label></th>
+                    <th><input type="text" class="form-control" name="txt_l_id" id="txt_l_id" required></th>
+                </tr>
+                <tr>
+                    <th><label for="txt_p_nombre" class="form-label">Nombre</label></th>
+                    <th><input type="text" class="form-control" name="txt_l_nombre" id="txt_l_nombre"></th>
+                </tr>
+                <tr>
+                    <th><label for="txt_p_director" class="form-label">Escritor</label></th>
+                    <th><input type="text" class="form-control" name="txt_l_escritor" id="txt_l_escritor"></th>
+                </tr>
+                <tr>
+                    <th><label for="txt_p_genero" class="form-label">Genero</label></th>
+                    <th><input type="text" class="form-control" name="txt_l_genero" id="txt_l_genero"></th>
+                </tr>
+                <tr>
+                    <th><label for="txt_p_ano" class="form-label">Año</label></th>
+                    <th><input type="number" class="form-control" name="txt_l_ano" id="txt_l_ano" required></th>
+                </tr>
+                <tr>
+                    <th><label for="txt_p_clasificacion" class="form-label">Clasificación</label></th>
+                    <th><input type="text" class="form-control" name="txt_l_clasificacion" id="txt_l_clasificacion">
+                    </th>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th>
+                        <button type="submit" class="btn btn-success">Registrar Pelicula</button>
+                        <input type="reset" class="btn btn-danger" value="Limpiar">
+                    </th>
+            </table>
+        </form>
     </div>
 </div>
-
+<p>{{msj}}</p>
 {% endblock %}

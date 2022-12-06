@@ -16,6 +16,13 @@ class Pelicula(models.Model):
     an_o            = models.IntegerField()
     clasificacion   = models.CharField(max_length=10)
 
+class Libro(models.Model):
+    idLibro         = models.CharField(max_length=10, primary_key=True)
+    nombre          = models.CharField(max_length=100)
+    escritor        = models.CharField(max_length=50)
+    genero          = models.CharField(max_length=10)
+    an_o            = models.IntegerField()
+    clasificacion   = models.CharField(max_length=10)
 
 """
 class Persona(models.Model):
