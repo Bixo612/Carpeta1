@@ -3,7 +3,7 @@
     <div class="col">
         <h5 class="card-title">Registrar Juego</h5>
         <br>
-        <form action="registar_juego" method="post" id="form_registrar_juego"> {% csrf_token %}
+        <form action="registar_juego" method="post"> {% csrf_token %}
             <table class="table table-borderless">
                 <tr>
                     <th><label for="txt_j_id" class="form-label">Id</label></th>
@@ -46,7 +46,7 @@
                     <th>
                         <select class="form-select" name="txt_j_clasificacion" id="txt_j_clasificacion"
                             aria-label="Default select example" required>
-                            <option value=""></option>
+                            <option></option>
                             <option value="ER">ER</option>
                             <option value="TE">TE</option>
                             <option value="8+">8+</option>
@@ -92,7 +92,14 @@
                 </tr>
                 <tr>
                     <th><label for="txt_p_clasificacion" class="form-label">Clasificación</label></th>
-                    <th><input type="text" class="form-control" name="txt_p_clasificacion" id="txt_p_clasificacion">
+                    <th>
+                        <select class="form-select" name="txt_p_clasificacion" aria-label="Default select example" required>
+                            <option></option>
+                            <option value="TE">TE</option>
+                            <option value="TE+7">8+</option>
+                            <option value="14+">14+</option>
+                            <option value="18+">18+</option>
+                        </select>
                     </th>
                 </tr>
                 <tr>
@@ -107,7 +114,7 @@
     <div class="col">
         <h5 class="card-title">Registrar Libro</h5>
         <br>
-        <form action="registar_libro" method="post" id="form_registrar_juego"> {% csrf_token %}
+        <form action="registar_libro" method="post"> {% csrf_token %}
             <table class="table table-borderless">
                 <tr>
                     <th><label for="txt_p_id" class="form-label">Id</label></th>

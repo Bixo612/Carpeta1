@@ -1,4 +1,8 @@
 from django.db import models
+class Genero(models.Model):
+    idG     = models.IntegerField(primary_key=True)
+    genero  = models.CharField(max_length=10)
+    
 
 class Juego(models.Model):
     idJuego         = models.CharField(max_length=10, primary_key=True)

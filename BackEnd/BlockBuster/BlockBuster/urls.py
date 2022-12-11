@@ -32,4 +32,5 @@ urlpatterns = [
     path('fx_eliminar_juego', views.fx_eliminarJuego),
     path('fx_eliminar_pelicula', views.fx_eliminarPelicula),
     path('fx_eliminar_libro', views.fx_eliminarlibro),
+    path('fx_actualizar',views.fx_actualizar),
 ]

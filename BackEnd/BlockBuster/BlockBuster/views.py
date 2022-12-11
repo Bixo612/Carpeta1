@@ -119,19 +119,25 @@ def fx_eliminarlibro(request):
             msj = 'Ha ocurrido un problema'   
         return render(request,"inicio.html", {"msj":msj}) 
 
-'''
-def elimina(request):
+def fx_actualizar(request):
     msj = None
     try:
-        per = Persona.objects.get(rut = request.GET["rut_busqueda"])
-        per.delete()
-        msj = "Persona eliminada"
-        return render(request, "eliminar.html",{"msj":msj})
-    except Exception as ex:
-        if str(ex.args).find('does not exist') > 0:
-            msj = 'Rut no existe'
+        cat = request.GET["select_categoria"]
+        if cat == "J":
+            cont = Juego.objects.get(idJuego = request.GET["txt_id_actualizar"])
+            return render(request, "actualizar.html",{'contenido':cont,'vista':'J'})
+        elif cat == "P":
+            cont = Pelicula.objects.get(idPelicula = request.GET["txt_id_actualizar"])
+            return render(request, "actualizar.html",{'contenido':cont,'vista':'P'})
+        elif cat == "L":
+            cont = Libro.objects.get(idLibro = request.GET["txt_id_actualizar"])
+            return render(request, "actualizar.html",{'contenido':cont,'vista':'L'})
         else:
-            msj = 'Ha ocurrido un problema'
-        
-        return render(request,"eliminar.html", {"msj":msj})    
-'''
+            msj = "Categoria no selecionada"
+            return render(request, "actualizar.html",{'msj':msj})
+    except:
+        cont = None
+
+
+
+
