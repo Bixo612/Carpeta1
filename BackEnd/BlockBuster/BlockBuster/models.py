@@ -1,8 +1,4 @@
 from django.db import models
-class Genero(models.Model):
-    idG     = models.IntegerField(primary_key=True)
-    genero  = models.CharField(max_length=10)
-    
 
 class Juego(models.Model):
     idJuego         = models.CharField(max_length=10, primary_key=True)
@@ -27,6 +23,11 @@ class Libro(models.Model):
     genero          = models.CharField(max_length=10)
     an_o            = models.IntegerField()
     clasificacion   = models.CharField(max_length=10)
+
+class Genero(models.Model):
+    idG     = models.IntegerField(primary_key=True)
+    genero  = models.CharField(max_length=20)
+    tipo    = models.CharField(max_length=20)  
 
 """
 class Persona(models.Model):

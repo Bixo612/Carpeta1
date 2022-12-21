@@ -7,7 +7,7 @@
             <table class="table table-borderless">
                 <tr>
                     <th><label for="txt_j_id" class="form-label">Id</label></th>
-                    <th><input type="text" class="form-control" name="txt_j_id" id="txt_j_id" required maxlength="10">
+                    <th><input type="number" class="form-control" name="txt_j_id" required maxlength="10">
                     </th>
                 </tr>
                 <tr>
@@ -18,8 +18,7 @@
                 <tr>
                     <th><label for="txt_j_consola" class="form-label">Consola</label></th>
                     <th>
-                        <select class="form-select" name="txt_j_consola" id="txt_j_consola"
-                            aria-label="Default select example" required>
+                        <select class="form-select" name="txt_j_consola" required>
                             <option value=""></option>
                             <option value="Switch">Switch</option>
                             <option value="Wii U">Wii U</option>
@@ -33,19 +32,25 @@
                 </tr>
                 <tr>
                     <th><label for="txt_j_genero" class="form-label">Genero</label></th>
-                    <th><input type="text" class="form-control" name="txt_j_genero" id="txt_j_genero" maxlength="10">
+                    <th>
+                        <select class="form-select" name="txt_j_genero" required>
+                            <option value=""></option>
+                            {% for g in generos %}
+                            {% if g.tipo == "Juego" %}
+                            <option value="{{g.genero}}">{{g.genero}}</option>
+                            {% endif %}
+                            {% endfor %}
+                        </select>
                     </th>
                 </tr>
                 <tr>
                     <th><label for="txt_j_ano" class="form-label">Año</label></th>
-                    <th><input type="number" class="form-control" name="txt_j_ano" id="txt_j_ano" required min="2000"
-                            max="3000"></th>
+                    <th><input type="number" class="form-control" name="txt_j_ano" required min="2000" max="3000"></th>
                 </tr>
                 <tr>
                     <th><label for="txt_j_clasificacion" class="form-label">Clasificación</label></th>
                     <th>
-                        <select class="form-select" name="txt_j_clasificacion" id="txt_j_clasificacion"
-                            aria-label="Default select example" required>
+                        <select class="form-select" name="txt_j_clasificacion" required>
                             <option></option>
                             <option value="ER">ER</option>
                             <option value="TE">TE</option>
@@ -72,28 +77,37 @@
             <table class="table table-borderless">
                 <tr>
                     <th><label for="txt_p_id" class="form-label">Id</label></th>
-                    <th><input type="text" class="form-control" name="txt_p_id" id="txt_p_id" required></th>
+                    <th><input type="number" class="form-control" name="txt_p_id" required></th>
                 </tr>
                 <tr>
                     <th><label for="txt_p_nombre" class="form-label">Nombre</label></th>
-                    <th><input type="text" class="form-control" name="txt_p_nombre" id="txt_p_nombre"></th>
+                    <th><input type="text" class="form-control" name="txt_p_nombre"></th>
                 </tr>
                 <tr>
                     <th><label for="txt_p_director" class="form-label">Director</label></th>
-                    <th><input type="text" class="form-control" name="txt_p_director" id="txt_p_director"></th>
+                    <th><input type="text" class="form-control" name="txt_p_director"></th>
                 </tr>
                 <tr>
                     <th><label for="txt_p_genero" class="form-label">Genero</label></th>
-                    <th><input type="text" class="form-control" name="txt_p_genero" id="txt_p_genero"></th>
+                    <th>
+                        <select class="form-select" name="txt_p_genero" required>
+                            <option value=""></option>
+                            {% for g in generos %}
+                            {% if g.tipo == "Pelicula" %}
+                            <option value="{{g.genero}}">{{g.genero}}</option>
+                            {% endif %}
+                            {% endfor %}
+                        </select>
+                    </th>
                 </tr>
                 <tr>
                     <th><label for="txt_p_ano" class="form-label">Año</label></th>
-                    <th><input type="number" class="form-control" name="txt_p_ano" id="txt_p_ano" required></th>
+                    <th><input type="number" class="form-control" name="txt_p_ano" required></th>
                 </tr>
                 <tr>
                     <th><label for="txt_p_clasificacion" class="form-label">Clasificación</label></th>
                     <th>
-                        <select class="form-select" name="txt_p_clasificacion" aria-label="Default select example" required>
+                        <select class="form-select" name="txt_p_clasificacion" required>
                             <option></option>
                             <option value="TE">TE</option>
                             <option value="TE+7">8+</option>
@@ -118,27 +132,43 @@
             <table class="table table-borderless">
                 <tr>
                     <th><label for="txt_p_id" class="form-label">Id</label></th>
-                    <th><input type="text" class="form-control" name="txt_l_id" id="txt_l_id" required></th>
+                    <th><input type="number" class="form-control" name="txt_l_id" required></th>
                 </tr>
                 <tr>
                     <th><label for="txt_p_nombre" class="form-label">Nombre</label></th>
-                    <th><input type="text" class="form-control" name="txt_l_nombre" id="txt_l_nombre"></th>
+                    <th><input type="text" class="form-control" name="txt_l_nombre"></th>
                 </tr>
                 <tr>
                     <th><label for="txt_p_director" class="form-label">Escritor</label></th>
-                    <th><input type="text" class="form-control" name="txt_l_escritor" id="txt_l_escritor"></th>
+                    <th><input type="text" class="form-control" name="txt_l_escritor"></th>
                 </tr>
                 <tr>
                     <th><label for="txt_p_genero" class="form-label">Genero</label></th>
-                    <th><input type="text" class="form-control" name="txt_l_genero" id="txt_l_genero"></th>
+                    <th>
+                        <select class="form-select" name="txt_l_genero" required>
+                            <option value=""></option>
+                            {% for g in generos %}
+                            {% if g.tipo == "Libro" %}
+                            <option value="{{g.genero}}">{{g.genero}}</option>
+                            {% endif %}
+                            {% endfor %}
+                        </select>
+                    </th>
                 </tr>
                 <tr>
                     <th><label for="txt_p_ano" class="form-label">Año</label></th>
-                    <th><input type="number" class="form-control" name="txt_l_ano" id="txt_l_ano" required></th>
+                    <th><input type="number" class="form-control" name="txt_l_ano" required></th>
                 </tr>
                 <tr>
                     <th><label for="txt_p_clasificacion" class="form-label">Clasificación</label></th>
-                    <th><input type="text" class="form-control" name="txt_l_clasificacion" id="txt_l_clasificacion">
+                    <th>
+                        <select class="form-select" name="txt_l_clasificacion" required>
+                            <option></option>
+                            <option value="TE">TE</option>
+                            <option value="TE+7">8+</option>
+                            <option value="14+">14+</option>
+                            <option value="18+">18+</option>
+                        </select>
                     </th>
                 </tr>
                 <tr>

@@ -3,18 +3,24 @@ from msilib.schema import Error
 from .models import Juego
 from .models import Pelicula
 from .models import Libro
+from .models import Genero
 
 def irInicio(request):
     return render(request, "inicio.html")
 
 def irRegistro(request):
-    return render(request, "registro.html")
+    gen = Genero.objects.all()
+    return render(request, "registro.html",{'generos': gen})
 
 def irEliminar(request):
     return render(request, "eliminar.html")
 
 def irActualizar(request):
     return render(request, "actualizar.html")
+
+def irCategorias(request):
+    gen = Genero.objects.all()
+    return render(request, "categorias.html",{'generos': gen}) 
 
 def irLista(request):
     p = Pelicula.objects.all()
@@ -24,7 +30,7 @@ def irLista(request):
 
 def fx_registrarJuego(request):
     msj = None
-    j_id = request.POST['txt_j_id']
+    j_id = 'J' + request.POST['txt_j_id']
     j_nombre = request.POST['txt_j_nombre']
     j_consola = request.POST['txt_j_consola']
     j_genero = request.POST['txt_j_genero']
@@ -42,7 +48,7 @@ def fx_registrarJuego(request):
 
 def fx_registrarPelicula(request):
     msj = None
-    p_id = request.POST['txt_p_id']
+    p_id = 'P' + request.POST['txt_p_id']
     p_nombre = request.POST['txt_p_nombre']
     p_director = request.POST['txt_p_director']
     p_genero = request.POST['txt_p_genero']
@@ -60,7 +66,7 @@ def fx_registrarPelicula(request):
 
 def fx_registrarLibro(request):
     msj = None
-    l_id = request.POST['txt_l_id']
+    l_id = 'L' + request.POST['txt_l_id']
     l_nombre = request.POST['txt_l_nombre']
     l_escritor = request.POST['txt_l_escritor']
     l_genero = request.POST['txt_l_genero']
@@ -76,6 +82,37 @@ def fx_registrarLibro(request):
         msj = f'\n Ha ocurrido un error en la operacion {err}'
     return render(request, "registro.html", {'msj': msj})
     
+def fx_registarGenero(request):
+    gen = Genero.objects.all()
+    msj = None
+    g_idG     = request.POST['txt_g_id']
+    g_genero  = request.POST['txt_g_genero']
+    g_tipo    = request.POST['txt_g_tipo']
+    try:
+        Genero.objects.create(
+            idG = g_idG,
+            genero = g_genero,
+            tipo = g_tipo
+        )
+        msj = "Genero " + str(g_idG) + " registrado correctamente"
+    except Error as err:
+        msj = f'\n Ha ocurrido un error en la operacion {err}'
+    return render(request, "categorias.html", {'generos': gen,'msj': msj})
+
+def fx_eliminarGenero(request):
+    msj = None
+    gen = Genero.objects.all()
+    try:
+        ge = Genero.objects.get(idG = request.GET['f_g_id'])
+        ge.delete()
+        msj = 'Genero eliminado correctamente'
+        return render(request,"categorias.html", {'generos': gen,"msj":msj}) 
+    except Exception as ex:
+        if str(ex.args).find('does not exist') > 0:
+            msj = 'Genero no existe'
+        else:
+            msj = 'Ha ocurrido un problema'  
+        return render(request,"categorias.html", {'generos': gen,"msj":msj}) 
 
 def fx_eliminarJuego(request):
     msj = None
@@ -86,7 +123,7 @@ def fx_eliminarJuego(request):
         return render(request, "inicio.html", {'msj': msj})
     except Exception as ex:
         if str(ex.args).find('does not exist') > 0:
-            msj = 'juego no existe'
+            msj = 'Juego no existe'
         else:
             msj = 'Ha ocurrido un problema'  
         return render(request,"eliminar.html", {"msj":msj}) 
@@ -96,11 +133,11 @@ def fx_eliminarPelicula(request):
     try:
         pe = Pelicula.objects.get(idPelicula = request.GET['txt_p_id'])
         pe.delete()
-        msj = 'Juego eliminado'
+        msj = 'Pelicula eliminada'
         return render(request, "eliminar.html", {'msj': msj})
     except Exception as ex:
         if str(ex.args).find('does not exist') > 0:
-            msj = 'juego no existe'
+            msj = 'Pelicula no existe'
         else:
             msj = 'Ha ocurrido un problema'   
         return render(request,"eliminar.html", {"msj":msj}) 
@@ -114,7 +151,7 @@ def fx_eliminarlibro(request):
         return render(request, "eliminar.html", {'msj': msj})
     except Exception as ex:
         if str(ex.args).find('does not exist') > 0:
-            msj = 'juego no existe'
+            msj = 'Libro no existe'
         else:
             msj = 'Ha ocurrido un problema'   
         return render(request,"inicio.html", {"msj":msj}) 

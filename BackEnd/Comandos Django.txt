@@ -10,3 +10,8 @@ python manage.py migrate
 django-admin startproject myworld
 
 '''
+
+py manage.py makemigrations todoTalleres
+python manage.py migrate
+
+py manage.py runserver

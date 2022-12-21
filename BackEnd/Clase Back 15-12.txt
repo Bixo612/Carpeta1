@@ -1,0 +1,96 @@
+Clase 15-12 Back
+
+-nuevas instalaciones en la cmd
+C:\Users\alumnossur>pip install djangorestframework djangorestframework-simplejwt django-model-utils
+C:\Users\alumnossur>cd Desktop
+C:\Users\alumnossur\Desktop>django-admin startproject EjemploRest
+C:\Users\alumnossur\Desktop>cd EjemploRest
+C:\Users\alumnossur\Desktop\EjemploRest>django-admin startapp api_rest
+
+-En settings.py EjemploRest
+Se debe agregar en app
+    'api_rest',
+    'rest_framework'
+
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'api_rest',
+    'rest_framework'
+]
+
+-En models.py en api_rest
+
+from models_utils.models import TimeStampedModel, SoftDeletableModel
+
+class Mensaje(TimeStampedModel, SoftDeletableModel):
+    id_mensaje = models.IntegerField(primary_key= True)
+    titulo = models.CharField(max_length=50, null= False, blank= True)
+    mensaje = models.CharField(max_length=5000, null= False, blank= True)
+    fecha_publicacion = models.DateTimeField(auto_now_add= True, verbose_name = 'Fecha Creacion')
+    fecha_actualizacion = models.DateField(auto_now= True, verbose_name = 'Fecha Actualizacion')
+
+-En EjemploRest se crea clase serializers.py
+-En archivo se crea lo siguiente:
+
+from rest_framework import serializers
+from api_rest.models import Mensaje
+
+class MensajeSerializador(serializers.ModelSerializer):
+    class Meta:
+        model = Mensaje
+        exclude = ['is_removed', 'created', 'modified'] #remover las acciones que no se deben conciderar
+
+-La vista se crea en EjemploRest
+
+	En archivo views.py se agrega
+
+from rest_framework.response import Response
+from rest_framework.views import APIView
+from .serializers import MensajeSerializador
+from api_rest.models import Mensaje
+from rest_framework import status
+from django.http import Http404
+
+class Mensaje_APIView(APIView):
+    def get(self, request, format =None, *args, **kwargs): #args es el orden especifico
+        mensaje = Mensaje.objects.all()
+        serializador = MensajeSerializador(mensaje, many=True)
+
+        return Response(serializador.data)
+    
+    def get(self, request, format =None):
+        serializador = MensajeSerializador(data= request.data)
+        if serializador.is_valid():
+            serializador.save()
+            return Response(serializador.data, status= status.HTTP_201_CREATED)
+        return Response(serializador.data, status= status.HTTP_400_BAD_REQUEST)
+
+class Mensaje_APIView_Detail(APIView):
+    def get_object(self, pk):
+        try:
+            return Mensaje.object.get(pk=pk)
+        except Mensaje.DoesNotExist:
+            raise Http404
+    
+    def get(self, request, pk, format = None):
+        mensaje = self.get_object(pk)
+        serializador = MensajeSerializador(mensaje)
+        return Response(serializador.data)
+
+    def put(self, request, pk, format = None):
+        mensaje = self.get_object(pk)
+        serializador = MensajeSerializador(mensaje, data= request.data)
+        if serializador.is_valid():
+            serializador.save()
+            return Response(serializador.data)
+        return Response(serializador.errors,  status= status.HTTP_400_BAD_REQUEST)
+
+    def delete(self, request, pk, format = None):
+        mensaje = self.get_object(pk)
+        mensaje.delete()
+        return Response(status= status.HTTP_204_NO_CONTENT)
