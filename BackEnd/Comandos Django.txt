@@ -11,7 +11,7 @@ django-admin startproject myworld
 
 '''
 
-py manage.py makemigrations todoTalleres
+py manage.py makemigrations EjemploRest
 python manage.py migrate
 
 py manage.py runserver

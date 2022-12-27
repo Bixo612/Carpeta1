@@ -1,0 +1,10 @@
+{% extends "base.html" %} 
+{% block titulo %} Aplicacion Administrador {% endblock %} 
+{% block navegador%}{% include "navegador.html"%}{% endblock %}
+{% block body %}
+
+<h3> Se ha recibido el siguiente mensaje</h3>
+<hr>
+<p>{{mensaje}}</p>
+
+{% endblock %}

@@ -23,6 +23,7 @@ def registro(request):
         msj = 'Se ha guardado el certificado'
     except Error as err:
         msj = f'ha ocurrido un problema en la operación_, {err}'
+
     return render(request,"respuesta.html",{'msj':msj})
 
 def actualizar(request):

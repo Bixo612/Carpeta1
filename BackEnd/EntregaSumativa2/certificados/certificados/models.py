@@ -8,6 +8,7 @@ class Certificado(models.Model):
     version = models.CharField(max_length=15) 
     id_verificacion = models.CharField(max_length=15)
 
+
 '''
 create database sistema_certificados;
 use sistema_certificados;
