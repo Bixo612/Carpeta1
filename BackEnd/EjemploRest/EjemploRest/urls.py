@@ -19,6 +19,6 @@ from .views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('mensaje', Mensaje_APIView.as_view()),
-    path('mensaje/<int:pk>/' ,Mensaje_APIView_Detail.as_view()),
+    path('mensaje',Mensaje_APIView.as_view()),
+    path('mensaje/<int:pk>/',Mensaje_APIView_Detail.as_view()),
 ]

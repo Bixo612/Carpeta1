@@ -1,0 +1,18 @@
+{% extends "base.html" %} 
+
+{% block titulo %}Inicio{% endblock %} 
+
+{% block body %}
+
+<h1>Página de administración</h1>
+
+<h3>Datos en formato JSON:</h3>
+
+<a href="{% url 'listaVehiculos' %}">Vehiculos</a>
+<a href="{% url 'listaInsumosComputacionales' %}">Insumos</a>
+<a href="{% url 'listaArticulo' %}">Articulos</a>
+
+{% endblock %}
+
+{% block navegador%}{% include "navegador.html"%}{% endblock %}
+

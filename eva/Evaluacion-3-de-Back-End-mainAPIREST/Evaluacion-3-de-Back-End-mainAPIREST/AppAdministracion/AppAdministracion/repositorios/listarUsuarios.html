@@ -1,0 +1,50 @@
+{% extends "base.html" %} 
+{% block titulo %}Lista de usuarios{% endblock %} 
+{% block navegador%}{% include "navegador.html"%}{% endblock %}
+{% block body %}
+<h2>Lista de usuarios</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>
+                Username
+            </th>
+            <th>
+                Password
+            </th>
+            <th>
+                Email
+            </th>
+            <th>
+                Nombre
+            </th>
+            <th>
+                Perfil
+            </th>
+        </tr>
+    </thead>
+    <tbody class="table-group-divider">
+        {% for us in usuarios %}
+        <tr>
+            <td>{{us.username}}</td>
+            <td>{{us.password}}</td>
+            <td>{{us.email}}</td>
+            <td>{{us.nombre}}</td> 
+                {% if us.perfil == 0 %}
+                <td class="table-success">Administrador</td>
+                {% elif us.perfil == 1 %}
+                <td class="table-primary">Computación</td>
+                {% elif us.perfil == 2 %}
+                <td class="table-warning">Vehículos</td>
+                {% elif us.perfil == 3 %}
+                <td class="table-info">Oficina</td>
+                {% else %}
+                <td class="table-danger">{{us.nombre}}</td>
+                {% endif %}
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+
+
+{% endblock %}

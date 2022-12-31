@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block titulo %}Agregar artículo de oficina{% endblock %}
+{% block navegador%} {% include "navegador.html"%} {% endblock %}
+{% block body %}
+<h2>Agregar artículo de oficina</h2>
+<form action="agregarOficina" method="post"> {% csrf_token %}
+    <div class="col-md-12 col-lg-6">
+        <table class="table">
+            <tr>
+                <td><label class="form-label">Numero</label></td>
+                <td><input class="form-control" type="number" name="f_numero_oficina" /></td>
+            </tr>
+            <tr>
+                <td><label class="form-label">Nombre</label></td>
+                <td><input class="form-control" type="text" name="f_nombre_oficina" /></td>
+            </tr>
+            <tr>
+                <td><label class="form-label">Ubicación</label></td>
+                <td><input class="form-control" type="text" name="f_ubicacion" /></td>
+            </tr>
+            <tr>
+                <td><label class="form-label">Stocke</label></td>
+                <td><input class="form-control" type="number" name="f_stock_oficina" /></td>
+            </tr>
+            <tr>
+                <td><label class="form-label">Descripción</label></td>
+                <td><input class="form-control" type="text" name="f_descripcion_oficina" /></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit" class="btn btn-primary" value="Ingresar" />
+                    <input type="reset" class="btn btn-danger" value="Cancelar" />
+                </td>
+            </tr>
+        </table>
+    </div>
+</form>
+
+{{mensaje}}
+
+{% endblock %}
