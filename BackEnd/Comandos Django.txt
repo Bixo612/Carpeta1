@@ -1,5 +1,8 @@
 Comandos Django
 
+django-admin startproject my_tennis_club
+
+
 '''
 comandos en termianrl para hacer migracioenes
 
