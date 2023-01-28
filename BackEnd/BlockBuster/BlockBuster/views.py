@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from msilib.schema import Error
 from .models import Juego, Pelicula, Libro, Disco, Vinilo, Genero
 
@@ -7,12 +7,14 @@ def irInicio(request):
 
 def irRegistro(request):
     gen = Genero.objects.all()
-    return render(request, "registro.html", {'generos': gen,'alerts': False})
+    return render(request, "registro.html", {'generos': gen, 'alerts': False})
 
 def irCategorias(request):
     gen = Genero.objects.all()
     return render(request, "categorias.html", {'generos': gen})
 
+def irBuscar_Eliminar(request):
+    return render(request, "buscar_eliminar.html")
 
 def irLista(request):
     p = Pelicula.objects.all()
@@ -21,6 +23,57 @@ def irLista(request):
     d = Disco.objects.all()
     v = Vinilo.objects.all()
     return render(request, "lista.html", {'juegos': j, 'peliculas': p, 'libros': l, 'discos': d, 'vinilos': v})
+
+def irEditar(request):
+    gen = Genero.objects.all()
+    id = request.GET['txt_id']
+    id = id.upper()
+    if id[0] == 'J':
+        try:
+            cont = Juego.objects.get(idJuego=id)
+            return render(request, "editar.html",{'vista': 'J', 'cont': cont,'generos': gen})
+        except:
+            pass
+
+def fx_buscar(request):
+    id = request.POST['txt_id']
+    id = id.upper()
+    if id[0] == 'L':
+        try:
+            cont = Libro.objects.get(idLibro=id)
+            return render(request, 'buscar.html', {'vista': 'L', 'cont': cont})
+        except:
+            pass
+    elif id[0] == 'P':
+        try:
+            cont = Pelicula.objects.get(idPelicula=id)
+            return render(request, 'buscar.html', {'vista': 'P', 'cont': cont})
+        except:
+            pass
+    elif id[0] == 'J':
+        try:
+            cont = Juego.objects.get(idJuego=id)
+            return render(request, 'buscar.html', {'vista': 'J', 'cont': cont})
+        except:
+            pass
+    elif id[0] == 'D':
+        try:
+            cont = Disco.objects.get(idDisco=id)
+            return render(request, 'buscar.html', {'vista': 'D', 'cont': cont})
+        except:
+            pass
+    elif id[0] == 'V':
+        try:
+            cont = Vinilo.objects.get(idVinilo=id)
+            return render(request, 'buscar.html', {'vista': 'V', 'cont': cont})
+        except:
+            pass
+    else:
+        # en caso de no coincidir con el formato mantien en la misma pagina
+        try:
+            return redirect(request.META['HTTP_REFERER'])
+        except:
+            return render(request, "inicio.html")
 
 def fx_registrarJuego(request):
     msj = None
@@ -39,7 +92,7 @@ def fx_registrarJuego(request):
         msj = "Juego " + str(j_id) + " registrado correctamente"
     except Error as err:
         msj = f'\n Ha ocurrido un error en la operacion {err}'
-    return render(request, "registro.html", {'msj': msj,'alert': True})
+    return render(request, "registro.html", {'msj': msj, 'alert': True})
 
 def fx_registrarPelicula(request):
     msj = None
@@ -59,7 +112,7 @@ def fx_registrarPelicula(request):
         msj = "Pelicula " + str(p_id) + " registrado correctamente"
     except Error as err:
         msj = f'\n Ha ocurrido un error en la operacion {err}'
-    return render(request, "registro.html", {'msj': msj,'alert': True})
+    return render(request, "registro.html", {'msj': msj, 'alert': True})
 
 def fx_registrarLibro(request):
     msj = None
@@ -77,7 +130,7 @@ def fx_registrarLibro(request):
         msj = "Libro " + str(l_id) + " registrado correctamente"
     except Error as err:
         msj = f'\n Ha ocurrido un error en la operacion {err}'
-    return render(request, "registro.html", {'msj': msj,'alert': True})
+    return render(request, "registro.html", {'msj': msj, 'alert': True})
 
 def fx_registrarDisco(request):
     msj = None
@@ -97,7 +150,7 @@ def fx_registrarDisco(request):
         msj = "Disco " + str(d_id) + " registrado correctamente"
     except Error as err:
         msj = f'\n Ha ocurrido un error en la operacion {err}'
-    return render(request, "registro.html", {'msj': msj,'alert': True})
+    return render(request, "registro.html", {'msj': msj, 'alert': True})
 
 def fx_registrarVinilo(request):
     msj = None
@@ -117,7 +170,7 @@ def fx_registrarVinilo(request):
         msj = "Vinilo " + str(v_id) + " registrado correctamente"
     except Error as err:
         msj = f'\n Ha ocurrido un error en la operacion {err}'
-    return render(request, "registro.html", {'msj': msj,'alert': True}) 
+    return render(request, "registro.html", {'msj': msj, 'alert': True})
 
 def fx_registarGenero(request):
     gen = Genero.objects.all()
@@ -192,46 +245,3 @@ def fx_eliminarlibro(request):
         else:
             msj = 'Ha ocurrido un problema'
         return render(request, "inicio.html", {"msj": msj})
-
-def fx_actualizar(request):
-    gen = Genero.objects.all()
-    msj = None
-    try:
-        cat = request.GET["select_categoria"]
-        if cat == "J":
-            cont = Juego.objects.get(idJuego=request.GET["txt_id_actualizar"])
-            return render(request, "actualizar.html", {'contenido': cont, 'vista': 'J', 'generos': gen})
-        elif cat == "P":
-            cont = Pelicula.objects.get(
-                idPelicula=request.GET["txt_id_actualizar"])
-            return render(request, "actualizar.html", {'contenido': cont, 'vista': 'P', 'generos': gen})
-        elif cat == "L":
-            cont = Libro.objects.get(idLibro=request.GET["txt_id_actualizar"])
-            return render(request, "actualizar.html", {'contenido': cont, 'vista': 'L', 'generos': gen})
-        else:
-            msj = "Categoria no selecionada"
-            return render(request, "actualizar.html", {'msj': msj})
-    except:
-        msj = "Contenido no encontrado"
-        return render(request, "actualizar.html", {'msj': msj})
-
-def fx_buscar(request):
-    msj = None
-    id = request.POST['txt_id']
-    id = id.upper()
-    if id[0] == 'L':
-        try:
-            cont = Libro.objects.get(id)
-        except:
-            return render(request, "inicio.html")
-        return render(request, 'buscar.html')
-    elif id[0] == 'P':
-        return render(request, 'buscar.html')
-    elif id[0] == 'J':
-        return render(request, 'buscar.html')
-    elif id[0] == 'D':
-        return render(request, 'buscar.html')
-    elif id[0] == 'V':
-        return render(request, 'buscar.html')
-    else:
-        return render(request, "inicio.html")

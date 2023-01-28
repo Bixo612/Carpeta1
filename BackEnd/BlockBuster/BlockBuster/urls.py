@@ -24,6 +24,7 @@ urlpatterns = [
     path('Registro', views.irRegistro),
     path('Lista', views.irLista),
     path('Categorias', views.irCategorias),
+    path('Editar', views.irEditar),
     #url de funciones
     path('buscar', views.fx_buscar),
     path('registar_juego', views.fx_registrarJuego),
