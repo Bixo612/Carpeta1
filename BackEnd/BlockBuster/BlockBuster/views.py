@@ -7,11 +7,11 @@ def irInicio(request):
 
 def irRegistro(request):
     gen = Genero.objects.all()
-    return render(request, "registro.html", {'generos': gen, 'alerts': False})
+    return render(request, "registro.html", {'generos': gen, 'alert': False})
 
 def irCategorias(request):
     gen = Genero.objects.all()
-    return render(request, "categorias.html", {'generos': gen})
+    return render(request, "categorias.html", {'generos': gen,'alert': False})
 
 def irBuscar_Eliminar(request):
     return render(request, "buscar_eliminar.html")
@@ -34,6 +34,58 @@ def irEditar(request):
             return render(request, "editar.html",{'vista': 'J', 'cont': cont,'generos': gen})
         except:
             pass
+    elif id[0] == 'P':
+        try:
+            cont = Pelicula.objects.get(idPelicula=id)
+            return render(request, "editar.html",{'vista': 'P', 'cont': cont,'generos': gen})
+        except:
+            pass
+    elif id[0] == 'L':
+        try:
+            cont = Libro.objects.get(idLibro=id)
+            return render(request, "editar.html",{'vista': 'L', 'cont': cont,'generos': gen})
+        except:
+            pass
+    elif id[0] == 'D':
+        try:
+            cont = Disco.objects.get(idDisco=id)
+            return render(request, "editar.html",{'vista': 'D', 'cont': cont,'generos': gen})
+        except:
+            pass
+    elif id[0] == 'V':
+        try:
+            cont = Vinilo.objects.get(idVinilo=id)
+            return render(request, "editar.html",{'vista': 'V', 'cont': cont,'generos': gen})
+        except:
+            pass
+    else:
+        pass
+
+def fx_editarJuego(request):
+    msj = None
+    j_id = request.POST['txt_j_id']
+    j_nombre = request.POST['txt_j_nombre']
+    j_consola = request.POST['txt_j_consola']
+    j_genero = request.POST['txt_j_genero']
+    j_ano = request.POST['txt_j_ano']
+    j_clasificacion = request.POST['txt_j_clasificacion']
+    j_disponible = request.POST['txt_j_disponible']
+    try:
+        juego = Juego.objects.get(idJuego=j_id)
+        juego.nombre = j_nombre
+        juego.consola = j_consola
+        juego.genero = j_genero
+        juego.an_o = j_ano
+        juego.clasificacion = j_clasificacion
+        juego.disponible = j_disponible
+        try:
+            juego.save()
+            msj = "Se ha actualizado el juego"
+        except:
+            pass
+    except:
+        pass
+    return render(request, "inicio.html",{'msj': msj})
 
 def fx_buscar(request):
     id = request.POST['txt_id']
@@ -187,7 +239,7 @@ def fx_registarGenero(request):
         msj = "Genero " + str(g_idG) + " registrado correctamente"
     except Error as err:
         msj = f'\n Ha ocurrido un error en la operacion {err}'
-    return render(request, "categorias.html", {'generos': gen, 'msj': msj})
+    return render(request, "categorias.html", {'generos': gen, 'msj': msj,'alert': True})
 
 def fx_eliminarGenero(request):
     msj = None
@@ -196,13 +248,13 @@ def fx_eliminarGenero(request):
         ge = Genero.objects.get(idG=request.GET['f_g_id'])
         ge.delete()
         msj = 'Genero eliminado correctamente'
-        return render(request, "categorias.html", {'generos': gen, "msj": msj})
+        return render(request, "categorias.html", {'generos': gen, "msj": msj,'alert': True})
     except Exception as ex:
         if str(ex.args).find('does not exist') > 0:
             msj = 'Genero no existe'
         else:
             msj = 'Ha ocurrido un problema'
-        return render(request, "categorias.html", {'generos': gen, "msj": msj})
+        return render(request, "categorias.html", {'generos': gen, "msj": msj,'alert': True})
 
 def fx_eliminarJuego(request):
     msj = None

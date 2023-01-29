@@ -34,4 +34,5 @@ urlpatterns = [
     path('registar_vinilo',views.fx_registrarVinilo),
     path('fxAgregarGenero',views.fx_registarGenero),
     path('fxEliminarGenero',views.fx_eliminarGenero),
+    path('editar_juego',views.fx_editarJuego),
 ]

@@ -1,9 +1,8 @@
 {% extends "base.html" %} {% block titulo %} Categorias {% endblock %} {% block body %}
 <h5>Categorias</h5>
-<p>{{msj}}</p>
 <div class="row">
-    <div class="col-8">
-        <h6>Lista genero</h6>
+    <div class="col-7">
+        <h6>Lista de generos</h6>
         <table class="table table-striped">
             <thead>
                 <tr>
@@ -24,7 +23,7 @@
         </table>
     </div>
     <br>
-    <div class="col-4">
+    <div class="col-5">
         <h6>Registrar genero</h6>
         <form action="fxAgregarGenero" method="post"> {% csrf_token %}
             <table class="table table-borderless">
@@ -49,7 +48,7 @@
                         </select>
                     </th>
                 </tr>
-                <tr >
+                <tr>
                     <th></th>
                     <th>
                         <input type="submit" class="btn btn-outline-success" value="Registrar Categoria">
@@ -61,16 +60,19 @@
         <hr>
         <h6>Eliminar genero</h6>
         <form action="fxEliminarGenero" method="get"> {% csrf_token %}
-                <div class="input-group mb-3">
-                    <span class="input-group-text">Id</span>
-                    <input type="number" class="form-control" name="f_g_id" required>
-                    <input type="submit" class="btn btn-outline-danger" value="Eliminar Categoria">
-                </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text">Id</span>
+                <input type="number" class="form-control" name="f_g_id" required>
+                <input type="submit" class="btn btn-outline-danger" value="Eliminar Categoria">
+            </div>
         </form>
+        <hr>
+        {% if alert == True %}
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>{{msj}}</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endif %}
     </div>
-
-
 </div>
-
-
 {% endblock %}
