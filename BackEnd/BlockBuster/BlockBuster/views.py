@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from msilib.schema import Error
-from .models import Juego, Pelicula, Libro, Disco, Vinilo, Genero
+from .models import Juego, Pelicula, Libro, Disco, Vinilo, Genero, Usuario
 
 def irInicio(request):
     return render(request, "inicio.html")
@@ -15,6 +15,13 @@ def irCategorias(request):
 
 def irBuscar_Eliminar(request):
     return render(request, "buscar_eliminar.html")
+
+def irCrearUsuario(request):
+    return render(request, "usuarios/crearUsuario.html", {'alert':False})
+
+def irBuscarUsuario(request):
+    usr = Usuario.objects.all()
+    return render(request, "usuarios/buscarUsuario.html",{'usr':usr})
 
 def irLista(request):
     p = Pelicula.objects.all()
@@ -71,16 +78,123 @@ def fx_editarJuego(request):
     j_clasificacion = request.POST['txt_j_clasificacion']
     j_disponible = request.POST['txt_j_disponible']
     try:
-        juego = Juego.objects.get(idJuego=j_id)
-        juego.nombre = j_nombre
-        juego.consola = j_consola
-        juego.genero = j_genero
-        juego.an_o = j_ano
-        juego.clasificacion = j_clasificacion
-        juego.disponible = j_disponible
+        edi = Juego.objects.get(idJuego=j_id)
+        edi.nombre = j_nombre
+        edi.consola = j_consola
+        edi.genero = j_genero
+        edi.an_o = j_ano
+        edi.clasificacion = j_clasificacion
+        edi.disponible = j_disponible
         try:
-            juego.save()
+            edi.save()
             msj = "Se ha actualizado el juego"
+        except:
+            pass
+    except:
+        pass
+    return render(request, "inicio.html",{'msj': msj})
+
+def fx_editarDisco(request):
+    msj = None
+    d_id = request.POST['txt_d_id']
+    d_nombre = request.POST['txt_d_nombre']
+    d_genero = request.POST['txt_d_genero']
+    d_ano = request.POST['txt_d_ano']
+    d_interprete = request.POST['txt_d_interprete']
+    d_duracion = request.POST['txt_d_duracion']
+    d_disponible = request.POST['txt_d_disponible']
+    try:
+        dis = Disco.objects.get(idDisco=d_id)
+        dis.nombre = d_nombre
+        dis.genero = d_genero
+        dis.an_o = d_ano
+        dis.interprete = d_interprete
+        dis.duracion = d_duracion
+        dis.disponible = d_disponible
+        try:
+            dis.save()
+            msj = "Se ha actualizado el disco"
+        except:
+            pass
+    except:
+        pass
+    return render(request, "inicio.html",{'msj': msj})
+
+def fx_editarVinilo(request):
+    msj = None
+    v_id = request.POST['txt_v_id']
+    v_nombre = request.POST['txt_v_nombre']
+    v_genero = request.POST['txt_v_genero']
+    v_ano = request.POST['txt_v_ano']
+    v_interprete = request.POST['txt_v_interprete']
+    v_duracion = request.POST['txt_v_duracion']
+    v_disponible = request.POST['txt_v_disponible']
+    try:
+        dis = Vinilo.objects.get(idDisco=v_id)
+        dis.nombre = v_nombre
+        dis.genero = v_genero
+        dis.an_o = v_ano
+        dis.interprete = v_interprete
+        dis.duracion = v_duracion
+        dis.disponible = v_disponible
+        try:
+            dis.save()
+            msj = "Se ha actualizado el vinilo"
+        except:
+            pass
+    except:
+        pass
+    return render(request, "inicio.html",{'msj': msj})
+
+
+def fx_editarLibro(request):
+    msj = None
+    l_id = request.POST['txt_l_id']
+    l_nombre = request.POST['txt_l_nombre']
+    l_genero = request.POST['txt_l_genero']
+    l_ano = request.POST['txt_l_ano']
+    l_escritor = request.POST['txt_l_escritor']
+    l_editorial = request.POST['txt_l_editorial']
+    l_disponible = request.POST['txt_l_disponible']
+    try:
+        lib = Libro.objects.get(idLibro = l_id)
+        lib.nombre = l_nombre
+        lib.genero = l_genero
+        lib.an_o = l_ano
+        lib.escritor = l_escritor
+        lib.editorial = l_editorial
+        lib.disponible = l_disponible
+        try:
+            lib.save()
+            msj = "Se ha actualizado el libro"
+        except:
+            msj = "error"
+    except:
+        msj = "error"
+    return render(request, "inicio.html",{'msj': msj})
+
+def fx_editarPelicula(request):
+    msj = None
+    p_id = request.POST['txt_p_id']
+    p_nombre = request.POST['txt_p_nombre']
+    p_genero = request.POST['txt_p_genero']
+    p_ano = request.POST['txt_p_ano']
+    p_clasificacion = request.POST['txt_p_clasificacion']
+    p_disponible = request.POST['txt_p_disponible']
+    p_director = request.POST['txt_p_director'] 
+    p_duracion = request.POST['txt_p_duracion']
+    try:
+        edita = Pelicula.objects.get(idPelicula=p_id)
+        edita.nombre = p_nombre
+        edita.genero = p_genero
+        edita.an_o = p_ano
+        edita.clasificacion = p_clasificacion
+        edita.director = p_disponible
+        edita.disponible = p_director
+        edita.duracion = p_duracion
+        try:
+            edita.save()
+            msj = "Se ha actualizado la pelicula"
         except:
             pass
     except:

@@ -1,11 +1,12 @@
 {% extends "base.html" %} {% block titulo %} Inicio {% endblock %} {% block body %}
+<h5>Registrar Contenido</h5>
 {% if alert == True %}
 <div class="alert alert-warning alert-dismissible fade show" role="alert">
     <strong>{{msj}}</strong>
     <button type="button" class="btn-outline-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>
 {% endif %}
-<div class="card mb-3">
+<div class="card border-primary mb-3">
     <div class="card-body">
         <form action="registar_juego" method="post" class="row g-3"> {% csrf_token %}
             <h5>Registrar Juego <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -78,7 +79,7 @@
     </div>
 </div>
 <!---->
-<div class="card mb-3">
+<div class="card border-success mb-3">
     <div class="card-body">
         <form action="registar_pelicula" method="post" class="row g-3"> {% csrf_token %}
             <h5>Registrar Pelicula <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -118,7 +119,7 @@
                 <select class="form-select" name="txt_p_clasificacion" required>
                     <option></option>
                     <option value="TE">TE</option>
-                    <option value="TE+7">8+</option>
+                    <option value="TE+7">TE+7</option>
                     <option value="14+">14+</option>
                     <option value="18+">18+</option>
                 </select>
@@ -143,7 +144,7 @@
     </div>
 </div>
 <!---->
-<div class="card mb-3">
+<div class="card border-danger mb-3">
     <div class="card-body">
         <h5>Registrar Libro <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                 class="bi bi-book" viewBox="0 0 16 16">
@@ -198,7 +199,7 @@
     </div>
 </div>
 <!---->
-<div class="card mb-3">
+<div class="card border-warning mb-3">
     <div class="card-body">
         <h5>Registrar Disco <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                 class="bi bi-disc" viewBox="0 0 16 16">
@@ -254,7 +255,7 @@
     </div>
 </div>
 <!---->
-<div class="card mb-3">
+<div class="card border-info mb-3">
     <div class="card-body">
         <h5>Registrar Vinilo <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                 class="bi bi-vinyl" viewBox="0 0 16 16">

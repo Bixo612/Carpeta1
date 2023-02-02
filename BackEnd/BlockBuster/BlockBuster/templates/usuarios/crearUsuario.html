@@ -1,0 +1,66 @@
+{% extends "base.html" %} {% block titulo %} Inicio {% endblock %} {% block body %}
+<div class="card border-light mb-3">
+    <div class="card-body">
+        <h5>Registrar usuario <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-person-vcard" viewBox="0 0 16 16">
+                <path
+                    d="M5 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm4-2.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5ZM9 8a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4A.5.5 0 0 1 9 8Zm1 2.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5Z" />
+                <path
+                    d="M2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H2ZM1 4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H8.96c.026-.163.04-.33.04-.5C9 10.567 7.21 9 5 9c-2.086 0-3.8 1.398-3.984 3.181A1.006 1.006 0 0 1 1 12V4Z" />
+            </svg></h5>
+        <form action="registar_Usuario" method="post" class="row g-3"> {% csrf_token %}
+            <div class="col-md-3">
+                <label for="inpt_nombre" class="form-label">Rut</label>
+                <input type="text" class="form-control" name="inpt_nombre" required>
+            </div>
+            <div class="col-md-3">
+                <label for="inpt_nick" class="form-label">Nick</label>
+                <input type="text" class="form-control" name="inpt_nombre" required>
+            </div>
+            <div class="col-md-6">
+                <label for="inpt_correo" class="form-label">Correo</label>
+                <input type="email" class="form-control" name="inpt_nombre" required>
+            </div>
+            <div class="col-md-3">
+                <label for="inpt_clave1" class="form-label">Clave</label>
+                <input type="password" class="form-control" name="inpt_nombre" required>
+            </div>
+            <div class="col-md-3">
+                <label for="inpt_clave2" class="form-label">Confirmar clave</label>
+                <input type="password" class="form-control" name="inpt_nombre" required>
+            </div>
+            <div class="col-md-3">
+                <label for="inpt_nacimiento" class="form-label">Fecha de nacimiento</label>
+                <input type="Date" class="form-control" name="inpt_nombre" required>
+            </div>
+            <div class="col-md-3">
+                <label for="inpt_tipo" class="form-label">Tipo</label>
+                <select class="form-select" name="txt_p_clasificacion" required>
+                    <option></option>
+                    <option value="ADMIN">Administrador</option>
+                    <option value="_USER">Usuario</option>
+                </select>
+            </div>
+            <div class="col-md-12">
+                <button type="submit" class="btn btn-outline-success">Registrar Usuario <svg
+                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-save"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M2 1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H9.5a1 1 0 0 0-1 1v7.293l2.646-2.647a.5.5 0 0 1 .708.708l-3.5 3.5a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L7.5 9.293V2a2 2 0 0 1 2-2H14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h2.5a.5.5 0 0 1 0 1H2z" />
+                    </svg></button>
+                <button type="reset" class="btn btn-outline-danger">Limpiar <svg xmlns="http://www.w3.org/2000/svg"
+                        width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                        <path
+                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                    </svg></button>
+            </div>
+        </form>
+    </div>
+</div>
+{% if alert == True %}
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+    <strong>{{msj}}</strong>
+    <button type="button" class="btn-outline-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{% endif %}
+{% endblock %}

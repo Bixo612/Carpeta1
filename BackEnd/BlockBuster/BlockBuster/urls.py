@@ -25,6 +25,8 @@ urlpatterns = [
     path('Lista', views.irLista),
     path('Categorias', views.irCategorias),
     path('Editar', views.irEditar),
+    path('Crear_Usuario', views.irCrearUsuario),
+    path('Buscar_Usuario', views.irBuscarUsuario),
     #url de funciones
     path('buscar', views.fx_buscar),
     path('registar_juego', views.fx_registrarJuego),
@@ -34,5 +36,10 @@ urlpatterns = [
     path('registar_vinilo',views.fx_registrarVinilo),
     path('fxAgregarGenero',views.fx_registarGenero),
     path('fxEliminarGenero',views.fx_eliminarGenero),
+    #
     path('editar_juego',views.fx_editarJuego),
+    path('editar_pelicula',views.fx_editarPelicula),
+    path('editar_libro',views.fx_editarLibro),
+    path('editar_disco',views.fx_editarDisco),
+    path('editar_vinilo',views.fx_editarVinilo),
 ]

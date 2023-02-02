@@ -153,34 +153,299 @@
                     <tr>
                         <th scope="row">Clasificación</th>
                         <td><input type="text" class="form-control" value="{{cont.clasificacion}}" disabled></td>
-                        <td><select class="form-select" name="txt_j_clasificacion" required>
+                        <td><select class="form-select" name="txt_p_clasificacion" required>
                                 <option></option>
-                                <option value="ER">ER</option>
                                 <option value="TE">TE</option>
-                                <option value="8+">8+</option>
+                                <option value="TE+7">TE+7</option>
                                 <option value="14+">14+</option>
                                 <option value="18+">18+</option>
                             </select>
                         </td>
                     </tr>
                     <tr>
-                        <th scope="row">Consola</th>
-                        <td><input type="text" class="form-control" value="{{cont.consola}}" disabled></td>
-                        <td><select class="form-select" name="txt_j_consola" required>
-                                <option value=""></option>
-                                <option value="Switch">Switch</option>
-                                <option value="Wii U">Wii U</option>
-                                <option value="Xbox One">Xbox One</option>
-                                <option value="Xbox Series">Xbox Series</option>
-                                <option value="Ps3">Ps3</option>
-                                <option value="Ps4">Ps4</option>
-                                <option value="Ps5">Ps5</option>
-                            </select></td>
+                        <th scope="row">Duración</th>
+                        <td><input type="text" class="form-control" value="{{cont.duracion}}" disabled></td>
+                        <td><input type="number" class="form-control" value="{{cont.duracion}}" name="txt_p_duracion"
+                                required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Director</th>
+                        <td><input type="text" class="form-control" value="{{cont.director}}" disabled></td>
+                        <td><input type="text" class="form-control" value="{{cont.director}}" name="txt_p_director"
+                                required>
+                        </td>
                     </tr>
                     <tr>
                         <th scope="row">Disponible</th>
                         <td><input type="text" class="form-control" value="{{cont.disponible}}" disabled></td>
-                        <td><select class="form-select" name="txt_j_disponible" required>
+                        <td><select class="form-select" name="txt_p_disponible" required>
+                                <option value=""></option>
+                                <option value="True">True</option>
+                                <option value="False">False</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td></td>
+                        <td>
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-outline-success" type="submit">Guardar cambios <svg
+                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-check-circle" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                        <path
+                                            d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z" />
+                                    </svg></button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+</div>
+{%elif vista == 'L'%}
+<div class="card mb-3">
+    <div class="card-header">
+        <h5>Editar Libro <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-book" viewBox="0 0 16 16">
+                <path
+                    d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
+            </svg></h5>
+    </div>
+    <div class="card-body">
+        <form action="editar_libro" method="post" class="row g-3"> {% csrf_token %}
+            <table class="table table-borderless">
+                <thead>
+                    <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">{{cont.idLibro}}</th>
+                        <th scope="col"><input type="text" hidden value="{{cont.idLibro}}" name="txt_l_id"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Nombre</th>
+                        <td><input type="text" class="form-control" value="{{cont.nombre}}" disabled></td>
+                        <td><input type="text" class="form-control" value="{{cont.nombre}}" name="txt_l_nombre"
+                                required></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Género</th>
+                        <td><input type="text" class="form-control" value="{{cont.genero}}" disabled></td>
+                        <td><select class="form-select" name="txt_l_genero" required>
+                                <option value=""></option>
+                                {% for g in generos %}
+                                {% if g.tipo == "Libro" %}
+                                <option value="{{g.genero}}">{{g.genero}}</option>
+                                {% endif %}
+                                {% endfor %}
+                            </select></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Año</th>
+                        <td><input type="text" class="form-control" value="{{cont.an_o}}" disabled></td>
+                        <td><input type="number" class="form-control" value="{{cont.an_o}}" name="txt_l_ano" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Escritor</th>
+                        <td><input type="text" class="form-control" value="{{cont.escritor}}" disabled></td>
+                        <td><input type="text" class="form-control" value="{{cont.escritor}}" name="txt_l_escritor"
+                                required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Editorial</th>
+                        <td><input type="text" class="form-control" value="{{cont.editorial}}" disabled></td>
+                        <td><input type="text" class="form-control" value="{{cont.editorial}}" name="txt_l_editorial"
+                                required></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Disponible</th>
+                        <td><input type="text" class="form-control" value="{{cont.disponible}}" disabled></td>
+                        <td><select class="form-select" name="txt_l_disponible" required>
+                                <option value=""></option>
+                                <option value="True">True</option>
+                                <option value="False">False</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td></td>
+                        <td>
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-outline-success" type="submit">Guardar cambios <svg
+                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-check-circle" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                        <path
+                                            d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z" />
+                                    </svg></button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+</div>
+{%elif vista == 'D'%}
+<div class="card mb-3">
+    <div class="card-header">
+        <h5>Editar Disco <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-disc" viewBox="0 0 16 16">
+                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                <path
+                    d="M10 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM8 4a4 4 0 0 0-4 4 .5.5 0 0 1-1 0 5 5 0 0 1 5-5 .5.5 0 0 1 0 1zm4.5 3.5a.5.5 0 0 1 .5.5 5 5 0 0 1-5 5 .5.5 0 0 1 0-1 4 4 0 0 0 4-4 .5.5 0 0 1 .5-.5z" />
+            </svg></h5>
+    </div>
+    <div class="card-body">
+        <form action="editar_disco" method="post" class="row g-3"> {% csrf_token %}
+            <table class="table table-borderless">
+                <thead>
+                    <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">{{cont.idDisco}}</th>
+                        <th scope="col"><input type="text" hidden value="{{cont.idDisco}}" name="txt_d_id"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Nombre</th>
+                        <td><input type="text" class="form-control" value="{{cont.nombre}}" disabled></td>
+                        <td><input type="text" class="form-control" value="{{cont.nombre}}" name="txt_d_nombre"
+                                required></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Género</th>
+                        <td><input type="text" class="form-control" value="{{cont.genero}}" disabled></td>
+                        <td><select class="form-select" name="txt_d_genero" required>
+                                <option value=""></option>
+                                {% for g in generos %}
+                                {% if g.tipo == "Disco" %}
+                                <option value="{{g.genero}}">{{g.genero}}</option>
+                                {% endif %}
+                                {% endfor %}
+                            </select></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Año</th>
+                        <td><input type="text" class="form-control" value="{{cont.an_o}}" disabled></td>
+                        <td><input type="number" class="form-control" value="{{cont.an_o}}" name="txt_d_ano" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Interprete</th>
+                        <td><input type="text" class="form-control" value="{{cont.interprete}}" disabled></td>
+                        <td><input type="text" class="form-control" value="{{cont.interprete}}" name="txt_d_interprete"
+                                required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Duracion</th>
+                        <td><input type="text" class="form-control" value="{{cont.duracion}}" disabled></td>
+                        <td><input type="number" class="form-control" value="{{cont.duracion}}" name="txt_d_duracion"
+                                required></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Disponible</th>
+                        <td><input type="text" class="form-control" value="{{cont.disponible}}" disabled></td>
+                        <td><select class="form-select" name="txt_d_disponible" required>
+                                <option value=""></option>
+                                <option value="True">True</option>
+                                <option value="False">False</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td></td>
+                        <td>
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-outline-success" type="submit">Guardar cambios <svg
+                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-check-circle" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                        <path
+                                            d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z" />
+                                    </svg></button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+</div>
+{%elif vista == 'V'%}
+<div class="card mb-3">
+    <div class="card-header">
+        <h5>Editar Vinilo <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+            class="bi bi-vinyl" viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+            <path d="M8 6a2 2 0 1 0 0 4 2 2 0 0 0 0-4zM4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0z" />
+            <path d="M9 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+        </svg></h5>
+    </div>
+    <div class="card-body">
+        <form action="editar_vinilo" method="post" class="row g-3"> {% csrf_token %}
+            <table class="table table-borderless">
+                <thead>
+                    <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">{{cont.idVinilo}}</th>
+                        <th scope="col"><input type="text" hidden value="{{cont.idVinilo}}" name="txt_v_id"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Nombre</th>
+                        <td><input type="text" class="form-control" value="{{cont.nombre}}" disabled></td>
+                        <td><input type="text" class="form-control" value="{{cont.nombre}}" name="txt_v_nombre"
+                                required></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Género</th>
+                        <td><input type="text" class="form-control" value="{{cont.genero}}" disabled></td>
+                        <td><select class="form-select" name="txt_v_genero" required>
+                                <option value=""></option>
+                                {% for g in generos %}
+                                {% if g.tipo == "Vinilo" %}
+                                <option value="{{g.genero}}">{{g.genero}}</option>
+                                {% endif %}
+                                {% endfor %}
+                            </select></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Año</th>
+                        <td><input type="text" class="form-control" value="{{cont.an_o}}" disabled></td>
+                        <td><input type="number" class="form-control" value="{{cont.an_o}}" name="txt_v_ano" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Interprete</th>
+                        <td><input type="text" class="form-control" value="{{cont.interprete}}" disabled></td>
+                        <td><input type="text" class="form-control" value="{{cont.interprete}}" name="txt_v_interprete"
+                                required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Duracion</th>
+                        <td><input type="text" class="form-control" value="{{cont.duracion}}" disabled></td>
+                        <td><input type="number" class="form-control" value="{{cont.duracion}}" name="txt_v_duracion"
+                                required></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Disponible</th>
+                        <td><input type="text" class="form-control" value="{{cont.disponible}}" disabled></td>
+                        <td><select class="form-select" name="txt_v_disponible" required>
                                 <option value=""></option>
                                 <option value="True">True</option>
                                 <option value="False">False</option>
