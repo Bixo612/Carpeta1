@@ -2,26 +2,33 @@ from django.shortcuts import render, redirect
 from msilib.schema import Error
 from .models import Juego, Pelicula, Libro, Disco, Vinilo, Genero, Usuario
 
+
 def irInicio(request):
     return render(request, "inicio.html")
+
 
 def irRegistro(request):
     gen = Genero.objects.all()
     return render(request, "registro.html", {'generos': gen, 'alert': False})
 
+
 def irCategorias(request):
     gen = Genero.objects.all()
-    return render(request, "categorias.html", {'generos': gen,'alert': False})
+    return render(request, "categorias.html", {'generos': gen, 'alert': False})
+
 
 def irBuscar_Eliminar(request):
     return render(request, "buscar_eliminar.html")
 
+
 def irCrearUsuario(request):
-    return render(request, "usuarios/crearUsuario.html", {'alert':False})
+    return render(request, "usuarios/crearUsuario.html", {'alert': False})
+
 
 def irBuscarUsuario(request):
     usr = Usuario.objects.all()
-    return render(request, "usuarios/buscarUsuario.html",{'usr':usr})
+    return render(request, "usuarios/buscarUsuario.html", {'usr': usr})
+
 
 def irLista(request):
     p = Pelicula.objects.all()
@@ -31,6 +38,7 @@ def irLista(request):
     v = Vinilo.objects.all()
     return render(request, "lista.html", {'juegos': j, 'peliculas': p, 'libros': l, 'discos': d, 'vinilos': v})
 
+
 def irEditar(request):
     gen = Genero.objects.all()
     id = request.GET['txt_id']
@@ -38,35 +46,84 @@ def irEditar(request):
     if id[0] == 'J':
         try:
             cont = Juego.objects.get(idJuego=id)
-            return render(request, "editar.html",{'vista': 'J', 'cont': cont,'generos': gen})
+            return render(request, "editar.html", {'vista': 'J', 'cont': cont, 'generos': gen})
         except:
             pass
     elif id[0] == 'P':
         try:
             cont = Pelicula.objects.get(idPelicula=id)
-            return render(request, "editar.html",{'vista': 'P', 'cont': cont,'generos': gen})
+            return render(request, "editar.html", {'vista': 'P', 'cont': cont, 'generos': gen})
         except:
             pass
     elif id[0] == 'L':
         try:
             cont = Libro.objects.get(idLibro=id)
-            return render(request, "editar.html",{'vista': 'L', 'cont': cont,'generos': gen})
+            return render(request, "editar.html", {'vista': 'L', 'cont': cont, 'generos': gen})
         except:
             pass
     elif id[0] == 'D':
         try:
             cont = Disco.objects.get(idDisco=id)
-            return render(request, "editar.html",{'vista': 'D', 'cont': cont,'generos': gen})
+            return render(request, "editar.html", {'vista': 'D', 'cont': cont, 'generos': gen})
         except:
             pass
     elif id[0] == 'V':
         try:
             cont = Vinilo.objects.get(idVinilo=id)
-            return render(request, "editar.html",{'vista': 'V', 'cont': cont,'generos': gen})
+            return render(request, "editar.html", {'vista': 'V', 'cont': cont, 'generos': gen})
         except:
             pass
     else:
         pass
+
+def alertEliminar(request):
+    id = request.GET['txt_id']
+    id = id.upper()
+    if id[0] == 'J':
+        try:
+            cont = Juego.objects.get(idJuego=id)
+            return render(request, "buscar.html", {'vista': 'J', 'cont': cont,'alert': True})
+        except:
+            return render(request, "inicio.html")
+    else:
+        return render(request, "inicio.html")
+
+def irEliminarUsuario(request):
+    rutDel = request.GET['inptName']
+    usr = Usuario.objects.get(rut=rutDel)
+    return render(request, 'usuarios/eliminarUsuario.html', {'usr': usr})
+
+
+def irEditarUsuario(request):
+    rutEdt = request.GET['inptName']
+    usr = Usuario.objects.get(rut=rutEdt)
+    return render(request, 'usuarios/editarUsuario.html', {'usr': usr})
+
+
+def fx_editarUsuario(request):
+    msj = None
+    u_rut = request.GET['inpt_rut']
+    u_nick = request.GET['inpt_nick']
+    u_correo = request.GET['inpt_correo']
+    u_naciemiento = request.GET['inpt_nacimiento']
+    u_tipo = request.GET['inpt_tipo']
+    try:
+        ur = Usuario.objects.get(rut=u_rut)
+        ur.nick = u_nick
+        ur.correo = u_correo
+        ur.fnacimiento = u_naciemiento
+        ur.tipo = u_tipo
+        try:
+            ur.save()
+            msj = "Se ha actualizado el usuario"
+            usr = Usuario.objects.all()
+            return render(request, "usuarios/buscarUsuario.html", {'msj': msj, 'usr': usr, "alert": True, 'busqueda': True, "find": ur})
+        except:
+            msj = "Ha ocurrido un error :c"
+    except:
+        msj = "Ha ocurrido un error :c"
+    return render(request, "inicio.html", {'msj': msj})
+
 
 def fx_editarJuego(request):
     msj = None
@@ -92,7 +149,8 @@ def fx_editarJuego(request):
             pass
     except:
         pass
-    return render(request, "inicio.html",{'msj': msj})
+    return render(request, "inicio.html", {'msj': msj})
+
 
 def fx_editarDisco(request):
     msj = None
@@ -118,7 +176,8 @@ def fx_editarDisco(request):
             pass
     except:
         pass
-    return render(request, "inicio.html",{'msj': msj})
+    return render(request, "inicio.html", {'msj': msj})
+
 
 def fx_editarVinilo(request):
     msj = None
@@ -144,7 +203,7 @@ def fx_editarVinilo(request):
             pass
     except:
         pass
-    return render(request, "inicio.html",{'msj': msj})
+    return render(request, "inicio.html", {'msj': msj})
 
 
 def fx_editarLibro(request):
@@ -157,7 +216,7 @@ def fx_editarLibro(request):
     l_editorial = request.POST['txt_l_editorial']
     l_disponible = request.POST['txt_l_disponible']
     try:
-        lib = Libro.objects.get(idLibro = l_id)
+        lib = Libro.objects.get(idLibro=l_id)
         lib.nombre = l_nombre
         lib.genero = l_genero
         lib.an_o = l_ano
@@ -171,7 +230,8 @@ def fx_editarLibro(request):
             msj = "error"
     except:
         msj = "error"
-    return render(request, "inicio.html",{'msj': msj})
+    return render(request, "inicio.html", {'msj': msj})
+
 
 def fx_editarPelicula(request):
     msj = None
@@ -181,7 +241,7 @@ def fx_editarPelicula(request):
     p_ano = request.POST['txt_p_ano']
     p_clasificacion = request.POST['txt_p_clasificacion']
     p_disponible = request.POST['txt_p_disponible']
-    p_director = request.POST['txt_p_director'] 
+    p_director = request.POST['txt_p_director']
     p_duracion = request.POST['txt_p_duracion']
     try:
         edita = Pelicula.objects.get(idPelicula=p_id)
@@ -199,7 +259,8 @@ def fx_editarPelicula(request):
             pass
     except:
         pass
-    return render(request, "inicio.html",{'msj': msj})
+    return render(request, "inicio.html", {'msj': msj})
+
 
 def fx_buscar(request):
     id = request.POST['txt_id']
@@ -241,6 +302,34 @@ def fx_buscar(request):
         except:
             return render(request, "inicio.html")
 
+
+def fx_buscarUsuario(request):
+    msj = "Usuario no encontrado"
+    usr = Usuario.objects.all()
+    parametro = request.POST["inptParametro"]
+    dato = request.POST["inptDato"]
+    if parametro == "R":
+        try:
+            find = Usuario.objects.get(rut=dato)
+            return render(request, "usuarios/buscarUsuario.html", {'usr': usr, 'busqueda': True, "find": find})
+        except:
+            return render(request, "usuarios/buscarUsuario.html", {'usr': usr, "alert": True, "busqueda": False, "msj": msj})
+    elif parametro == "N":
+        try:
+            find = Usuario.objects.get(nick=dato)
+            return render(request, "usuarios/buscarUsuario.html", {'usr': usr, 'busqueda': True, "find": find})
+        except:
+            return render(request, "usuarios/buscarUsuario.html", {'usr': usr, "alert": True, "busqueda": False, "msj": msj})
+    elif parametro == "C":
+        try:
+            find = Usuario.objects.get(correo=dato)
+            return render(request, "usuarios/buscarUsuario.html", {'usr': usr, 'busqueda': True, "find": find})
+        except:
+            return render(request, "usuarios/buscarUsuario.html", {'usr': usr, "alert": True, "busqueda": False, "msj": msj})
+    else:
+        return render(request, "inicio.html")
+
+
 def fx_registrarJuego(request):
     msj = None
     j_id = 'J' + request.POST['txt_j_id']
@@ -259,6 +348,7 @@ def fx_registrarJuego(request):
     except Error as err:
         msj = f'\n Ha ocurrido un error en la operacion {err}'
     return render(request, "registro.html", {'msj': msj, 'alert': True})
+
 
 def fx_registrarPelicula(request):
     msj = None
@@ -280,6 +370,7 @@ def fx_registrarPelicula(request):
         msj = f'\n Ha ocurrido un error en la operacion {err}'
     return render(request, "registro.html", {'msj': msj, 'alert': True})
 
+
 def fx_registrarLibro(request):
     msj = None
     l_id = 'L' + request.POST['txt_l_id']
@@ -297,6 +388,7 @@ def fx_registrarLibro(request):
     except Error as err:
         msj = f'\n Ha ocurrido un error en la operacion {err}'
     return render(request, "registro.html", {'msj': msj, 'alert': True})
+
 
 def fx_registrarDisco(request):
     msj = None
@@ -318,6 +410,7 @@ def fx_registrarDisco(request):
         msj = f'\n Ha ocurrido un error en la operacion {err}'
     return render(request, "registro.html", {'msj': msj, 'alert': True})
 
+
 def fx_registrarVinilo(request):
     msj = None
     v_id = 'V' + request.POST['txt_v_id']
@@ -338,6 +431,7 @@ def fx_registrarVinilo(request):
         msj = f'\n Ha ocurrido un error en la operacion {err}'
     return render(request, "registro.html", {'msj': msj, 'alert': True})
 
+
 def fx_registarGenero(request):
     gen = Genero.objects.all()
     msj = None
@@ -353,7 +447,35 @@ def fx_registarGenero(request):
         msj = "Genero " + str(g_idG) + " registrado correctamente"
     except Error as err:
         msj = f'\n Ha ocurrido un error en la operacion {err}'
-    return render(request, "categorias.html", {'generos': gen, 'msj': msj,'alert': True})
+    return render(request, "categorias.html", {'generos': gen, 'msj': msj, 'alert': True})
+
+
+def fx_registrarUsuario(request):
+    msj = None
+    inptClave1 = request.POST['inpt_clave1']
+    inptClave2 = request.POST['inpt_clave2']
+    if inptClave1 != inptClave2:
+        msj = "Las claves no coinciden"
+        return render(request, "usuarios/crearUsuario.html", {'alert': True, 'msj': msj})
+    else:
+        inptRut = request.POST['inpt_rut']
+        inptNick = request.POST['inpt_nick']
+        inptCorreo = request.POST['inpt_correo']
+        inptNacimiento = request.POST['inpt_nacimiento']
+        inptTipo = request.POST['inpt_tipo']
+        try:
+            Usuario.objects.create(rut=inptRut,
+                                   nick=inptNick,
+                                   correo=inptCorreo,
+                                   clave=inptClave2,
+                                   fnacimiento=inptNacimiento,
+                                   tipo=inptTipo
+                                   )
+            msj = f"\nUsuario {inptNick} registrado correctamente :)"
+        except Error as err:
+            msj = f'\n Ha ocurrido un error en la operacion {err}'
+        return render(request, "usuarios/crearUsuario.html", {'alert': True, 'msj': msj})
+
 
 def fx_eliminarGenero(request):
     msj = None
@@ -362,13 +484,30 @@ def fx_eliminarGenero(request):
         ge = Genero.objects.get(idG=request.GET['f_g_id'])
         ge.delete()
         msj = 'Genero eliminado correctamente'
-        return render(request, "categorias.html", {'generos': gen, "msj": msj,'alert': True})
+        return render(request, "categorias.html", {'generos': gen, "msj": msj, 'alert': True})
     except Exception as ex:
         if str(ex.args).find('does not exist') > 0:
             msj = 'Genero no existe'
         else:
             msj = 'Ha ocurrido un problema'
-        return render(request, "categorias.html", {'generos': gen, "msj": msj,'alert': True})
+        return render(request, "categorias.html", {'generos': gen, "msj": msj, 'alert': True})
+
+
+def fx_eliminarUsuario(request):
+    usr = Usuario.objects.all()
+    msj = None
+    try:
+        usrDel = Usuario.objects.get(rut=request.GET['inptRut'])
+        usrDel.delete()
+        msj = "Usuario eliminado"
+        return render(request, "usuarios/buscarUsuario.html", {"usr": usr, "msj": msj, 'alert': True})
+    except Exception as ex:
+        if str(ex.args).find('does not exist') > 0:
+            msj = 'Usuario no existe'
+        else:
+            msj = 'Ha ocurrido un problema'
+        return render(request, "usuarios/buscarUsuario.html", {"usr": usr, "msj": msj, 'alert': True})
+
 
 def fx_eliminarJuego(request):
     msj = None
@@ -384,6 +523,7 @@ def fx_eliminarJuego(request):
             msj = 'Ha ocurrido un problema'
         return render(request, "eliminar.html", {"msj": msj})
 
+
 def fx_eliminarPelicula(request):
     msj = None
     try:
@@ -397,6 +537,7 @@ def fx_eliminarPelicula(request):
         else:
             msj = 'Ha ocurrido un problema'
         return render(request, "eliminar.html", {"msj": msj})
+
 
 def fx_eliminarlibro(request):
     msj = None

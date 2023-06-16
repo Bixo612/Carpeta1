@@ -25,10 +25,14 @@ urlpatterns = [
     path('Lista', views.irLista),
     path('Categorias', views.irCategorias),
     path('Editar', views.irEditar),
+    path('fxAlertEliminar', views.alertEliminar),
     path('Crear_Usuario', views.irCrearUsuario),
     path('Buscar_Usuario', views.irBuscarUsuario),
+    path('irEliminarUsuario',views.irEliminarUsuario),
+    path('irEditarUsuario',views.irEditarUsuario),
     #url de funciones
     path('buscar', views.fx_buscar),
+    path('fx_buscarUsuario', views.fx_buscarUsuario),
     path('registar_juego', views.fx_registrarJuego),
     path('registar_pelicula',views.fx_registrarPelicula),
     path('registar_libro',views.fx_registrarLibro),
@@ -36,10 +40,13 @@ urlpatterns = [
     path('registar_vinilo',views.fx_registrarVinilo),
     path('fxAgregarGenero',views.fx_registarGenero),
     path('fxEliminarGenero',views.fx_eliminarGenero),
-    #
+    path('registar_Usuario',views.fx_registrarUsuario),
     path('editar_juego',views.fx_editarJuego),
     path('editar_pelicula',views.fx_editarPelicula),
     path('editar_libro',views.fx_editarLibro),
     path('editar_disco',views.fx_editarDisco),
     path('editar_vinilo',views.fx_editarVinilo),
+    path('fxEliminarUsuario',views.fx_eliminarUsuario),
+    path('fxEditarUsuario',views.fx_editarUsuario),
 ]
+#fx_editarUsuario

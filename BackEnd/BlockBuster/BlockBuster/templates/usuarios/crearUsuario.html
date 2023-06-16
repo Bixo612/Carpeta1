@@ -10,35 +10,34 @@
             </svg></h5>
         <form action="registar_Usuario" method="post" class="row g-3"> {% csrf_token %}
             <div class="col-md-3">
-                <label for="inpt_nombre" class="form-label">Rut</label>
-                <input type="text" class="form-control" name="inpt_nombre" required>
+                <label for="inpt_rut" class="form-label">Rut</label>
+                <input type="text" class="form-control" name="inpt_rut" required>
             </div>
             <div class="col-md-3">
                 <label for="inpt_nick" class="form-label">Nick</label>
-                <input type="text" class="form-control" name="inpt_nombre" required>
+                <input type="text" class="form-control" name="inpt_nick" required>
             </div>
             <div class="col-md-6">
                 <label for="inpt_correo" class="form-label">Correo</label>
-                <input type="email" class="form-control" name="inpt_nombre" required>
+                <input type="email" class="form-control" name="inpt_correo" required>
             </div>
             <div class="col-md-3">
                 <label for="inpt_clave1" class="form-label">Clave</label>
-                <input type="password" class="form-control" name="inpt_nombre" required>
+                <input type="password" class="form-control" name="inpt_clave1" required>
             </div>
             <div class="col-md-3">
                 <label for="inpt_clave2" class="form-label">Confirmar clave</label>
-                <input type="password" class="form-control" name="inpt_nombre" required>
+                <input type="password" class="form-control" name="inpt_clave2" required>
             </div>
             <div class="col-md-3">
                 <label for="inpt_nacimiento" class="form-label">Fecha de nacimiento</label>
-                <input type="Date" class="form-control" name="inpt_nombre" required>
+                <input type="Date" class="form-control" name="inpt_nacimiento" required>
             </div>
             <div class="col-md-3">
                 <label for="inpt_tipo" class="form-label">Tipo</label>
-                <select class="form-select" name="txt_p_clasificacion" required>
-                    <option></option>
+                <select class="form-select" name="inpt_tipo" required>
                     <option value="ADMIN">Administrador</option>
-                    <option value="_USER">Usuario</option>
+                    <option value="_USER" selected>Usuario</option>
                 </select>
             </div>
             <div class="col-md-12">
@@ -60,7 +59,7 @@
 {% if alert == True %}
 <div class="alert alert-warning alert-dismissible fade show" role="alert">
     <strong>{{msj}}</strong>
-    <button type="button" class="btn-outline-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>
 {% endif %}
 {% endblock %}

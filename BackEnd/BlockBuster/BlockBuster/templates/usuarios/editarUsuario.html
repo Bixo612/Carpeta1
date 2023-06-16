@@ -1,0 +1,65 @@
+{% extends "base.html" %} {% block titulo %} Inicio {% endblock %} {% block body %}
+<div class="card border-info mb-3">
+    <div class="card-header">Editar Usuario:</div>
+    <div class="card-body text-info">
+        <h5 class="card-title"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-person-fill-gear" viewBox="0 0 16 16">
+                <path
+                    d="M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm-9 8c0 1 1 1 1 1h5.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.544-3.393C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4Zm9.886-3.54c.18-.613 1.048-.613 1.229 0l.043.148a.64.64 0 0 0 .921.382l.136-.074c.561-.306 1.175.308.87.869l-.075.136a.64.64 0 0 0 .382.92l.149.045c.612.18.612 1.048 0 1.229l-.15.043a.64.64 0 0 0-.38.921l.074.136c.305.561-.309 1.175-.87.87l-.136-.075a.64.64 0 0 0-.92.382l-.045.149c-.18.612-1.048.612-1.229 0l-.043-.15a.64.64 0 0 0-.921-.38l-.136.074c-.561.305-1.175-.309-.87-.87l.075-.136a.64.64 0 0 0-.382-.92l-.148-.045c-.613-.18-.613-1.048 0-1.229l.148-.043a.64.64 0 0 0 .382-.921l-.074-.136c-.306-.561.308-1.175.869-.87l.136.075a.64.64 0 0 0 .92-.382l.045-.148ZM14 12.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0Z" />
+            </svg> {{usr.nick}} / {{usr.rut}} </h5>
+        <table class="table table-borderless">
+            <form action="fxEditarUsuario" method="get">
+                <tr>
+                    <td><label class="form-label">Rut</label></td>
+                    <td>{{usr.rut}}</td>
+                    <td><input class="form-control" name="inpt_rut" type="text" hidden required value="{{usr.rut}}"></td>
+                </tr>
+                <tr>
+                    <td><label for="inpt_nick" class="form-label">Nick</label></td>
+                    <td>{{usr.nick}}</td>
+                    <td><input type="text" class="form-control" name="inpt_nick" required value="{{usr.nick}}"></td>
+                </tr>
+                <tr>
+                    <td><label for="inpt_correo" class="form-label">Correo</label></td>
+                    <td>{{usr.correo}}</td>
+                    <td><input type="email" class="form-control" name="inpt_correo" required value="{{usr.correo}}">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="inpt_nacimiento" class="form-label">Fecha de nacimiento</label></td>
+                    <td>{{usr.fnacimiento}}</td>
+                    <td><input type="Date" class="form-control" name="inpt_nacimiento" required
+                            value="{{usr.fnacimiento}}">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="inpt_tipo" class="form-label">Tipo</label></td>
+                    <td>{{usr.tipo}}</td>
+                    <td><select class="form-select" name="inpt_tipo" required>
+                            <option value="ADMIN">Administrador</option>
+                            <option value="_USER" selected>Usuario</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <div class="btn-group">
+                            <button type="submit" class="btn btn-outline-info"> Guardar cambios <svg
+                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-save" viewBox="0 0 16 16">
+                                    <path
+                                        d="M2 1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H9.5a1 1 0 0 0-1 1v7.293l2.646-2.647a.5.5 0 0 1 .708.708l-3.5 3.5a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L7.5 9.293V2a2 2 0 0 1 2-2H14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h2.5a.5.5 0 0 1 0 1H2z" />
+                                </svg></button>
+                            <a type="button" class="btn btn-outline-warning" href="Buscar_Usuario">Cancelar</a>
+
+                        </div>
+                    </td>
+                </tr>
+            </form>
+        </table>
+
+    </div>
+    <div class="card-footer">Esta acción no se puede deshacer</div>
+</div>
+{% endblock %}

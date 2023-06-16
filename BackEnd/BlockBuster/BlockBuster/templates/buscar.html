@@ -32,11 +32,16 @@
             </tr>
         </table>
         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-            <button type="button" class="btn btn-outline-danger">Eliminar <svg xmlns="http://www.w3.org/2000/svg"
-                    width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
-                    <path
-                        d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z" />
-                </svg></button>
+            <!---->
+            <form action="fxAlertEliminar" method="get"> {% csrf_token %}
+                <input type="text" name="txt_id" value="{{cont.idJuego}}" hidden>
+                <button type="submit" class="btn btn-outline-danger">Eliminar <svg xmlns="http://www.w3.org/2000/svg"
+                        width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
+                        <path
+                            d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z" />
+                    </svg></button>
+            </form>
+            <!---->
             <form action="Editar" method="get"> {% csrf_token %}
                 <input type="text" name="txt_id" value="{{cont.idJuego}}" hidden>
                 <button type="submit" class="btn btn-outline-warning">Editar <svg xmlns="http://www.w3.org/2000/svg"
@@ -47,11 +52,13 @@
                             d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
                     </svg></button>
             </form>
+            <!---->
             <button type="button" class="btn btn-outline-success">Arrendar <svg xmlns="http://www.w3.org/2000/svg"
                     width="16" height="16" fill="currentColor" class="bi bi-cursor" viewBox="0 0 16 16">
                     <path
                         d="M14.082 2.182a.5.5 0 0 1 .103.557L8.528 15.467a.5.5 0 0 1-.917-.007L5.57 10.694.803 8.652a.5.5 0 0 1-.006-.916l12.728-5.657a.5.5 0 0 1 .556.103zM2.25 8.184l3.897 1.67a.5.5 0 0 1 .262.263l1.67 3.897L12.743 3.52 2.25 8.184z" />
                 </svg></button>
+            <!---->
         </div>
     </div>
 </div>
@@ -285,4 +292,19 @@
     </div>
 </div>
 {%endif%}
+<!---->
+{%if alert == True %}
+<br>
+<div class="alert alert-danger" role="alert">
+    <h4 class="alert-heading">Realmente desea eliminar {{cont.nombre}}</h4>
+    <p>Esta acción no se puede deshacer.</p>
+    <hr>
+    <form action="FxConfirmarEliminar" method="get"> {% csrf_token %}
+        {%if vista == 'J'%}
+        <input type="text" name="txt_id" value="{{cont.idJuego}}" hidden>
+        {% endif %}
+        <button type="button" class="btn btn-outline-danger">Confirmar Eliminar</button>
+    </form>
+</div>
+{% endif %}
 {% endblock %}
